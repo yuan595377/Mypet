@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  MyPet
+//
+//  Created by 袁立康 on 17/3/26.
+//  Copyright © 2017年 袁立康. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "PC_VC.h"
+#import "MsgVC.h"
+#import "PublishVC.h"
+#import "HOMEVC.h"
+#import "MyTabBar.h"
+#import <BmobSDK/Bmob.h>
+#import <Hyphenate_CN/EMSDKFull.h>
+
+
+#endif /* PrefixHeader_pch */
