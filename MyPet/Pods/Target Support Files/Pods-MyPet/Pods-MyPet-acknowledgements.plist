@@ -721,7 +721,7 @@ SOFTWARE.
 			<key>License</key>
 			<string>MIT</string>
 			<key>Title</key>
-			<string>Hyphenate_CN</string>
+			<string>HyphenateFullSDK</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

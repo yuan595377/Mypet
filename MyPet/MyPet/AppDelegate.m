@@ -21,9 +21,9 @@
     //注册bmob
     [Bmob registerWithAppKey:@"5edb7a137c535854844cb92b8c1b2149"];
     
-//    //注册环信
-//    EMOptions *options = [EMOptions optionsWithAppkey:@"1834751360#pan"];
-//    [[EMClient sharedClient]initializeSDKWithOptions:options];
+    //注册环信
+    EMOptions *options = [EMOptions optionsWithAppkey:@"1834751360#pan"];
+    [[EMClient sharedClient]initializeSDKWithOptions:options];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     

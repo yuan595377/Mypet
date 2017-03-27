@@ -1,21 +1,21 @@
 PODS:
   - BmobSDK (1.7.2)
-  - Hyphenate_CN (3.2.0)
+  - HyphenateFullSDK (3.1.5)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
 
 DEPENDENCIES:
   - BmobSDK
-  - Hyphenate_CN (~> 3.2.0)
+  - HyphenateFullSDK (~> 3.1.5)
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh (~> 3.1.12)
 
 SPEC CHECKSUMS:
   BmobSDK: e188cb31d6a8417ab668aee821da227d7512b865
-  Hyphenate_CN: 91e2e0e36558f0b72bf7e2035eb05c7a7e00e951
+  HyphenateFullSDK: 536f76eeb0914dba766b1d5d30dee083f0805da2
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
 
-PODFILE CHECKSUM: f85550911be66faa2103c25eeb1a0b509c7e2e16
+PODFILE CHECKSUM: d514df5bfa9ecdaa5ddb899f78cbbf8d2af74c40
 
 COCOAPODS: 1.1.1

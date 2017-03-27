@@ -8,8 +8,8 @@
 
 #import "PC_VC.h"
 
-@interface PC_VC ()
-
+@interface PC_VC ()<UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, retain)UITableView *tabelOfPC;
 @end
 
 @implementation PC_VC
@@ -17,7 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self hideNavi];
+    [self createSubview];
 }
+
+- (void)hideNavi {
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)createSubview {
+    _tabelOfPC = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+    
+
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -36,9 +36,7 @@
 		F337E7C31E87907D00709A3B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F337E7C21E87907D00709A3B /* AVFoundation.framework */; };
 		F337E7C51E87908500709A3B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F337E7C41E87908500709A3B /* AudioToolbox.framework */; };
 		F337E7C71E87908F00709A3B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F337E7C61E87908F00709A3B /* CoreMedia.framework */; };
-		F34A4E2B1E87938E002DE3B4 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F34A4E271E87938E002DE3B4 /* libMBProgressHUD.a */; };
-		F34A4E2C1E87938E002DE3B4 /* libMJRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F34A4E281E87938E002DE3B4 /* libMJRefresh.a */; };
-		F34A4E2F1E87939C002DE3B4 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F337E7C81E8790A000709A3B /* libHyphenateFullSDK.a */; };
+		F3660FA91E88C0EE00968B62 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,10 +107,15 @@
 		F337E7C41E87908500709A3B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F337E7C61E87908F00709A3B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		F337E7C81E8790A000709A3B /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateFullSDK.a; path = Pods/Hyphenate_CN/HyphenateFullSDK/lib/libHyphenateFullSDK.a; sourceTree = "<group>"; };
+		F348E9471E87D0A3004CDD72 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		F34A4E271E87938E002DE3B4 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "../../../Library/Developer/Xcode/DerivedData/MyPet-ewgxrsatkfjhmfgikllaozmfbtyb/Build/Products/Debug-iphonesimulator/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		F34A4E281E87938E002DE3B4 /* libMJRefresh.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMJRefresh.a; path = "../../../Library/Developer/Xcode/DerivedData/MyPet-ewgxrsatkfjhmfgikllaozmfbtyb/Build/Products/Debug-iphonesimulator/MJRefresh/libMJRefresh.a"; sourceTree = "<group>"; };
 		F34A4E291E87938E002DE3B4 /* libPods-MyPetTests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyPetTests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyPetTests.a"; sourceTree = "<group>"; };
 		F34A4E2A1E87938E002DE3B4 /* libPods-MyPetUITests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyPetUITests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyPetUITests.a"; sourceTree = "<group>"; };
+		F35A62201E88BA3D00573D21 /* libPods-MyPetTests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyPetTests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyPetTests.a"; sourceTree = "<group>"; };
+		F35A62211E88BA3D00573D21 /* libPods-MyPetUITests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyPetUITests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyPetUITests.a"; sourceTree = "<group>"; };
+		F35A62241E88BB8800573D21 /* MyPet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPet.entitlements; sourceTree = "<group>"; };
+		F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateFullSDK.a; path = Pods/HyphenateFullSDK/HyphenateFullSDK/lib/libHyphenateFullSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F34A4E2F1E87939C002DE3B4 /* libHyphenateFullSDK.a in Frameworks */,
-				F34A4E2B1E87938E002DE3B4 /* libMBProgressHUD.a in Frameworks */,
-				F34A4E2C1E87938E002DE3B4 /* libMJRefresh.a in Frameworks */,
+				F3660FA91E88C0EE00968B62 /* libHyphenateFullSDK.a in Frameworks */,
 				F337E7C71E87908F00709A3B /* CoreMedia.framework in Frameworks */,
 				F337E7C51E87908500709A3B /* AudioToolbox.framework in Frameworks */,
 				F337E7C31E87907D00709A3B /* AVFoundation.framework in Frameworks */,
@@ -172,6 +173,10 @@
 		CC0EB54F39B2A11CDF22842B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */,
+				F35A62201E88BA3D00573D21 /* libPods-MyPetTests.a */,
+				F35A62211E88BA3D00573D21 /* libPods-MyPetUITests.a */,
+				F348E9471E87D0A3004CDD72 /* libMBProgressHUD.a */,
 				F34A4E271E87938E002DE3B4 /* libMBProgressHUD.a */,
 				F34A4E281E87938E002DE3B4 /* libMJRefresh.a */,
 				F34A4E291E87938E002DE3B4 /* libPods-MyPetTests.a */,
@@ -219,6 +224,7 @@
 		F337E7651E878D2C00709A3B /* MyPet */ = {
 			isa = PBXGroup;
 			children = (
+				F35A62241E88BB8800573D21 /* MyPet.entitlements */,
 				F337E7691E878D2C00709A3B /* AppDelegate.h */,
 				F337E76A1E878D2C00709A3B /* AppDelegate.m */,
 				F337E7A11E878EB400709A3B /* PrefixHeader.pch */,
@@ -388,8 +394,13 @@
 				TargetAttributes = {
 					F337E7621E878D2C00709A3B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = SE9769F267;
+						DevelopmentTeam = 98E92X44D4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					F337E77B1E878D2C00709A3B = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -684,6 +695,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -731,6 +743,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -753,18 +766,20 @@
 			baseConfigurationReference = 97DDA58D0609AB029AEE0A47 /* Pods-MyPet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SE9769F267;
+				CODE_SIGN_ENTITLEMENTS = MyPet/MyPet.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 98E92X44D4;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyPet/PrefixHeader.pch";
 				INFOPLIST_FILE = MyPet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Pods/Hyphenate_CN/HyphenateFullSDK/lib",
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Pods/HyphenateFullSDK/HyphenateFullSDK/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = yuan.MyPet;
+				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -775,18 +790,20 @@
 			baseConfigurationReference = 27D63179CB4CC3560F981B6F /* Pods-MyPet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SE9769F267;
+				CODE_SIGN_ENTITLEMENTS = MyPet/MyPet.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 98E92X44D4;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyPet/PrefixHeader.pch";
 				INFOPLIST_FILE = MyPet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Pods/Hyphenate_CN/HyphenateFullSDK/lib",
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Pods/HyphenateFullSDK/HyphenateFullSDK/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = yuan.MyPet;
+				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -800,6 +817,7 @@
 				DEVELOPMENT_TEAM = SE9769F267;
 				INFOPLIST_FILE = MyPetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = yuan.MyPetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPet.app/MyPet";
@@ -814,6 +832,7 @@
 				DEVELOPMENT_TEAM = SE9769F267;
 				INFOPLIST_FILE = MyPetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = yuan.MyPetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPet.app/MyPet";
