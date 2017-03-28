@@ -3,19 +3,25 @@ PODS:
   - HyphenateFullSDK (3.1.5)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
+  - MOBFoundation_IDFA (2.2.3)
+  - SMSSDK (2.0.8)
 
 DEPENDENCIES:
   - BmobSDK
   - HyphenateFullSDK (~> 3.1.5)
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh (~> 3.1.12)
+  - MOBFoundation_IDFA
+  - SMSSDK
 
 SPEC CHECKSUMS:
   BmobSDK: e188cb31d6a8417ab668aee821da227d7512b865
   HyphenateFullSDK: 536f76eeb0914dba766b1d5d30dee083f0805da2
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MOBFoundation_IDFA: bdc119aa1dd48c741d913695dcecfbef350555df
+  SMSSDK: 1fc8500bec6bc36b524e4de7fac4acdb784e0217
 
-PODFILE CHECKSUM: d514df5bfa9ecdaa5ddb899f78cbbf8d2af74c40
+PODFILE CHECKSUM: e3a99a592e8a33a62fc00ec8f8e1af5b8ac5ee6f
 
 COCOAPODS: 1.1.1

@@ -4,6 +4,10 @@ pod 'BmobSDK'
 pod 'HyphenateFullSDK', '~> 3.1.5'
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'MJRefresh', '~> 3.1.12'
+#// Mob产品公共库
+pod 'MOBFoundation_IDFA'
+#// SMSSDK必须
+pod 'SMSSDK'
 target 'MyPet' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!

@@ -7,7 +7,7 @@
 //
 
 #import "PC_VC.h"
-
+#import "vcofTest.h"
 @interface PC_VC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)UITableView *tabelOfPC;
 @end
@@ -25,13 +25,41 @@
     self.navigationController.navigationBar.hidden = YES;
 }
 
+
 - (void)createSubview {
     _tabelOfPC = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
-    
-
+    _tabelOfPC.delegate = self;
+    _tabelOfPC.dataSource = self;
+    [_tabelOfPC registerClass:[UITableViewCell class] forCellReuseIdentifier:@"pool"];
+    [self.view addSubview:_tabelOfPC];
 
 }
+    
+- (void)createHeaderView {
+   
+ 
+}
+    
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
+    return 10;
+}
+    
+    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
+    cell.textLabel.text = @"123";
+    return cell;
+
+  
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+
+}
+    
+    
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

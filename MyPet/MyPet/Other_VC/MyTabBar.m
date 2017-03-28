@@ -23,7 +23,13 @@
 - (void)setUpAllChildViewController{
     // 1.添加第一个控制器
     HomeVC *oneVC = [[HomeVC alloc]init];
-    [self setUpOneChildViewController:oneVC image:nil title:@"首页"];
+    UIImage * homenormalImage = [[UIImage imageNamed:@"home_line-2.png"]  imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage * homeselectImage = [[UIImage imageNamed:@"home_shape-2.png"]  imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    oneVC.tabBarItem.selectedImage = homeselectImage;
+    [self setUpOneChildViewController:oneVC image:homenormalImage title:@"首页"];
+    
+    
+    
     // 2.添加第2个控制器
 
     PublishVC *twoVC = [[PublishVC alloc]init];

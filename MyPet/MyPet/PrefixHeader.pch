@@ -19,6 +19,6 @@
 #import "MyTabBar.h"
 #import <BmobSDK/Bmob.h>
 #import <HyphenateFullSDK/EMSDKFull.h>
-
+#import "Masonry.h"
 
 #endif /* PrefixHeader_pch */
