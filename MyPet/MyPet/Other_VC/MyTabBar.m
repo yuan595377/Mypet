@@ -25,29 +25,28 @@
     HomeVC *oneVC = [[HomeVC alloc]init];
     UIImage * homenormalImage = [[UIImage imageNamed:@"home_line-2.png"]  imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIImage * homeselectImage = [[UIImage imageNamed:@"home_shape-2.png"]  imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    oneVC.tabBarItem.selectedImage = homeselectImage;
-    [self setUpOneChildViewController:oneVC image:homenormalImage title:@"首页"];
-    
-    
+    [self setUpOneChildViewController:oneVC image:homenormalImage select_img:homeselectImage title:@"首页"];
     
     // 2.添加第2个控制器
 
     PublishVC *twoVC = [[PublishVC alloc]init];
-    [self setUpOneChildViewController:twoVC image:nil title:@"发布"];
+    UIImage * publishImg = [[UIImage imageNamed:@"publish.png"]  imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [self setUpOneChildViewController:twoVC image:publishImg select_img:nil title:@"发布"];
     
     // 3.添加第3个控制器
     MsgVC *msgVC = [[MsgVC alloc]init];
-    [self setUpOneChildViewController:msgVC image:nil title:@"消息"];
+    [self setUpOneChildViewController:msgVC image:nil select_img:nil title:@"消息"];
     // 4.添加第4个控制器
     PC_VC *Pc_VC = [[PC_VC alloc]init];
-    [self setUpOneChildViewController:Pc_VC image:nil title:@"我的"];
+    [self setUpOneChildViewController:Pc_VC image:nil select_img:nil title:@"我的"];
     
 }
 
-- (void)setUpOneChildViewController:(UIViewController *)viewController image:(UIImage *)image title:(NSString *)title{
+- (void)setUpOneChildViewController:(UIViewController *)viewController image:(UIImage *)image select_img:(UIImage *)select_img title:(NSString *)title{
     UINavigationController *navC = [[UINavigationController alloc]initWithRootViewController:viewController];
     navC.title = title;
     navC.tabBarItem.image = image;
+    navC.tabBarItem.selectedImage = select_img;
     [navC.navigationBar setBackgroundImage:[UIImage imageNamed:@"commentary_num_bg"] forBarMetrics:UIBarMetricsDefault];
     viewController.navigationItem.title = title;
     [self addChildViewController:navC];

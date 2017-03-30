@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		236E577AB95E3EBD97278D7A /* libPods-MyPetUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEE548F1706B5A132CF18C /* libPods-MyPetUITests.a */; };
-		252BB2F3ED38835FD3F0A0E4 /* libPods-MyPet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA271E367BA7066DFB4BC1 /* libPods-MyPet.a */; };
-		5426620E44D332F21E4A2A8C /* libPods-MyPetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74423EC9271AD3D989DAF5C8 /* libPods-MyPetTests.a */; };
+		3B9EEAC4F0F6CA022175B6DA /* libPods-MyPetUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF04AF4F23D2D82D0D4BF706 /* libPods-MyPetUITests.a */; };
+		DAC6C36230785F3E8DD2CCD3 /* libPods-MyPetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14860BD93314E6982ED07B8 /* libPods-MyPetTests.a */; };
+		E9A91CA30C4D5D6E3F200CC2 /* libPods-MyPet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D401018F7BC5C18A13BC526 /* libPods-MyPet.a */; };
 		F337E7681E878D2C00709A3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E7671E878D2C00709A3B /* main.m */; };
 		F337E76B1E878D2C00709A3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E76A1E878D2C00709A3B /* AppDelegate.m */; };
 		F337E76E1E878D2C00709A3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E76D1E878D2C00709A3B /* ViewController.m */; };
@@ -40,6 +40,8 @@
 		F3660FAC1E88E5F700968B62 /* vcofTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3660FAB1E88E5F700968B62 /* vcofTest.m */; };
 		F3660FB31E88F31500968B62 /* home_line-2.png in Resources */ = {isa = PBXBuildFile; fileRef = F3660FB21E88F31500968B62 /* home_line-2.png */; };
 		F3660FB51E88F31900968B62 /* home_shape-2.png in Resources */ = {isa = PBXBuildFile; fileRef = F3660FB41E88F31900968B62 /* home_shape-2.png */; };
+		F3AA2FFA1E8D35030036BF88 /* publish.png in Resources */ = {isa = PBXBuildFile; fileRef = F3AA2FF91E8D35030036BF88 /* publish.png */; };
+		F3AA2FFE1E8D362D0036BF88 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = F3AA2FFD1E8D362D0036BF88 /* setting.png */; };
 		F3CB24F81E8A8A8C00EBA1E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3CB24DE1E8A8A8C00EBA1E9 /* Info.plist */; };
 		F3CB24F91E8A8A8C00EBA1E9 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB24E01E8A8A8C00EBA1E9 /* MASCompositeConstraint.m */; };
 		F3CB24FA1E8A8A8C00EBA1E9 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB24E31E8A8A8C00EBA1E9 /* MASConstraint.m */; };
@@ -72,14 +74,14 @@
 
 /* Begin PBXFileReference section */
 		27D63179CB4CC3560F981B6F /* Pods-MyPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPet.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPet/Pods-MyPet.release.xcconfig"; sourceTree = "<group>"; };
-		28EEE548F1706B5A132CF18C /* libPods-MyPetUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPetUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		74423EC9271AD3D989DAF5C8 /* libPods-MyPetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D401018F7BC5C18A13BC526 /* libPods-MyPet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED1D3B22379760672805169 /* Pods-MyPetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPetTests/Pods-MyPetTests.release.xcconfig"; sourceTree = "<group>"; };
 		97DDA58D0609AB029AEE0A47 /* Pods-MyPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyPet/Pods-MyPet.debug.xcconfig"; sourceTree = "<group>"; };
 		9A3309E4530F218E667883F7 /* Pods-MyPetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyPetTests/Pods-MyPetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0BAC010E265E9DB7ED58A3 /* Pods-MyPetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyPetUITests/Pods-MyPetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B909B5B34CD1EA8846FDEEE9 /* Pods-MyPetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPetUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPetUITests/Pods-MyPetUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D3EA271E367BA7066DFB4BC1 /* libPods-MyPet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF04AF4F23D2D82D0D4BF706 /* libPods-MyPetUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPetUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14860BD93314E6982ED07B8 /* libPods-MyPetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F337E7631E878D2C00709A3B /* MyPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F337E7671E878D2C00709A3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F337E7691E878D2C00709A3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,21 +122,14 @@
 		F337E7C21E87907D00709A3B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F337E7C41E87908500709A3B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F337E7C61E87908F00709A3B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		F337E7C81E8790A000709A3B /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateFullSDK.a; path = Pods/Hyphenate_CN/HyphenateFullSDK/lib/libHyphenateFullSDK.a; sourceTree = "<group>"; };
-		F348E9471E87D0A3004CDD72 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
-		F34A4E271E87938E002DE3B4 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "../../../Library/Developer/Xcode/DerivedData/MyPet-ewgxrsatkfjhmfgikllaozmfbtyb/Build/Products/Debug-iphonesimulator/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
-		F34A4E281E87938E002DE3B4 /* libMJRefresh.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMJRefresh.a; path = "../../../Library/Developer/Xcode/DerivedData/MyPet-ewgxrsatkfjhmfgikllaozmfbtyb/Build/Products/Debug-iphonesimulator/MJRefresh/libMJRefresh.a"; sourceTree = "<group>"; };
-		F34A4E291E87938E002DE3B4 /* libPods-MyPetTests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyPetTests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyPetTests.a"; sourceTree = "<group>"; };
-		F34A4E2A1E87938E002DE3B4 /* libPods-MyPetUITests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyPetUITests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyPetUITests.a"; sourceTree = "<group>"; };
-		F35A62201E88BA3D00573D21 /* libPods-MyPetTests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyPetTests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyPetTests.a"; sourceTree = "<group>"; };
-		F35A62211E88BA3D00573D21 /* libPods-MyPetUITests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyPetUITests.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyPetUITests.a"; sourceTree = "<group>"; };
 		F35A62241E88BB8800573D21 /* MyPet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPet.entitlements; sourceTree = "<group>"; };
 		F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateFullSDK.a; path = Pods/HyphenateFullSDK/HyphenateFullSDK/lib/libHyphenateFullSDK.a; sourceTree = "<group>"; };
 		F3660FAA1E88E5F700968B62 /* vcofTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcofTest.h; sourceTree = "<group>"; };
 		F3660FAB1E88E5F700968B62 /* vcofTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcofTest.m; sourceTree = "<group>"; };
 		F3660FB21E88F31500968B62 /* home_line-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_line-2.png"; sourceTree = "<group>"; };
 		F3660FB41E88F31900968B62 /* home_shape-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_shape-2.png"; sourceTree = "<group>"; };
-		F3CB24DA1E8A89DD00EBA1E9 /* libMasonry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMasonry.a; path = "Pods/../build/Debug-iphoneos/Masonry/libMasonry.a"; sourceTree = "<group>"; };
+		F3AA2FF91E8D35030036BF88 /* publish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = publish.png; sourceTree = "<group>"; };
+		F3AA2FFD1E8D362D0036BF88 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		F3CB24DE1E8A8A8C00EBA1E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3CB24DF1E8A8A8C00EBA1E9 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		F3CB24E01E8A8A8C00EBA1E9 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -179,7 +174,7 @@
 				F337E7B91E87905600709A3B /* libsqlite3.tbd in Frameworks */,
 				F337E7B71E87904B00709A3B /* libstdc++.6.0.9.tbd in Frameworks */,
 				F337E7B51E87903F00709A3B /* libiconv.tbd in Frameworks */,
-				252BB2F3ED38835FD3F0A0E4 /* libPods-MyPet.a in Frameworks */,
+				E9A91CA30C4D5D6E3F200CC2 /* libPods-MyPet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5426620E44D332F21E4A2A8C /* libPods-MyPetTests.a in Frameworks */,
+				DAC6C36230785F3E8DD2CCD3 /* libPods-MyPetTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				236E577AB95E3EBD97278D7A /* libPods-MyPetUITests.a in Frameworks */,
+				3B9EEAC4F0F6CA022175B6DA /* libPods-MyPetUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,16 +213,7 @@
 		CC0EB54F39B2A11CDF22842B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3CB24DA1E8A89DD00EBA1E9 /* libMasonry.a */,
 				F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */,
-				F35A62201E88BA3D00573D21 /* libPods-MyPetTests.a */,
-				F35A62211E88BA3D00573D21 /* libPods-MyPetUITests.a */,
-				F348E9471E87D0A3004CDD72 /* libMBProgressHUD.a */,
-				F34A4E271E87938E002DE3B4 /* libMBProgressHUD.a */,
-				F34A4E281E87938E002DE3B4 /* libMJRefresh.a */,
-				F34A4E291E87938E002DE3B4 /* libPods-MyPetTests.a */,
-				F34A4E2A1E87938E002DE3B4 /* libPods-MyPetUITests.a */,
-				F337E7C81E8790A000709A3B /* libHyphenateFullSDK.a */,
 				F337E7C61E87908F00709A3B /* CoreMedia.framework */,
 				F337E7C41E87908500709A3B /* AudioToolbox.framework */,
 				F337E7C21E87907D00709A3B /* AVFoundation.framework */,
@@ -238,9 +224,9 @@
 				F337E7B81E87905600709A3B /* libsqlite3.tbd */,
 				F337E7B61E87904B00709A3B /* libstdc++.6.0.9.tbd */,
 				F337E7B41E87903F00709A3B /* libiconv.tbd */,
-				D3EA271E367BA7066DFB4BC1 /* libPods-MyPet.a */,
-				74423EC9271AD3D989DAF5C8 /* libPods-MyPetTests.a */,
-				28EEE548F1706B5A132CF18C /* libPods-MyPetUITests.a */,
+				6D401018F7BC5C18A13BC526 /* libPods-MyPet.a */,
+				F14860BD93314E6982ED07B8 /* libPods-MyPetTests.a */,
+				CF04AF4F23D2D82D0D4BF706 /* libPods-MyPetUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -371,6 +357,8 @@
 		F3660FAD1E88F23D00968B62 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F3AA2FF91E8D35030036BF88 /* publish.png */,
+				F3AA2FFD1E8D362D0036BF88 /* setting.png */,
 				F3660FB41E88F31900968B62 /* home_shape-2.png */,
 				F3660FB21E88F31500968B62 /* home_line-2.png */,
 			);
@@ -546,8 +534,10 @@
 				F3CB24F81E8A8A8C00EBA1E9 /* Info.plist in Resources */,
 				F337E7A61E878F7B00709A3B /* HomeVC.xib in Resources */,
 				F3660FB51E88F31900968B62 /* home_shape-2.png in Resources */,
+				F3AA2FFA1E8D35030036BF88 /* publish.png in Resources */,
 				F337E7AB1E878F9900709A3B /* MsgVC.xib in Resources */,
 				F337E7731E878D2C00709A3B /* Assets.xcassets in Resources */,
+				F3AA2FFE1E8D362D0036BF88 /* setting.png in Resources */,
 				F3660FB31E88F31500968B62 /* home_line-2.png in Resources */,
 				F337E7711E878D2C00709A3B /* Main.storyboard in Resources */,
 			);
@@ -892,8 +882,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/HyphenateFullSDK/HyphenateFullSDK/lib",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Masonry",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MJRefresh",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -917,6 +909,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/HyphenateFullSDK/HyphenateFullSDK/lib",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Masonry",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MJRefresh",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
