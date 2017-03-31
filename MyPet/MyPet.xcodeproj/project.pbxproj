@@ -42,6 +42,10 @@
 		F3660FB51E88F31900968B62 /* home_shape-2.png in Resources */ = {isa = PBXBuildFile; fileRef = F3660FB41E88F31900968B62 /* home_shape-2.png */; };
 		F3AA2FFA1E8D35030036BF88 /* publish.png in Resources */ = {isa = PBXBuildFile; fileRef = F3AA2FF91E8D35030036BF88 /* publish.png */; };
 		F3AA2FFE1E8D362D0036BF88 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = F3AA2FFD1E8D362D0036BF88 /* setting.png */; };
+		F3C8A9411E8E3B900099B846 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A93F1E8E3B900099B846 /* RegisterVC.m */; };
+		F3C8A9421E8E3B900099B846 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C8A9401E8E3B900099B846 /* RegisterVC.xib */; };
+		F3C8A95D1E8E4FF30099B846 /* loginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A95B1E8E4FF30099B846 /* loginVC.m */; };
+		F3C8A95E1E8E4FF30099B846 /* loginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C8A95C1E8E4FF30099B846 /* loginVC.xib */; };
 		F3CB24F81E8A8A8C00EBA1E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3CB24DE1E8A8A8C00EBA1E9 /* Info.plist */; };
 		F3CB24F91E8A8A8C00EBA1E9 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB24E01E8A8A8C00EBA1E9 /* MASCompositeConstraint.m */; };
 		F3CB24FA1E8A8A8C00EBA1E9 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB24E31E8A8A8C00EBA1E9 /* MASConstraint.m */; };
@@ -130,6 +134,12 @@
 		F3660FB41E88F31900968B62 /* home_shape-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_shape-2.png"; sourceTree = "<group>"; };
 		F3AA2FF91E8D35030036BF88 /* publish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = publish.png; sourceTree = "<group>"; };
 		F3AA2FFD1E8D362D0036BF88 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		F3C8A93E1E8E3B8F0099B846 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		F3C8A93F1E8E3B900099B846 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		F3C8A9401E8E3B900099B846 /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		F3C8A95A1E8E4FF30099B846 /* loginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginVC.h; sourceTree = "<group>"; };
+		F3C8A95B1E8E4FF30099B846 /* loginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginVC.m; sourceTree = "<group>"; };
+		F3C8A95C1E8E4FF30099B846 /* loginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginVC.xib; sourceTree = "<group>"; };
 		F3CB24DE1E8A8A8C00EBA1E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3CB24DF1E8A8A8C00EBA1E9 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		F3CB24E01E8A8A8C00EBA1E9 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -350,6 +360,12 @@
 			children = (
 				F337E79E1E878E8100709A3B /* MyTabBar.h */,
 				F337E79F1E878E8100709A3B /* MyTabBar.m */,
+				F3C8A93E1E8E3B8F0099B846 /* RegisterVC.h */,
+				F3C8A93F1E8E3B900099B846 /* RegisterVC.m */,
+				F3C8A9401E8E3B900099B846 /* RegisterVC.xib */,
+				F3C8A95A1E8E4FF30099B846 /* loginVC.h */,
+				F3C8A95B1E8E4FF30099B846 /* loginVC.m */,
+				F3C8A95C1E8E4FF30099B846 /* loginVC.xib */,
 			);
 			path = Other_VC;
 			sourceTree = "<group>";
@@ -535,9 +551,11 @@
 				F337E7A61E878F7B00709A3B /* HomeVC.xib in Resources */,
 				F3660FB51E88F31900968B62 /* home_shape-2.png in Resources */,
 				F3AA2FFA1E8D35030036BF88 /* publish.png in Resources */,
+				F3C8A95E1E8E4FF30099B846 /* loginVC.xib in Resources */,
 				F337E7AB1E878F9900709A3B /* MsgVC.xib in Resources */,
 				F337E7731E878D2C00709A3B /* Assets.xcassets in Resources */,
 				F3AA2FFE1E8D362D0036BF88 /* setting.png in Resources */,
+				F3C8A9421E8E3B900099B846 /* RegisterVC.xib in Resources */,
 				F3660FB31E88F31500968B62 /* home_line-2.png in Resources */,
 				F337E7711E878D2C00709A3B /* Main.storyboard in Resources */,
 			);
@@ -718,7 +736,9 @@
 				F337E7B21E878FBE00709A3B /* PC_VC.m in Sources */,
 				F3CB24FF1E8A8A8C00EBA1E9 /* NSArray+MASAdditions.m in Sources */,
 				F3CB25001E8A8A8C00EBA1E9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				F3C8A95D1E8E4FF30099B846 /* loginVC.m in Sources */,
 				F3660FAC1E88E5F700968B62 /* vcofTest.m in Sources */,
+				F3C8A9411E8E3B900099B846 /* RegisterVC.m in Sources */,
 				F337E7A01E878E8100709A3B /* MyTabBar.m in Sources */,
 				F337E7AE1E878FAC00709A3B /* PublishVC.m in Sources */,
 			);

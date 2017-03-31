@@ -22,6 +22,9 @@
 #import <BmobSDK/Bmob.h>
 #import <HyphenateFullSDK/EMSDKFull.h>
 #import "Masonry.h"
+#import "RegisterVC.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "loginVC.h"
 
 
 #endif /* PrefixHeader_pch */

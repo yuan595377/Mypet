@@ -17,6 +17,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self creatButton];
+    
+}
+
+
+- (void)creatButton {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(80, 300, 100, 50);
+    button.backgroundColor = [UIColor cyanColor];
+    [button setTitle:@"退出登录" forState:UIControlStateNormal];
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchDown];
+    
+    
+}
+
+-(void)logout {
+    EMError *error = [[EMClient sharedClient] logout:YES];
+    if (!error) {
+        [SVProgressHUD showSuccessWithStatus:@"退出登录"];
+        RegisterVC *vc = [[RegisterVC alloc]init];
+        [self.navigationController pushViewController:vc animated:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

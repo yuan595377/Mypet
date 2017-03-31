@@ -30,12 +30,7 @@
     
 #pragma mark 创建TabBar
     MyTabBar *myTabBar = [[MyTabBar alloc]init];
-    //判断是否登陆过
-    //跳转到首页
     self.window.rootViewController = myTabBar;
-    
-    
-    
     [self.window makeKeyAndVisible];
     return YES;
 }

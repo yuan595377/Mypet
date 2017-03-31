@@ -35,6 +35,7 @@
 
 
 - (void)createSubview {
+    
     _tabelOfPC = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
     _tabelOfPC.delegate = self;
     _tabelOfPC.dataSource = self;
@@ -66,6 +67,7 @@
 
 #pragma mark ----添加头像和昵称
 - (void)addAvatar_Nickname {
+    
     self.avatar = [[UIImageView alloc]init];
     [self touchChangeBackbackground];
     [self.headerView addSubview:self.avatar];
@@ -105,8 +107,10 @@
 
 - (void)set {
     
-    NSLog(@"点击设置");
+    RegisterVC *vc = [[RegisterVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
+
     
 - (void)touchChangeBackbackground {
     
@@ -119,20 +123,28 @@
 
 //手势事件
 - (void)changeBackground{
-    NSLog(@"423");
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    //按钮：从相册选择，类型：UIAlertActionStyleDefault
-    [alert addAction:[UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self chooseImg];
-    }]];
     
-    //按钮：拍照，类型：UIAlertActionStyleDefault
-    [alert addAction:[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self takePhoto];
-    }]];
-    //按钮：取消，类型：UIAlertActionStyleCancel
-    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
-    [self presentViewController:alert animated:YES completion:nil];
+    if ([EMClient sharedClient].isLoggedIn) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        //按钮：从相册选择，类型：UIAlertActionStyleDefault
+        [alert addAction:[UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self chooseImg];
+        }]];
+        
+        //按钮：拍照，类型：UIAlertActionStyleDefault
+        [alert addAction:[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self takePhoto];
+        }]];
+        //按钮：取消，类型：UIAlertActionStyleCancel
+        [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }else {
+        
+        loginVC *vc = [[loginVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    
+    }
+
 
 }
 
@@ -232,9 +244,16 @@
 
 - (void)getAvatar_nickName {
     
-    NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avatar.png"];
-    UIImage *avatar=[[UIImage alloc]initWithContentsOfFile:fullPath];
-    self.avatar.image = avatar;
+    if ([EMClient sharedClient].isLoggedIn) {
+        NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avatar.png"];
+        UIImage *avatar=[[UIImage alloc]initWithContentsOfFile:fullPath];
+        self.avatar.image = avatar;
+    }else {
+        self.avatar.image = nil;
+    
+    }
+    
+
 
 }
 
