@@ -127,7 +127,9 @@
     }]];
     
     //按钮：拍照，类型：UIAlertActionStyleDefault
-    [alert addAction:[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self takePhoto];
+    }]];
     //按钮：取消，类型：UIAlertActionStyleCancel
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
     [self presentViewController:alert animated:YES completion:nil];
@@ -151,12 +153,32 @@
 
 }
 
+- (void)takePhoto {
+    NSLog(@"点击拍照");
+    __block NSUInteger blockSourceType = 0;
+    //相机
+    blockSourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    
+    imagePickerController.delegate = self;
+    
+    imagePickerController.allowsEditing = YES;
+    
+    imagePickerController.sourceType = blockSourceType;
+    
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+
+}
+
+
 //PickerImage完成后的代理方法
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     //定义一个newPhoto，用来存放我们选择的图片。
     UIImage *newPhoto = [info objectForKey:@"UIImagePickerControllerEditedImage"];
     //把newPhono设置成头像
     self.avatar.image = newPhoto;
+    [self saveImage:newPhoto withName:@"avatar.png"];
     //关闭当前界面，即回到主界面去
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -190,10 +212,31 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.tabBarController.tabBar.hidden = NO;
+    [self getAvatar_nickName];
 
 }
+
+
+#pragma mark - 保存图片至本地沙盒
+
+- (void)saveImage:(UIImage *)currentImage withName:(NSString *)imageName
+{
+    NSData *imageData = UIImageJPEGRepresentation(currentImage, 0.8);
+    // 获取沙盒目录
+    NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:imageName];
+    NSLog(@"fullPath:%@", fullPath);
     
+    // 将图片写入文件
+    [imageData writeToFile:fullPath atomically:NO];
+}
+
+- (void)getAvatar_nickName {
     
+    NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avatar.png"];
+    UIImage *avatar=[[UIImage alloc]initWithContentsOfFile:fullPath];
+    self.avatar.image = avatar;
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
