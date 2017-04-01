@@ -11,9 +11,11 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#endif /* PrefixHeader_pch */
+
+#ifdef __OBJC__
+
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
-
-
 #import "PC_VC.h"
 #import "MsgVC.h"
 #import "PublishVC.h"
@@ -25,6 +27,8 @@
 #import "RegisterVC.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "loginVC.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "EaseUI.h"
 
-
-#endif /* PrefixHeader_pch */
+#endif

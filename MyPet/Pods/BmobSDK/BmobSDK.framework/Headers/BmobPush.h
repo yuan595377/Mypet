@@ -26,11 +26,7 @@
  */
 -(void)setQuery:(BmobQuery*)query;
 
-/**
- *  设置多个订阅频道
- *
- *  @param channelss 多个订阅频道放在数组里面
- */
+
 -(void)setChannels:(NSArray *)channels;
 
 /**

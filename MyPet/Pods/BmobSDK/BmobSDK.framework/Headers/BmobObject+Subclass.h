@@ -41,24 +41,10 @@
 -(void)sub_updateInBackgroundWithResultBlock:(BmobBooleanResultBlock)block;
 
 
-/**
- *  把bmobobject对象转成子类，对BmobObject，BmobUser，BmobRole，BmobInstallation的子类有效
- *
- *  @param obj    BmobObject对象
- *  @param kClass 父类的class
- *
- *  @return 子类的对象
- */
+
 -(instancetype)initFromBmobObject:(BmobObject *)obj  ;
 
-/**
- *  把bmobobject对象转成子类，对BmobObject，BmobUser，BmobRole，BmobInstallation的子类有效
- *
- *  @param obj    BmobObject对象
- *  @param kClass 父类的class
- *
- *  @return 子类的对象
- */
+
 +(instancetype)convertWithObject:(BmobObject *)obj;
 
 @end
