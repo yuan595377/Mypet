@@ -1,26 +1,23 @@
 //
-//  MsgVC.m
+//  conversationListVc.m
 //  MyPet
 //
-//  Created by 袁立康 on 17/3/26.
+//  Created by 袁立康 on 17/4/1.
 //  Copyright © 2017年 袁立康. All rights reserved.
 //
 
-#import "MsgVC.h"
 #import "conversationListVc.h"
-@interface MsgVC ()
+
+@interface conversationListVc ()
 
 @end
 
-@implementation MsgVC
+@implementation conversationListVc
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
+    // Do any additional setup after loading the view.
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -34,8 +34,8 @@
     [self setUpOneChildViewController:twoVC image:publishImg select_img:nil title:@"发布"];
     
     // 3.添加第3个控制器
-    MsgVC *msgVC = [[MsgVC alloc]init];
-    [self setUpOneChildViewController:msgVC image:nil select_img:nil title:@"消息"];
+    conversationListVc *conversation = [[conversationListVc alloc]init];
+    [self setUpOneChildViewController:conversation image:nil select_img:nil title:@"消息"];
     // 4.添加第4个控制器
     PC_VC *Pc_VC = [[PC_VC alloc]init];
     [self setUpOneChildViewController:Pc_VC image:nil select_img:nil title:@"我的"];

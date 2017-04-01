@@ -11,6 +11,7 @@
 		DAC6C36230785F3E8DD2CCD3 /* libPods-MyPetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14860BD93314E6982ED07B8 /* libPods-MyPetTests.a */; };
 		E9A91CA30C4D5D6E3F200CC2 /* libPods-MyPet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D401018F7BC5C18A13BC526 /* libPods-MyPet.a */; };
 		F309CD5D1E8F5575001B178C /* chatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F309CD5C1E8F5575001B178C /* chatVC.m */; };
+		F309CD601E8F89D1001B178C /* conversationListVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F309CD5F1E8F89D1001B178C /* conversationListVc.m */; };
 		F337E7681E878D2C00709A3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E7671E878D2C00709A3B /* main.m */; };
 		F337E76B1E878D2C00709A3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E76A1E878D2C00709A3B /* AppDelegate.m */; };
 		F337E76E1E878D2C00709A3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E76D1E878D2C00709A3B /* ViewController.m */; };
@@ -189,6 +190,8 @@
 		F14860BD93314E6982ED07B8 /* libPods-MyPetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F309CD5B1E8F5575001B178C /* chatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatVC.h; sourceTree = "<group>"; };
 		F309CD5C1E8F5575001B178C /* chatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatVC.m; sourceTree = "<group>"; };
+		F309CD5E1E8F89D1001B178C /* conversationListVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conversationListVc.h; sourceTree = "<group>"; };
+		F309CD5F1E8F89D1001B178C /* conversationListVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = conversationListVc.m; sourceTree = "<group>"; };
 		F337E7631E878D2C00709A3B /* MyPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F337E7671E878D2C00709A3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F337E7691E878D2C00709A3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -650,6 +653,8 @@
 			children = (
 				F337E7A71E878F9900709A3B /* MsgVC.h */,
 				F337E7A81E878F9900709A3B /* MsgVC.m */,
+				F309CD5E1E8F89D1001B178C /* conversationListVc.h */,
+				F309CD5F1E8F89D1001B178C /* conversationListVc.m */,
 				F337E7A91E878F9900709A3B /* MsgVC.xib */,
 			);
 			path = Msg_VC;
@@ -1583,6 +1588,7 @@
 				F3C8B5811E8F4E870099B846 /* PSTCollectionViewLayout.m in Sources */,
 				F3C8B5691E8F4E870099B846 /* DACircularProgressView.m in Sources */,
 				F3C8B5451E8F4E870099B846 /* EMCDDeviceManager+Remind.m in Sources */,
+				F309CD601E8F89D1001B178C /* conversationListVc.m in Sources */,
 				F3C8B5A21E8F4E870099B846 /* EaseMessageCell.m in Sources */,
 				F3C8B59F1E8F4E870099B846 /* EaseUserCell.m in Sources */,
 				F3C8B5841E8F4E870099B846 /* PSTGridLayoutItem.m in Sources */,

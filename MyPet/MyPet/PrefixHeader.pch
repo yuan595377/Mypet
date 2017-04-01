@@ -30,5 +30,6 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "EaseUI.h"
+#import "conversationListVc.h"
 
 #endif

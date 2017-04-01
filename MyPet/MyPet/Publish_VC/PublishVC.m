@@ -7,7 +7,7 @@
 //
 
 #import "PublishVC.h"
-
+#import "chatVC.h"
 @interface PublishVC ()
 
 @end
@@ -17,6 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(80, 300, 100, 50);
+    button.backgroundColor = [UIColor cyanColor];
+    [button setTitle:@"退出登录" forState:UIControlStateNormal];
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchDown];
+}
+
+- (void)logout {
+    
+    chatVC *vc = [[chatVC alloc]initWithConversationChatter:@"yuan" conversationType:EMConversationTypeChat];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
