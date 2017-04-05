@@ -19,7 +19,7 @@
 #import "NSDate+Category.h"
 #import "EaseLocalDefine.h"
 
-@interface EaseConversationListViewController ()
+@interface EaseConversationListViewController ()<EMChatManagerDelegate>
 
 @end
 
@@ -28,9 +28,29 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    [self tableViewDidTriggerHeaderRefresh];
     [self registerNotifications];
+    [self judgeBadge];
+    
+    
 }
+
+- (void)judgeBadge {
+    NSLog(@"判断消息未读数");
+    NSArray *conversations = [[EMClient sharedClient].chatManager getAllConversations];
+    int unread = 0;
+    for (EMConversation *con in conversations) {
+        unread += [con unreadMessagesCount];
+    }
+    NSLog(@"unread:%d", unread);
+    //未读消息数
+    if (unread != 0) {
+        self.navigationController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", unread];
+    }
+    
+
+}
+
 
 -(void)viewWillDisappear:(BOOL)animated
 {
@@ -41,7 +61,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
+    [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
+
+}
+
+
+
+
+- (void)didReceiveMessages:(NSArray *)aMessages {
+    
+    [self judgeBadge];
     [self tableViewDidTriggerHeaderRefresh];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -115,7 +147,9 @@
         EaseConversationModel *model = [self.dataArray objectAtIndex:indexPath.row];
         EaseMessageViewController *viewController = [[EaseMessageViewController alloc] initWithConversationChatter:model.conversation.conversationId conversationType:model.conversation.type];
         viewController.title = model.title;
+        [viewController setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:viewController animated:YES];
+        
     }
 }
 

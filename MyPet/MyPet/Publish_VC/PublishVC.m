@@ -29,7 +29,9 @@
 - (void)logout {
     
     chatVC *vc = [[chatVC alloc]initWithConversationChatter:@"yuan" conversationType:EMConversationTypeChat];
+    [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];
+    
     
 }
 
