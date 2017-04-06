@@ -26,7 +26,7 @@
     [[EMClient sharedClient]initializeSDKWithOptions:options];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    
+    self.window.backgroundColor = [UIColor whiteColor];
     
 #pragma mark 创建TabBar
     MyTabBar *myTabBar = [[MyTabBar alloc]init];

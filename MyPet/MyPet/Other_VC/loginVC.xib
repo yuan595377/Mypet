@@ -43,6 +43,15 @@
                         <action selector="login:" destination="-1" eventType="touchUpInside" id="wna-Fe-es9"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqh-nQ-QH6">
+                    <rect key="frame" x="73" y="280" width="228" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.50271213790000002" blue="0.64661156480000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="注册"/>
+                    <connections>
+                        <action selector="register:" destination="-1" eventType="touchUpInside" id="9Hh-he-E37"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="34.5" y="121.5"/>

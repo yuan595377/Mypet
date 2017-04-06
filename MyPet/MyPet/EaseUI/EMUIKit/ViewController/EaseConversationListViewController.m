@@ -62,6 +62,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
+    [self.tabBarController.tabBar setBackgroundColor:[UIColor whiteColor]];
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
 
 }

@@ -90,7 +90,6 @@
     self.nickName = [[UILabel alloc]init];
     self.nickName.text = @"古人寻旧";
     self.nickName.textAlignment = NSTextAlignmentCenter;
-    self.nickName.backgroundColor = [UIColor cyanColor];
     [self.headerView addSubview:self.nickName];
     [self.nickName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(100, 40));
@@ -107,8 +106,7 @@
 
 - (void)set {
     
-    RegisterVC *vc = [[RegisterVC alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
     
@@ -210,13 +208,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 10;
+    return 2;
 }
     
     
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
-    cell.textLabel.text = @"123";
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"我的关注";
+    }else {
+        cell.textLabel.text = @"收藏";
+    }
+    
     return cell;
 
   
