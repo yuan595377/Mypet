@@ -14,7 +14,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
@@ -24,7 +23,6 @@
     //注册环信
     EMOptions *options = [EMOptions optionsWithAppkey:@"1834751360#pan"];
     [[EMClient sharedClient]initializeSDKWithOptions:options];
-    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -32,6 +30,7 @@
     MyTabBar *myTabBar = [[MyTabBar alloc]init];
     self.window.rootViewController = myTabBar;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

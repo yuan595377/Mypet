@@ -7,7 +7,7 @@
 //
 
 #import "PC_VC.h"
-#import "vcofTest.h"
+#import "setVC.h"
 @interface PC_VC ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, retain)UITableView *tabelOfPC;
 @property (nonatomic, strong) UIImageView *headerImageView;
@@ -44,7 +44,6 @@
 
     //设置顶部背景
     self.headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
-    self.headerView.backgroundColor = [UIColor whiteColor];
     [self addAvatar_Nickname];
 
     _tabelOfPC.tableHeaderView = self.headerView;
@@ -85,31 +84,34 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeBackground)];
     [self.avatar addGestureRecognizer:tap];
     
-    
     //添加昵称
     self.nickName = [[UILabel alloc]init];
-    self.nickName.text = @"古人寻旧";
+    self.nickName.text = @"故人寻旧";
     self.nickName.textAlignment = NSTextAlignmentCenter;
     [self.headerView addSubview:self.nickName];
     [self.nickName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(100, 40));
         make.left.equalTo(self.headerView).with.offset(SCREEN_WIDTH / 2 - 50);
         make.top.equalTo(self.avatar.mas_bottom).with.offset(10);
-        
-        
     }];
   
-
 }
-
 
 
 - (void)set {
-    
+    setVC *vc = [[setVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
-    
+#pragma mark -------设置分区头
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 20)];
+    view.backgroundColor = [UIColor grayColor];
+    return view;
+}
+
+
 - (void)touchChangeBackbackground {
     
     self.avatar.userInteractionEnabled = YES;
