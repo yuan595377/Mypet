@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BHBPopView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3444FC431BB81ED10152300B15BA14B0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>557E67AA7124D2E60F8B5136999DB684</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E30566853DB61F2A777D67159A44518A</key>
+		<key>6BA8B26B18BC0EB09C8DBF1F5C23DAF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>85F9B66F6F62BD975BC1AA5A18BED3E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0346F6C54B5E7D64FE63BAAD086FFBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

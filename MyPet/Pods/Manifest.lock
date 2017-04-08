@@ -1,4 +1,5 @@
 PODS:
+  - BHBPopView (1.2.0)
   - BmobSDK (1.7.2)
   - HyphenateFullSDK (3.1.5)
   - MJRefresh (3.1.12)
@@ -7,6 +8,7 @@ PODS:
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
+  - BHBPopView
   - BmobSDK
   - HyphenateFullSDK (~> 3.1.5)
   - MJRefresh (~> 3.1.12)
@@ -15,6 +17,7 @@ DEPENDENCIES:
   - SVProgressHUD (~> 2.0.3)
 
 SPEC CHECKSUMS:
+  BHBPopView: ea1c5a614e6bbbbc64c873d52fb1b5b60378cef0
   BmobSDK: e188cb31d6a8417ab668aee821da227d7512b865
   HyphenateFullSDK: 536f76eeb0914dba766b1d5d30dee083f0805da2
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -22,6 +25,6 @@ SPEC CHECKSUMS:
   SMSSDK: 1fc8500bec6bc36b524e4de7fac4acdb784e0217
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 92952ce36843d8c63d8787647da07ea6bf50b911
+PODFILE CHECKSUM: 6a4d0538574a0eef14761023714b3c75ca150842
 
 COCOAPODS: 1.1.1

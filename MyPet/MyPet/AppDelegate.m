@@ -27,8 +27,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
 #pragma mark 创建TabBar
-    MyTabBar *myTabBar = [[MyTabBar alloc]init];
-    self.window.rootViewController = myTabBar;
+//    MyTabBar *myTabBar = [[MyTabBar alloc]init];
+//    DLTabBarController *myTabBar = [[DLTabBarController alloc]init];
+    self.window.rootViewController = [[DLTabBarController alloc]init];
     [self.window makeKeyAndVisible];
     
     return YES;

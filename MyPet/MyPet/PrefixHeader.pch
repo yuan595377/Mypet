@@ -32,4 +32,7 @@
 #import "EaseUI.h"
 #import "conversationListVc.h"
 #import "LEActionSheet.h"
+#import "DLTabBarController.h"
+#import "BHBPopView.h"
+
 #endif
