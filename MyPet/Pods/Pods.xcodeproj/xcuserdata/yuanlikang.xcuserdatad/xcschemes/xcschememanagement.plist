@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>BHBPopView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,6 +52,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>43AF37686DF6946F16C80D9E2BB1721C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>557E67AA7124D2E60F8B5136999DB684</key>
 		<dict>
 			<key>primary</key>
@@ -57,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>85F9B66F6F62BD975BC1AA5A18BED3E1</key>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E0346F6C54B5E7D64FE63BAAD086FFBF</key>
+		<key>CB39E7A64491917B41D1F4C9CCBFB876</key>
 		<dict>
 			<key>primary</key>
 			<true/>

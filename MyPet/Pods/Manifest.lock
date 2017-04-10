@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - BHBPopView (1.2.0)
   - BmobSDK (1.7.2)
   - HyphenateFullSDK (3.1.5)
@@ -8,6 +23,7 @@ PODS:
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
   - BHBPopView
   - BmobSDK
   - HyphenateFullSDK (~> 3.1.5)
@@ -17,6 +33,7 @@ DEPENDENCIES:
   - SVProgressHUD (~> 2.0.3)
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BHBPopView: ea1c5a614e6bbbbc64c873d52fb1b5b60378cef0
   BmobSDK: e188cb31d6a8417ab668aee821da227d7512b865
   HyphenateFullSDK: 536f76eeb0914dba766b1d5d30dee083f0805da2
@@ -25,6 +42,6 @@ SPEC CHECKSUMS:
   SMSSDK: 1fc8500bec6bc36b524e4de7fac4acdb784e0217
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 6a4d0538574a0eef14761023714b3c75ca150842
+PODFILE CHECKSUM: 7bcc274ba8b5137d727b2b869962a07bb6833666
 
 COCOAPODS: 1.1.1

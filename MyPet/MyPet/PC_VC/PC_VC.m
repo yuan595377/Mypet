@@ -8,6 +8,7 @@
 
 #import "PC_VC.h"
 #import "setVC.h"
+#import <BmobSDK/BmobFile.h>
 @interface PC_VC ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, retain)UITableView *tabelOfPC;
 @property (nonatomic, strong) UIImageView *headerImageView;
@@ -100,7 +101,9 @@
 
 - (void)set {
     setVC *vc = [[setVC alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+    
     
 }
 
@@ -186,6 +189,7 @@
 
 //PickerImage完成后的代理方法
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    
     //定义一个newPhoto，用来存放我们选择的图片。
     UIImage *newPhoto = [info objectForKey:@"UIImagePickerControllerEditedImage"];
     //把newPhono设置成头像

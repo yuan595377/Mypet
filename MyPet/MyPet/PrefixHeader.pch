@@ -34,5 +34,9 @@
 #import "LEActionSheet.h"
 #import "DLTabBarController.h"
 #import "BHBPopView.h"
+#import <BmobSDK/BmobFile.h>
+#import "Find_VC.h"
+#import "NewCell.h"
+#import "APPTools.h"
 
 #endif

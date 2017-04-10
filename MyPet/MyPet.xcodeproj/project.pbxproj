@@ -71,6 +71,12 @@
 		F337E7C31E87907D00709A3B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F337E7C21E87907D00709A3B /* AVFoundation.framework */; };
 		F337E7C51E87908500709A3B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F337E7C41E87908500709A3B /* AudioToolbox.framework */; };
 		F337E7C71E87908F00709A3B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F337E7C61E87908F00709A3B /* CoreMedia.framework */; };
+		F339B5E91E9B14FB0058A38C /* Find_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5E81E9B14FB0058A38C /* Find_VC.m */; };
+		F339B5ED1E9B1F2A0058A38C /* NewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5EB1E9B1F2A0058A38C /* NewCell.m */; };
+		F339B5EE1E9B1F2A0058A38C /* NewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F339B5EC1E9B1F2A0058A38C /* NewCell.xib */; };
+		F339B5F01E9BE3A60058A38C /* APPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5EF1E9BE3A60058A38C /* APPTools.m */; };
+		F339B5F41E9BE78E0058A38C /* NewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5F31E9BE78E0058A38C /* NewModel.m */; };
+		F339B5F71E9BF7620058A38C /* detailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5F61E9BF7620058A38C /* detailVC.m */; };
 		F3660FA91E88C0EE00968B62 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */; };
 		F3660FAC1E88E5F700968B62 /* vcofTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3660FAB1E88E5F700968B62 /* vcofTest.m */; };
 		F38B18081E97C832006C69F8 /* LEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B18071E97C832006C69F8 /* LEActionSheet.m */; };
@@ -310,6 +316,17 @@
 		F337E7C21E87907D00709A3B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F337E7C41E87908500709A3B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F337E7C61E87908F00709A3B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F339B5E71E9B14FB0058A38C /* Find_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Find_VC.h; sourceTree = "<group>"; };
+		F339B5E81E9B14FB0058A38C /* Find_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Find_VC.m; sourceTree = "<group>"; };
+		F339B5EA1E9B1F290058A38C /* NewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCell.h; sourceTree = "<group>"; };
+		F339B5EB1E9B1F2A0058A38C /* NewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCell.m; sourceTree = "<group>"; };
+		F339B5EC1E9B1F2A0058A38C /* NewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCell.xib; sourceTree = "<group>"; };
+		F339B5EF1E9BE3A60058A38C /* APPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPTools.m; sourceTree = "<group>"; };
+		F339B5F11E9BE3AB0058A38C /* APPTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPTools.h; sourceTree = "<group>"; };
+		F339B5F21E9BE78E0058A38C /* NewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewModel.h; sourceTree = "<group>"; };
+		F339B5F31E9BE78E0058A38C /* NewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewModel.m; sourceTree = "<group>"; };
+		F339B5F51E9BF7620058A38C /* detailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailVC.h; sourceTree = "<group>"; };
+		F339B5F61E9BF7620058A38C /* detailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailVC.m; sourceTree = "<group>"; };
 		F35A62241E88BB8800573D21 /* MyPet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPet.entitlements; sourceTree = "<group>"; };
 		F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateFullSDK.a; path = Pods/HyphenateFullSDK/HyphenateFullSDK/lib/libHyphenateFullSDK.a; sourceTree = "<group>"; };
 		F3660FAA1E88E5F700968B62 /* vcofTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcofTest.h; sourceTree = "<group>"; };
@@ -846,6 +863,7 @@
 				F337E7691E878D2C00709A3B /* AppDelegate.h */,
 				F337E76A1E878D2C00709A3B /* AppDelegate.m */,
 				F337E7A11E878EB400709A3B /* PrefixHeader.pch */,
+				F339B5E61E9B14E90058A38C /* FInd_VC */,
 				F3242B391E9883DC00A39ADD /* newTabbar */,
 				F3A9D9D21E96908E005FF25C /* im */,
 				F3C8B4181E8F4E870099B846 /* EaseUI */,
@@ -953,6 +971,22 @@
 				F3C8A95C1E8E4FF30099B846 /* loginVC.xib */,
 			);
 			path = Other_VC;
+			sourceTree = "<group>";
+		};
+		F339B5E61E9B14E90058A38C /* FInd_VC */ = {
+			isa = PBXGroup;
+			children = (
+				F339B5E71E9B14FB0058A38C /* Find_VC.h */,
+				F339B5E81E9B14FB0058A38C /* Find_VC.m */,
+				F339B5F51E9BF7620058A38C /* detailVC.h */,
+				F339B5F61E9BF7620058A38C /* detailVC.m */,
+				F339B5F21E9BE78E0058A38C /* NewModel.h */,
+				F339B5F31E9BE78E0058A38C /* NewModel.m */,
+				F339B5EA1E9B1F290058A38C /* NewCell.h */,
+				F339B5EB1E9B1F2A0058A38C /* NewCell.m */,
+				F339B5EC1E9B1F2A0058A38C /* NewCell.xib */,
+			);
+			path = FInd_VC;
 			sourceTree = "<group>";
 		};
 		F3A9D9D21E96908E005FF25C /* im */ = {
@@ -1461,6 +1495,8 @@
 		F3CB24DC1E8A8A8C00EBA1E9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F339B5F11E9BE3AB0058A38C /* APPTools.h */,
+				F339B5EF1E9BE3A60058A38C /* APPTools.m */,
 				F38B18091E97C8A8006C69F8 /* NSString+Extension.h */,
 				F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */,
 				F38B18061E97C832006C69F8 /* LEActionSheet.h */,
@@ -1644,6 +1680,7 @@
 				F3242B741E98898100A39ADD /* tabbar_compose_button@2x.png in Resources */,
 				F3242B711E98898100A39ADD /* Contents.json in Resources */,
 				F3242B721E98898100A39ADD /* tabbar_background@2x.png in Resources */,
+				F339B5EE1E9B1F2A0058A38C /* NewCell.xib in Resources */,
 				F3A9D9DE1E96908E005FF25C /* pub.png in Resources */,
 				F3242B851E98898100A39ADD /* Contents.json in Resources */,
 				F337E7B31E878FBE00709A3B /* PC_VC.xib in Resources */,
@@ -1840,6 +1877,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C8B5721E8F4E870099B846 /* NSData+EMImageContentType.m in Sources */,
+				F339B5E91E9B14FB0058A38C /* Find_VC.m in Sources */,
 				F3C8B5421E8F4E870099B846 /* EMCDDeviceManager+Media.m in Sources */,
 				F3C8B5621E8F4E870099B846 /* MWGridCell.m in Sources */,
 				F3C8B5A51E8F4E870099B846 /* EaseBubbleView+Gif.m in Sources */,
@@ -1847,6 +1885,7 @@
 				F3C8B5B31E8F4E870099B846 /* EaseRecordView.m in Sources */,
 				F3C8B5901E8F4E870099B846 /* UIViewController+HUD.m in Sources */,
 				F3C8B5741E8F4E870099B846 /* UIImage+EMGIF.m in Sources */,
+				F339B5ED1E9B1F2A0058A38C /* NewCell.m in Sources */,
 				F3C8B5AE1E8F4E870099B846 /* EaseImageView.m in Sources */,
 				F3C8B5A91E8F4E870099B846 /* EaseBubbleView+Video.m in Sources */,
 				F3C8B5951E8F4E870099B846 /* EaseEmojiEmoticons.m in Sources */,
@@ -1856,10 +1895,12 @@
 				F3242B341E98833800A39ADD /* DLTabBar.m in Sources */,
 				F337E7AA1E878F9900709A3B /* MsgVC.m in Sources */,
 				F3A9D9E81E96983D005FF25C /* setVC.m in Sources */,
+				F339B5F41E9BE78E0058A38C /* NewModel.m in Sources */,
 				F3CB24FD1E8A8A8C00EBA1E9 /* MASViewAttribute.m in Sources */,
 				F3C8B5B21E8F4E870099B846 /* EaseChatBarMoreView.m in Sources */,
 				F3C8B5831E8F4E870099B846 /* PSTGridLayoutInfo.m in Sources */,
 				F337E76E1E878D2C00709A3B /* ViewController.m in Sources */,
+				F339B5F01E9BE3A60058A38C /* APPTools.m in Sources */,
 				F3C8B5981E8F4E870099B846 /* FixFopen.c in Sources */,
 				F3C8B5631E8F4E870099B846 /* MWGridViewController.m in Sources */,
 				F337E76B1E878D2C00709A3B /* AppDelegate.m in Sources */,
@@ -1902,6 +1943,7 @@
 				F3CB25011E8A8A8C00EBA1E9 /* View+MASAdditions.m in Sources */,
 				F3C8B59B1E8F4E870099B846 /* EaseMessageViewController.m in Sources */,
 				F3C8B5941E8F4E870099B846 /* EaseEmoji.m in Sources */,
+				F339B5F71E9BF7620058A38C /* detailVC.m in Sources */,
 				F3C8B5AA1E8F4E870099B846 /* EaseBubbleView+Voice.m in Sources */,
 				F3C8B58B1E8F4E870099B846 /* EaseUserModel.m in Sources */,
 				F3CB24FC1E8A8A8C00EBA1E9 /* MASLayoutConstraint.m in Sources */,

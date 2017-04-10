@@ -34,7 +34,7 @@
     conversationListVc *messageCenter = [[conversationListVc alloc] init];
     [self addChildVc:messageCenter title:@"消息" image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
     
-    ViewController *discover = [[ViewController alloc] init];
+    Find_VC *discover = [[Find_VC alloc] init];
     [self addChildVc:discover title:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
     
    PC_VC *profile = [[PC_VC alloc] init];

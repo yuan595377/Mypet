@@ -4,6 +4,7 @@ pod 'BmobSDK'
 pod 'HyphenateFullSDK', '~> 3.1.5'
 pod 'MJRefresh', '~> 3.1.12'
 pod 'SVProgressHUD', '~> 2.0.3'
+pod 'AFNetworking', '~> 3.1.0'
 #新浪微博弹窗
 pod 'BHBPopView'
 #// Mob产品公共库
