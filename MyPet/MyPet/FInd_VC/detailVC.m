@@ -8,7 +8,7 @@
 
 #import "detailVC.h"
 
-@interface detailVC ()
+@interface detailVC ()<UIWebViewDelegate>
 
 @end
 
@@ -19,11 +19,20 @@
     // Do any additional setup after loading the view.
     
     UIWebView *view = [[UIWebView alloc]initWithFrame:self.view.frame];
+    view.delegate = self;
     NSString *url = [NSString stringWithFormat:@"http://wp.asopeixun.com/?p=%@", @4809];
     [view loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     [self.view addSubview:view];
     
 }
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    
+    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('bottomAD')[0].style.display = 'NONE'"];
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
