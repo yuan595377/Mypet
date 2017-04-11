@@ -28,6 +28,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     
+    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('box')[0].style.display = 'NONE'"];
     [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('bottomAD')[0].style.display = 'NONE'"];
     
 }

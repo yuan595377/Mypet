@@ -87,7 +87,7 @@
     
     //添加昵称
     self.nickName = [[UILabel alloc]init];
-    self.nickName.text = @"故人寻旧";
+    self.nickName.text = [EMClient sharedClient].currentUsername;
     self.nickName.textAlignment = NSTextAlignmentCenter;
     [self.headerView addSubview:self.nickName];
     [self.nickName mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -246,6 +246,23 @@
     // 获取沙盒目录
     NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:imageName];
     NSLog(@"fullPath:%@", fullPath);
+    BmobFile *file = [[BmobFile alloc]initWithFilePath:fullPath];
+    BmobObject *obj = [[BmobObject alloc]initWithClassName:[EMClient sharedClient].currentUsername];
+    
+    [file saveInBackground:^(BOOL isSuccessful, NSError *error) {
+        if (isSuccessful) {
+            [obj setObject:file  forKey:@"avatar"];
+            //此处相当于新建一条记录,         //关联至已有的记录请使用 [obj updateInBackground];
+            [obj saveInBackground];
+            //打印file文件的url地址
+            NSLog(@"file1.url:%@",file.url);
+            [SVProgressHUD dismiss];
+        }
+    } withProgressBlock:^(CGFloat progress) {
+        
+        [SVProgressHUD showProgress:progress status:nil];
+        
+    }];
     
     // 将图片写入文件
     [imageData writeToFile:fullPath atomically:NO];
@@ -254,9 +271,10 @@
 - (void)getAvatar_nickName {
     
     if ([EMClient sharedClient].isLoggedIn) {
-        NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avatar.png"];
-        UIImage *avatar=[[UIImage alloc]initWithContentsOfFile:fullPath];
-        self.avatar.image = avatar;
+        BmobObject *obj = [[BmobObject alloc]initWithClassName:[EMClient sharedClient].currentUsername];
+        BmobFile *file = [obj objectForKey:@"avatar"];
+        NSLog(@"getAvatar_nickName_url:%@", file.url);
+        self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:file.url]]];
     }else {
         self.avatar.image = nil;
     

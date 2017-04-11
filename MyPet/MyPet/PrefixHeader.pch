@@ -39,4 +39,7 @@
 #import "NewCell.h"
 #import "APPTools.h"
 
+#import <BmobSDK/BmobFile.h>
+
+
 #endif

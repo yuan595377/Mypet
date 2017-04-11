@@ -37,7 +37,7 @@
     Find_VC *discover = [[Find_VC alloc] init];
     [self addChildVc:discover title:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
     
-   PC_VC *profile = [[PC_VC alloc] init];
+    PC_VC *profile = [[PC_VC alloc] init];
     [self addChildVc:profile title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
 }
 
@@ -79,6 +79,7 @@
     [BHBPopView showToView:self.view.window withItems:@[item0,item1]andSelectBlock:^(BHBItem *item) {
         if ([item isKindOfClass:[BHBGroup class]]) {
             NSLog(@"选中%@分组",item.title);
+            
         }else{
             NSLog(@"选中%@项",item.title);
         }
