@@ -81,6 +81,7 @@
 		F3660FAC1E88E5F700968B62 /* vcofTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3660FAB1E88E5F700968B62 /* vcofTest.m */; };
 		F38B18081E97C832006C69F8 /* LEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B18071E97C832006C69F8 /* LEActionSheet.m */; };
 		F38B180B1E97C8A8006C69F8 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */; };
+		F39C7F3B1E9E32BA008705C6 /* welcome.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F39C7F3A1E9E32BA008705C6 /* welcome.jpeg */; };
 		F3A9D9D91E96908E005FF25C /* msg-2.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A9D9D31E96908E005FF25C /* msg-2.png */; };
 		F3A9D9DA1E96908E005FF25C /* msg.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A9D9D41E96908E005FF25C /* msg.png */; };
 		F3A9D9DB1E96908E005FF25C /* my-2.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A9D9D51E96908E005FF25C /* my-2.png */; };
@@ -335,6 +336,7 @@
 		F38B18071E97C832006C69F8 /* LEActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEActionSheet.m; sourceTree = "<group>"; };
 		F38B18091E97C8A8006C69F8 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		F39C7F3A1E9E32BA008705C6 /* welcome.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcome.jpeg; sourceTree = "<group>"; };
 		F3A9D9D31E96908E005FF25C /* msg-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "msg-2.png"; sourceTree = "<group>"; };
 		F3A9D9D41E96908E005FF25C /* msg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msg.png; sourceTree = "<group>"; };
 		F3A9D9D51E96908E005FF25C /* my-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my-2.png"; sourceTree = "<group>"; };
@@ -996,6 +998,7 @@
 				F3A9D9D41E96908E005FF25C /* msg.png */,
 				F3A9D9E31E969743005FF25C /* setting.png */,
 				F3A9D9D51E96908E005FF25C /* my-2.png */,
+				F39C7F3A1E9E32BA008705C6 /* welcome.jpeg */,
 				F3A9D9D61E96908E005FF25C /* my.png */,
 				F3A9D9D71E96908E005FF25C /* pub-2.png */,
 				F3A9D9D81E96908E005FF25C /* pub.png */,
@@ -1684,6 +1687,7 @@
 				F3A9D9DE1E96908E005FF25C /* pub.png in Resources */,
 				F3242B851E98898100A39ADD /* Contents.json in Resources */,
 				F337E7B31E878FBE00709A3B /* PC_VC.xib in Resources */,
+				F39C7F3B1E9E32BA008705C6 /* welcome.jpeg in Resources */,
 				F3242B7E1E98898100A39ADD /* tabbar_discover_selected@2x.png in Resources */,
 				F3CB24F81E8A8A8C00EBA1E9 /* Info.plist in Resources */,
 				F337E7A61E878F7B00709A3B /* HomeVC.xib in Resources */,
