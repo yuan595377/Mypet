@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +19,7 @@
     
     //注册bmob
     [Bmob registerWithAppKey:@"5edb7a137c535854844cb92b8c1b2149"];
-    
+    [SMSSDK registerApp:@"133daf526d52f" withSecret:@"0541ccfbdab6bc6b97575558b0fdb3cc"];
     //注册环信
     EMOptions *options = [EMOptions optionsWithAppkey:@"1834751360#pan"];
     [[EMClient sharedClient]initializeSDKWithOptions:options];
@@ -27,9 +27,20 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
 #pragma mark 创建TabBar
+    
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]){
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+        //第一次启动
+
+        //不是第一次启动了
+        self.window.rootViewController = [[ViewController alloc]init];
+        
+    }else{
+        self.window.rootViewController = [[ViewController alloc]init];
+
+    }
 //    MyTabBar *myTabBar = [[MyTabBar alloc]init];
 //    DLTabBarController *myTabBar = [[DLTabBarController alloc]init];
-    self.window.rootViewController = [[DLTabBarController alloc]init];
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -62,5 +73,23 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL) isFirstLoad{
+    NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary]
+                objectForKey:@"CFBundleShortVersionString"];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *lastRunVersion = [defaults objectForKey:LAST_RUN_VERSION_KEY];
+    
+    if (!lastRunVersion) {
+        [defaults setObject:currentVersion forKey:LAST_RUN_VERSION_KEY];
+        return YES;
+    }
+    else if (![lastRunVersion isEqualToString:currentVersion]) {
+        [defaults setObject:currentVersion forKey:LAST_RUN_VERSION_KEY];
+        return YES;  
+    }  
+    return NO;  
+}
 
 @end

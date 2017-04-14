@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
-
+#import "DLTabBarController.h"
 @interface ViewController ()
+
+@property (nonatomic, retain)UIImageView *image_logo;
+@property (nonatomic, retain)UIButton *button_login;
+@property (nonatomic, retain)UIButton *button_register;
+@property (nonatomic, retain)UIButton *button_try;
+
+
 
 @end
 
@@ -17,6 +24,86 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self setViews];
+}
+
+
+- (void)setViews{
+    //logo
+    self.image_logo = [[UIImageView alloc]init];
+    [self.view addSubview:self.image_logo];
+    self.image_logo.image = [UIImage imageNamed:@"1logo.jpeg"];
+    [self.image_logo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(80, 80));
+        make.left.equalTo(self.view).with.offset(SCREEN_WIDTH / 2 - 40);
+        make.top.equalTo(self.view.mas_top).with.offset(140);
+    }];
+    //login
+    self.button_login = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.button_login];
+    [self.button_login setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    self.button_login.layer.borderWidth=1;//设置边框的宽度
+    self.button_login.layer.cornerRadius = 18;
+    self.button_login.layer.masksToBounds = YES;
+    self.button_login.layer.borderColor=[[UIColor redColor]CGColor];
+    [self.button_login setTitle:@"手机号登录" forState:UIControlStateNormal];
+    [self.button_login mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 100, 40));
+        make.left.equalTo(self.view).with.offset(50);
+        make.top.equalTo(self.image_logo.mas_bottom).with.offset(60);
+    }];
+    [self.button_login addTarget:self action:@selector(loginUser) forControlEvents:UIControlEventTouchDown];
+    
+    //register
+    self.button_register = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.button_register];
+    [self.button_register setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    self.button_register.layer.borderWidth=1;//设置边框的宽度
+    self.button_register.layer.cornerRadius = 18;
+    self.button_register.layer.masksToBounds = YES;
+    self.button_register.layer.borderColor=[[UIColor redColor]CGColor];
+    [self.button_register setTitle:@"注册" forState:UIControlStateNormal];
+    [self.button_register mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 100, 40));
+        make.left.equalTo(self.view).with.offset(50);
+        make.top.equalTo(self.button_login.mas_bottom).with.offset(10);
+    }];
+    [self.button_register addTarget:self action:@selector(registerUser) forControlEvents:UIControlEventTouchDown];
+    
+    self.button_try = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.button_try];
+    [self.button_try setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [self.button_try setTitle:@"游客试用" forState:UIControlStateNormal];
+    self.button_try.titleLabel.font = [UIFont systemFontOfSize:15];
+    [self.button_try mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 100, 40));
+        make.left.equalTo(self.view).with.offset(50);
+        make.top.equalTo(self.button_register.mas_bottom).with.offset(5);
+    }];
+    [self.button_try addTarget:self action:@selector(try) forControlEvents:UIControlEventTouchDown];
+
+}
+
+- (void)loginUser{
+    loginVC *vc = [[loginVC alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+    
+
+
+}
+
+- (void)registerUser{
+    
+    RegisterVC *vc = [[RegisterVC alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+
+
+}
+
+- (void)try {
+    
+    [UIApplication sharedApplication].keyWindow.rootViewController = [[DLTabBarController alloc]init];
+
 }
 
 

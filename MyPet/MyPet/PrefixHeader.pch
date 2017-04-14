@@ -16,6 +16,7 @@
 #ifdef __OBJC__
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define LAST_RUN_VERSION_KEY @"last_run_version_of_application"
 #import "PC_VC.h"
 #import "MsgVC.h"
 #import "PublishVC.h"
@@ -38,7 +39,7 @@
 #import "Find_VC.h"
 #import "NewCell.h"
 #import "APPTools.h"
-
+#import <SMSSDK/SMS_SDK/SMSSDK.h>
 #import <BmobSDK/BmobFile.h>
 
 

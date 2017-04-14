@@ -7,7 +7,7 @@
 //
 
 #import "setVC.h"
-
+#import "ViewController.h"
 @interface setVC ()<LEActionSheetDelegate>
 
 @end
@@ -46,10 +46,11 @@
 - (void)logout {
     
   [[EMClient sharedClient] logout:YES completion:^(EMError *aError) {
-      loginVC *vc = [[loginVC alloc]init];
-      [self.navigationController pushViewController:vc animated:YES];
+      [self dismissViewControllerAnimated:YES completion:nil];
+      [UIApplication sharedApplication].keyWindow.rootViewController = [[ViewController alloc]init];
       
   }];
+    
 
 }
 

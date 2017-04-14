@@ -9,6 +9,7 @@
 #import "PC_VC.h"
 #import "setVC.h"
 #import <BmobSDK/BmobFile.h>
+#import "ViewController.h"
 @interface PC_VC ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, retain)UITableView *tabelOfPC;
 @property (nonatomic, strong) UIImageView *headerImageView;
@@ -143,8 +144,8 @@
         [self presentViewController:alert animated:YES completion:nil];
     }else {
         
-        loginVC *vc = [[loginVC alloc]init];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [UIApplication sharedApplication].keyWindow.rootViewController = [[ViewController alloc]init];
     
     }
 

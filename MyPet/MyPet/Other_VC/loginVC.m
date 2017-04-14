@@ -29,6 +29,7 @@
         [[EMClient sharedClient].options setIsAutoLogin:YES];
         [self dismissViewControllerAnimated:YES completion:nil];
         [self.navigationController popViewControllerAnimated:YES];
+        [UIApplication sharedApplication].keyWindow.rootViewController = [[DLTabBarController alloc]init];
     }
 }
 

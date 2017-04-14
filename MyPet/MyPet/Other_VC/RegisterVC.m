@@ -32,12 +32,23 @@
     [button setTitle:@"注册" forState:UIControlStateNormal];
     [self.view addSubview:button];
     [button addTarget:self action:@selector(registerq) forControlEvents:UIControlEventTouchDown];
-
+  
 
 }
 
 - (void)registerq {
     NSLog(@"点击注册");
+    
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:@"18824620912" zone:@"86" customIdentifier:nil result:^(NSError *error) {
+        if (!error) {
+            NSLog(@"获取验证码成功");
+        }else{
+            NSLog(@"%@", error);
+        
+        }
+        
+    }];
+    
     EMError *error = [[EMClient sharedClient] registerWithUsername:self.userName.text password:self.password.text];
     
     if (error==nil) {
