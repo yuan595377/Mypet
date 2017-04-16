@@ -19,6 +19,9 @@ PODS:
   - HyphenateFullSDK (3.1.5)
   - MJRefresh (3.1.12)
   - MOBFoundation_IDFA (2.2.3)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SMSSDK (2.0.8)
   - SVProgressHUD (2.0.3)
 
@@ -29,6 +32,7 @@ DEPENDENCIES:
   - HyphenateFullSDK (~> 3.1.5)
   - MJRefresh (~> 3.1.12)
   - MOBFoundation_IDFA
+  - SDWebImage (~> 3.8.2)
   - SMSSDK
   - SVProgressHUD (~> 2.0.3)
 
@@ -39,9 +43,10 @@ SPEC CHECKSUMS:
   HyphenateFullSDK: 536f76eeb0914dba766b1d5d30dee083f0805da2
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MOBFoundation_IDFA: bdc119aa1dd48c741d913695dcecfbef350555df
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SMSSDK: 1fc8500bec6bc36b524e4de7fac4acdb784e0217
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 7bcc274ba8b5137d727b2b869962a07bb6833666
+PODFILE CHECKSUM: f93a124bd14dbaa0aa10223b1ebb548dc452a4d0
 
 COCOAPODS: 1.1.1

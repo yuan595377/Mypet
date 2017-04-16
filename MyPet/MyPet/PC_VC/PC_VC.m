@@ -14,7 +14,7 @@
 @property (nonatomic, retain)UITableView *tabelOfPC;
 @property (nonatomic, strong) UIImageView *headerImageView;
 @property (nonatomic, retain) UIView *headerView;
-@property (nonatomic, strong) UIImageView *avatar;
+@property (nonatomic, retain) UIImageView *avatar;
 @property (nonatomic, strong) UILabel *nickName;
 @end
 
@@ -252,12 +252,12 @@
     
     [file saveInBackground:^(BOOL isSuccessful, NSError *error) {
         if (isSuccessful) {
-            [obj setObject:file  forKey:@"avatar"];
+            [obj setObject:file forKey:@"li"];
             //此处相当于新建一条记录,         //关联至已有的记录请使用 [obj updateInBackground];
             [obj saveInBackground];
             //打印file文件的url地址
-            NSLog(@"file1.url:%@",file.url);
-           self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:file.url]]];
+            NSLog(@"file1.url:%@,obj:%@",file.url,obj);
+            [self.avatar sd_setImageWithURL:[NSURL URLWithString:file.url]];
             [SVProgressHUD dismiss];
         }
     } withProgressBlock:^(CGFloat progress) {
@@ -272,19 +272,16 @@
 
 - (void)getAvatar_nickName {
     
-    if ([EMClient sharedClient].isLoggedIn) {
-        BmobObject *obj = [[BmobObject alloc]initWithClassName:[EMClient sharedClient].currentUsername];
-        BmobFile *file = [obj objectForKey:@"avatar"];
-        [BmobFile filesDeleteBatchWithArray:array resultBlock:^(NSArray *array, BOOL isSuccessful, NSError *error) {
-            NSLog(@"fail delete array %@",array);
-            NSLog(@"error %@",error.localizedDescription);
-            NSLog(@"issuccessful %i",isSuccessful);
-        }];
-        self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:file.url]]];
-    }else {
-        self.avatar.image = nil;
-    
-    }
+//    if ([EMClient sharedClient].isLoggedIn) {
+//        BmobObject *obj = [[BmobObject alloc]initWithClassName:[EMClient sharedClient].currentUsername];
+//        
+//        BmobFile *file = (BmobFile*)[obj objectForKey:@"li"];
+//        NSLog(@"url:%@, file:%@, obj:%@", file.url, file, obj);
+//        self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:file.url]]];
+//    }else {
+//        self.avatar.image = nil;
+//    
+//    }
     
 
 
