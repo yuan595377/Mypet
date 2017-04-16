@@ -77,12 +77,15 @@
     
     //添加popview
     [BHBPopView showToView:self.view.window withItems:@[item0,item1]andSelectBlock:^(BHBItem *item) {
-        if ([item isKindOfClass:[BHBGroup class]]) {
-            NSLog(@"选中%@分组",item.title);
-            
-        }else{
-            NSLog(@"选中%@项",item.title);
+        if ([item.title  isEqual: @"Text"]) {
+            PB_vc *vc = [[PB_vc alloc]init];
+            [self presentViewController:vc animated:YES completion:nil];
+        }else {
+        
+        
+        
         }
+        
     }];
     
 }

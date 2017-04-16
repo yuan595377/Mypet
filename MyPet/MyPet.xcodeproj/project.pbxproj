@@ -209,6 +209,7 @@
 		F3CB25001E8A8A8C00EBA1E9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB24F21E8A8A8C00EBA1E9 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		F3CB25011E8A8A8C00EBA1E9 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB24F41E8A8A8C00EBA1E9 /* View+MASAdditions.m */; };
 		F3CB25021E8A8A8C00EBA1E9 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB24F71E8A8A8C00EBA1E9 /* ViewController+MASAdditions.m */; };
+		F3FB43F01EA3BE0C005C226B /* PB_vc.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FB43EF1EA3BE0C005C226B /* PB_vc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -598,6 +599,8 @@
 		F3CB24F51E8A8A8C00EBA1E9 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		F3CB24F61E8A8A8C00EBA1E9 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		F3CB24F71E8A8A8C00EBA1E9 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		F3FB43EE1EA3BE0C005C226B /* PB_vc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PB_vc.h; sourceTree = "<group>"; };
+		F3FB43EF1EA3BE0C005C226B /* PB_vc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PB_vc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -973,6 +976,8 @@
 				F3C8A95A1E8E4FF30099B846 /* loginVC.h */,
 				F3C8A95B1E8E4FF30099B846 /* loginVC.m */,
 				F3C8A95C1E8E4FF30099B846 /* loginVC.xib */,
+				F3FB43EE1EA3BE0C005C226B /* PB_vc.h */,
+				F3FB43EF1EA3BE0C005C226B /* PB_vc.m */,
 			);
 			path = Other_VC;
 			sourceTree = "<group>";
@@ -2003,6 +2008,7 @@
 				F3C8B57D1E8F4E870099B846 /* PSTCollectionViewController.m in Sources */,
 				F337E7A01E878E8100709A3B /* MyTabBar.m in Sources */,
 				F3C8B5611E8F4E870099B846 /* MWCaptionView.m in Sources */,
+				F3FB43F01EA3BE0C005C226B /* PB_vc.m in Sources */,
 				F3C8B58F1E8F4E870099B846 /* UIViewController+DismissKeyboard.m in Sources */,
 				F3C8B5431E8F4E870099B846 /* EMCDDeviceManager+Microphone.m in Sources */,
 				F3C8B5A71E8F4E870099B846 /* EaseBubbleView+Location.m in Sources */,

@@ -257,6 +257,7 @@
             [obj saveInBackground];
             //打印file文件的url地址
             NSLog(@"file1.url:%@",file.url);
+           self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:file.url]]];
             [SVProgressHUD dismiss];
         }
     } withProgressBlock:^(CGFloat progress) {
@@ -274,7 +275,11 @@
     if ([EMClient sharedClient].isLoggedIn) {
         BmobObject *obj = [[BmobObject alloc]initWithClassName:[EMClient sharedClient].currentUsername];
         BmobFile *file = [obj objectForKey:@"avatar"];
-        NSLog(@"getAvatar_nickName_url:%@", file.url);
+        [BmobFile filesDeleteBatchWithArray:array resultBlock:^(NSArray *array, BOOL isSuccessful, NSError *error) {
+            NSLog(@"fail delete array %@",array);
+            NSLog(@"error %@",error.localizedDescription);
+            NSLog(@"issuccessful %i",isSuccessful);
+        }];
         self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:file.url]]];
     }else {
         self.avatar.image = nil;
