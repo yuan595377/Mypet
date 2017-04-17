@@ -14,7 +14,7 @@
 @property (nonatomic, retain)UIButton *button_login;
 @property (nonatomic, retain)UIButton *button_register;
 @property (nonatomic, retain)UIButton *button_try;
-
+@property (nonatomic, retain)UIButton *button_close;
 
 
 @end
@@ -81,6 +81,19 @@
         make.top.equalTo(self.button_register.mas_bottom).with.offset(5);
     }];
     [self.button_try addTarget:self action:@selector(try) forControlEvents:UIControlEventTouchDown];
+    
+    self.button_close = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.button_close];
+    [self.button_close setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [self.button_close setTitle:@"试用" forState:UIControlStateNormal];
+    [self.button_close setImage:[UIImage imageNamed:@"close.png"] forState:UIControlStateNormal];
+    self.button_close.titleLabel.font = [UIFont systemFontOfSize:15];
+    [self.button_close mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+        make.left.equalTo(self.view).with.offset(10);
+        make.top.equalTo(self.view).with.offset(30);
+    }];
+    [self.button_close addTarget:self action:@selector(try) forControlEvents:UIControlEventTouchDown];
 
 }
 

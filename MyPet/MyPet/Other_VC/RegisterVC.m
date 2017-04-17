@@ -7,11 +7,13 @@
 //
 
 #import "RegisterVC.h"
-
+#import "RegisterVC_2.h"
 @interface RegisterVC ()
-@property (weak, nonatomic) IBOutlet UITextField *userName;
+@property (nonatomic, retain)UIButton *button_close;
+@property (nonatomic, retain)UITextField *username;
+@property (nonatomic, retain)UITextField *password;
+@property (nonatomic, retain)UIButton *login;
 
-@property (weak, nonatomic) IBOutlet UITextField *password;
 
 @end
 
@@ -26,48 +28,85 @@
 
 
 - (void)creatButton {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(80, 300, 100, 50);
-    button.backgroundColor = [UIColor cyanColor];
-    [button setTitle:@"注册" forState:UIControlStateNormal];
-    [self.view addSubview:button];
-    [button addTarget:self action:@selector(registerq) forControlEvents:UIControlEventTouchDown];
-  
-
-}
-
-- (void)registerq {
-    NSLog(@"点击注册");
-    
-    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:@"18824620912" zone:@"86" customIdentifier:nil result:^(NSError *error) {
-        if (!error) {
-            NSLog(@"获取验证码成功");
-        }else{
-            NSLog(@"%@", error);
-        
-        }
-        
+    self.button_close = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.button_close];
+    [self.button_close setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [self.button_close setTitle:@"试用" forState:UIControlStateNormal];
+    [self.button_close setImage:[UIImage imageNamed:@"back2.png"] forState:UIControlStateNormal];
+    self.button_close.titleLabel.font = [UIFont systemFontOfSize:15];
+    [self.button_close mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+        make.left.equalTo(self.view).with.offset(10);
+        make.top.equalTo(self.view).with.offset(30);
     }];
     
-    EMError *error = [[EMClient sharedClient] registerWithUsername:self.userName.text password:self.password.text];
+    [self.button_close addTarget:self action:@selector(try) forControlEvents:UIControlEventTouchDown];
     
-    if (error==nil) {
-        NSLog(@"环信注册成功");
-        //注册成功后立即登录
-        EMError *error = [[EMClient sharedClient] loginWithUsername:self.userName.text password:self.password.text];
-        if (!error) {
-            [SVProgressHUD showSuccessWithStatus:@"注册成功"];
-            NSTimeInterval time = 1;
-            [SVProgressHUD dismissWithDelay:time];
-            [self.navigationController popViewControllerAnimated:YES];
-        }
-        
-        
-    }else {
-        NSLog(@"注册失败:%@", error.description);
-    }
+    UILabel *label = [[UILabel alloc]init];
+    [self.view addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(60, 40));
+        make.left.equalTo(self.view).with.offset(80);
+        make.top.equalTo(self.view.mas_top).with.offset(80);
+    }];
+    label.text = @"+86";
+    
+    self.username = [[UITextField alloc]init];
+    [self.view addSubview:self.username];
+    self.username.placeholder = @"输入手机号";
+    self.username.layer.borderWidth = 0.8;
+    self.username.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor colorWithRed:0.84 green:0.84 blue:0.85 alpha:1.00]);
+    [self.username mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 100, 40));
+        make.left.equalTo(self.view).with.offset(150);
+        make.top.equalTo(self.view.mas_top).with.offset(80);
+    }];
+    
+    self.password = [[UITextField alloc]init];
+    [self.view addSubview:self.password];
+    self.password.placeholder = @"设置登录密码，不少于6位";
+    [self.password setSecureTextEntry:YES];
+    self.password.layer.borderWidth = 0.8;
+    self.password.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor colorWithRed:0.84 green:0.84 blue:0.85 alpha:1.00]);
+    [self.password mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 100, 40));
+        make.left.equalTo(self.view).with.offset(80);
+        make.top.equalTo(self.username.mas_bottom).with.offset(0);
+    }];
+
+    self.login = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.login];
+    [self.login setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.login setTitle:@"下一步" forState:UIControlStateNormal];
+    [self.login setBackgroundImage:[UIImage imageNamed:@"login2.jpeg"] forState:UIControlStateNormal];
+    self.login.titleLabel.font = [UIFont systemFontOfSize:15];
+    [self.login mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(200, 40));
+        make.left.equalTo(self.view).with.offset(SCREEN_WIDTH / 2 - 100);
+        make.top.equalTo(self.password.mas_bottom).with.offset(30);
+    }];
+    [self.login addTarget:self action:@selector(register22) forControlEvents:UIControlEventTouchDown];
 
 }
+
+
+-(void)try {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+
+- (void)register22 {
+    
+    RegisterVC_2 *vc = [[RegisterVC_2 alloc]init];
+    vc.password = self.password.text;
+    vc.userName = self.username.text;
+    [self presentViewController:vc animated:YES completion:nil];
+
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -79,6 +79,11 @@
 		F339B5F71E9BF7620058A38C /* detailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5F61E9BF7620058A38C /* detailVC.m */; };
 		F3660FA91E88C0EE00968B62 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */; };
 		F3660FAC1E88E5F700968B62 /* vcofTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3660FAB1E88E5F700968B62 /* vcofTest.m */; };
+		F36B582D1EA514B40023A7FD /* close2.png in Resources */ = {isa = PBXBuildFile; fileRef = F36B582C1EA514B40023A7FD /* close2.png */; };
+		F36B582F1EA5156C0023A7FD /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = F36B582E1EA5156C0023A7FD /* close.png */; };
+		F36B58311EA515E20023A7FD /* login2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F36B58301EA515E20023A7FD /* login2.jpeg */; };
+		F36B58331EA522580023A7FD /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = F36B58321EA522580023A7FD /* back2.png */; };
+		F36B58361EA527510023A7FD /* RegisterVC_2.m in Sources */ = {isa = PBXBuildFile; fileRef = F36B58351EA527510023A7FD /* RegisterVC_2.m */; };
 		F38B18081E97C832006C69F8 /* LEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B18071E97C832006C69F8 /* LEActionSheet.m */; };
 		F38B180B1E97C8A8006C69F8 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */; };
 		F39C7F3B1E9E32BA008705C6 /* welcome.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F39C7F3A1E9E32BA008705C6 /* welcome.jpeg */; };
@@ -334,6 +339,12 @@
 		F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateFullSDK.a; path = Pods/HyphenateFullSDK/HyphenateFullSDK/lib/libHyphenateFullSDK.a; sourceTree = "<group>"; };
 		F3660FAA1E88E5F700968B62 /* vcofTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcofTest.h; sourceTree = "<group>"; };
 		F3660FAB1E88E5F700968B62 /* vcofTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcofTest.m; sourceTree = "<group>"; };
+		F36B582C1EA514B40023A7FD /* close2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close2.png; path = ../close2.png; sourceTree = "<group>"; };
+		F36B582E1EA5156C0023A7FD /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		F36B58301EA515E20023A7FD /* login2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login2.jpeg; sourceTree = "<group>"; };
+		F36B58321EA522580023A7FD /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2.png; sourceTree = "<group>"; };
+		F36B58341EA527510023A7FD /* RegisterVC_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC_2.h; sourceTree = "<group>"; };
+		F36B58351EA527510023A7FD /* RegisterVC_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC_2.m; sourceTree = "<group>"; };
 		F38B18061E97C832006C69F8 /* LEActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEActionSheet.h; sourceTree = "<group>"; };
 		F38B18071E97C832006C69F8 /* LEActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEActionSheet.m; sourceTree = "<group>"; };
 		F38B18091E97C8A8006C69F8 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
@@ -970,6 +981,8 @@
 				F337E79F1E878E8100709A3B /* MyTabBar.m */,
 				F3C8A93E1E8E3B8F0099B846 /* RegisterVC.h */,
 				F3C8A93F1E8E3B900099B846 /* RegisterVC.m */,
+				F36B58341EA527510023A7FD /* RegisterVC_2.h */,
+				F36B58351EA527510023A7FD /* RegisterVC_2.m */,
 				F3C8A9401E8E3B900099B846 /* RegisterVC.xib */,
 				F309CD5B1E8F5575001B178C /* chatVC.h */,
 				F309CD5C1E8F5575001B178C /* chatVC.m */,
@@ -1001,6 +1014,10 @@
 		F3A9D9D21E96908E005FF25C /* im */ = {
 			isa = PBXGroup;
 			children = (
+				F36B582C1EA514B40023A7FD /* close2.png */,
+				F36B58321EA522580023A7FD /* back2.png */,
+				F36B582E1EA5156C0023A7FD /* close.png */,
+				F36B58301EA515E20023A7FD /* login2.jpeg */,
 				F3A8D13E1EA12E10001C12C4 /* 1logo.jpeg */,
 				F3A9D9D31E96908E005FF25C /* msg-2.png */,
 				F3A9D9D41E96908E005FF25C /* msg.png */,
@@ -1673,7 +1690,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36B582D1EA514B40023A7FD /* close2.png in Resources */,
 				F337E7761E878D2C00709A3B /* LaunchScreen.storyboard in Resources */,
+				F36B582F1EA5156C0023A7FD /* close.png in Resources */,
 				F3C8B5B51E8F4E870099B846 /* EaseUIResource.bundle in Resources */,
 				F3242B7A1E98898100A39ADD /* tabbar_compose_icon_add_highlighted@2x.png in Resources */,
 				F3A9D9DD1E96908E005FF25C /* pub-2.png in Resources */,
@@ -1692,6 +1711,7 @@
 				F3242B711E98898100A39ADD /* Contents.json in Resources */,
 				F3242B721E98898100A39ADD /* tabbar_background@2x.png in Resources */,
 				F339B5EE1E9B1F2A0058A38C /* NewCell.xib in Resources */,
+				F36B58331EA522580023A7FD /* back2.png in Resources */,
 				F3A9D9DE1E96908E005FF25C /* pub.png in Resources */,
 				F3242B851E98898100A39ADD /* Contents.json in Resources */,
 				F337E7B31E878FBE00709A3B /* PC_VC.xib in Resources */,
@@ -1720,6 +1740,7 @@
 				F3242B761E98898100A39ADD /* tabbar_compose_button_highlighted@2x.png in Resources */,
 				F3242B821E98898100A39ADD /* tabbar_home_selected@2x.png in Resources */,
 				F3C8A9421E8E3B900099B846 /* RegisterVC.xib in Resources */,
+				F36B58311EA515E20023A7FD /* login2.jpeg in Resources */,
 				F3242B7F1E98898100A39ADD /* Contents.json in Resources */,
 				F3242B801E98898100A39ADD /* tabbar_home@2x.png in Resources */,
 				F337E7711E878D2C00709A3B /* Main.storyboard in Resources */,
@@ -1917,6 +1938,7 @@
 				F3C8B5981E8F4E870099B846 /* FixFopen.c in Sources */,
 				F3C8B5631E8F4E870099B846 /* MWGridViewController.m in Sources */,
 				F337E76B1E878D2C00709A3B /* AppDelegate.m in Sources */,
+				F36B58361EA527510023A7FD /* RegisterVC_2.m in Sources */,
 				F3C8B5A61E8F4E870099B846 /* EaseBubbleView+Image.m in Sources */,
 				F3C8B5701E8F4E870099B846 /* EMSDWebImagePrefetcher.m in Sources */,
 				F3C8B5921E8F4E870099B846 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,

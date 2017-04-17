@@ -29,19 +29,25 @@
     //创建BmobQuery实例，指定对应要操作的数据表名称
     BmobQuery *query = [BmobQuery queryWithClassName:[EMClient sharedClient].currentUsername];
     //按updatedAt进行降序排列
-    [query orderByDescending:@"updatedAt"];
-    //返回最多20个结果
-    query.limit = 20;
-    //执行查询
-    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-        
-        //处理查询结果
-        BmobObject *obj =array[0];
-        self.label.text  = [obj objectForKey:@"title"];
-        
-    
-    }];
-    [self.view addSubview:self.label];
+    if (query != nil) {
+        [query orderByDescending:@"updatedAt"];
+        //返回最多20个结果
+        query.limit = 20;
+        //执行查询
+        [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+            
+            //处理查询结果
+            BmobObject *obj =array[0];
+            if (obj) {
+                self.label.text  = [obj objectForKey:@"title"];
+            }
+            
+            
+            
+        }];
+
+    }
+        [self.view addSubview:self.label];
    
 }
 
