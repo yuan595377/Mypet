@@ -11,5 +11,6 @@
 @interface CellOfInfo : UITableViewCell
 @property (nonatomic, retain)UILabel *title;
 @property (nonatomic, retain)InfoModel *model;
-
+@property (nonatomic, retain)UILabel *name;
+@property (nonatomic, retain)UIButton *contact;
 @end

@@ -52,6 +52,7 @@
 //home
 #import "InfoModel.h"
 #import "CellOfInfo.h"
-
-
+#import "CellOfMyPub.h"
+#import "PubModel.h"
+#import "MyPubVC.h"
 #endif

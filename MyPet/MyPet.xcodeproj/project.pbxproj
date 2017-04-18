@@ -47,6 +47,9 @@
 		F3242B8A1E98898100A39ADD /* tabbar_profile_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3242B6D1E98898100A39ADD /* tabbar_profile_selected@2x.png */; };
 		F3372CC81EA657020035EA34 /* CellOfInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3372CC71EA657020035EA34 /* CellOfInfo.m */; };
 		F3372CCB1EA657330035EA34 /* InfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3372CCA1EA657330035EA34 /* InfoModel.m */; };
+		F3372CCF1EA66C340035EA34 /* MyPubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3372CCE1EA66C340035EA34 /* MyPubVC.m */; };
+		F3372CD21EA66D190035EA34 /* CellOfMyPub.m in Sources */ = {isa = PBXBuildFile; fileRef = F3372CD11EA66D190035EA34 /* CellOfMyPub.m */; };
+		F3372CD51EA66EFA0035EA34 /* PubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3372CD41EA66EFA0035EA34 /* PubModel.m */; };
 		F337E7681E878D2C00709A3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E7671E878D2C00709A3B /* main.m */; };
 		F337E76B1E878D2C00709A3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E76A1E878D2C00709A3B /* AppDelegate.m */; };
 		F337E76E1E878D2C00709A3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E76D1E878D2C00709A3B /* ViewController.m */; };
@@ -290,6 +293,12 @@
 		F3372CC71EA657020035EA34 /* CellOfInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellOfInfo.m; sourceTree = "<group>"; };
 		F3372CC91EA657330035EA34 /* InfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoModel.h; sourceTree = "<group>"; };
 		F3372CCA1EA657330035EA34 /* InfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoModel.m; sourceTree = "<group>"; };
+		F3372CCD1EA66C340035EA34 /* MyPubVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPubVC.h; sourceTree = "<group>"; };
+		F3372CCE1EA66C340035EA34 /* MyPubVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPubVC.m; sourceTree = "<group>"; };
+		F3372CD01EA66D190035EA34 /* CellOfMyPub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellOfMyPub.h; sourceTree = "<group>"; };
+		F3372CD11EA66D190035EA34 /* CellOfMyPub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellOfMyPub.m; sourceTree = "<group>"; };
+		F3372CD31EA66EFA0035EA34 /* PubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubModel.h; sourceTree = "<group>"; };
+		F3372CD41EA66EFA0035EA34 /* PubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubModel.m; sourceTree = "<group>"; };
 		F337E7631E878D2C00709A3B /* MyPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F337E7671E878D2C00709A3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F337E7691E878D2C00709A3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -858,6 +867,19 @@
 			path = tabbar_profile_selected.imageset;
 			sourceTree = "<group>";
 		};
+		F3372CCC1EA66BFE0035EA34 /* my_pub */ = {
+			isa = PBXGroup;
+			children = (
+				F3372CCD1EA66C340035EA34 /* MyPubVC.h */,
+				F3372CCE1EA66C340035EA34 /* MyPubVC.m */,
+				F3372CD01EA66D190035EA34 /* CellOfMyPub.h */,
+				F3372CD11EA66D190035EA34 /* CellOfMyPub.m */,
+				F3372CD31EA66EFA0035EA34 /* PubModel.h */,
+				F3372CD41EA66EFA0035EA34 /* PubModel.m */,
+			);
+			name = my_pub;
+			sourceTree = "<group>";
+		};
 		F337E75A1E878D2C00709A3B = {
 			isa = PBXGroup;
 			children = (
@@ -971,6 +993,7 @@
 				F3A9D9E51E96983D005FF25C /* setVC.h */,
 				F3A9D9E61E96983D005FF25C /* setVC.m */,
 				F3A9D9E71E96983D005FF25C /* setVC.xib */,
+				F3372CCC1EA66BFE0035EA34 /* my_pub */,
 			);
 			path = PC_VC;
 			sourceTree = "<group>";
@@ -1938,6 +1961,7 @@
 				F3C8B5AD1E8F4E870099B846 /* EaseChatToolbarItem.m in Sources */,
 				F3242B341E98833800A39ADD /* DLTabBar.m in Sources */,
 				F337E7AA1E878F9900709A3B /* MsgVC.m in Sources */,
+				F3372CCF1EA66C340035EA34 /* MyPubVC.m in Sources */,
 				F3A9D9E81E96983D005FF25C /* setVC.m in Sources */,
 				F339B5F41E9BE78E0058A38C /* NewModel.m in Sources */,
 				F3CB24FD1E8A8A8C00EBA1E9 /* MASViewAttribute.m in Sources */,
@@ -1993,6 +2017,7 @@
 				F3C8B5AA1E8F4E870099B846 /* EaseBubbleView+Voice.m in Sources */,
 				F3C8B58B1E8F4E870099B846 /* EaseUserModel.m in Sources */,
 				F3CB24FC1E8A8A8C00EBA1E9 /* MASLayoutConstraint.m in Sources */,
+				F3372CD21EA66D190035EA34 /* CellOfMyPub.m in Sources */,
 				F3CB25021E8A8A8C00EBA1E9 /* ViewController+MASAdditions.m in Sources */,
 				F3C8B58C1E8F4E870099B846 /* NSDate+Category.m in Sources */,
 				F3CB24FA1E8A8A8C00EBA1E9 /* MASConstraint.m in Sources */,
@@ -2048,6 +2073,7 @@
 				F3C8B5A71E8F4E870099B846 /* EaseBubbleView+Location.m in Sources */,
 				F3C8B5A81E8F4E870099B846 /* EaseBubbleView+Text.m in Sources */,
 				F3C8B5481E8F4E870099B846 /* wav.mm in Sources */,
+				F3372CD51EA66EFA0035EA34 /* PubModel.m in Sources */,
 				F3C8B59E1E8F4E870099B846 /* EaseViewController.m in Sources */,
 				F3242B381E9883D600A39ADD /* UIView+Extension.m in Sources */,
 				F3C8B5AB1E8F4E870099B846 /* EaseBubbleView.m in Sources */,

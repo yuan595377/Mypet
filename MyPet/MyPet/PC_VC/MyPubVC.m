@@ -1,32 +1,28 @@
 //
-//  HomeVC.m
+//  MyPubVC.m
 //  MyPet
 //
-//  Created by 袁立康 on 17/3/26.
+//  Created by 袁立康 on 17/4/18.
 //  Copyright © 2017年 袁立康. All rights reserved.
 //
 
-#import "HomeVC.h"
+#import "MyPubVC.h"
 
-@interface HomeVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface MyPubVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)UITableView *tableView;
 @property (nonatomic, retain)NSMutableArray *dataSource1;
 
 @end
 
-@implementation HomeVC
+@implementation MyPubVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
     [self createTable];
-   
-    
-    
 }
 
-
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self fetchData];
     
@@ -39,15 +35,21 @@
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 200;
-    [self.tableView registerClass:[CellOfInfo class] forCellReuseIdentifier:@"pool"];
+    self.tableView.rowHeight = 100;
+    [self.tableView registerClass:[CellOfMyPub class] forCellReuseIdentifier:@"pool"];
+    
+}
 
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)fetchData {
+    self.dataSource1 = [NSMutableArray array];
     //创建BmobQuery实例，指定对应要操作的数据表名称
     BmobQuery *query = [BmobQuery queryWithClassName:STOREAGE_INFO];
-    self.dataSource1 = [NSMutableArray array];
     //按updatedAt进行降序排列
     [query orderByDescending:@"updatedAt"];
     //返回最多20个结果
@@ -56,32 +58,31 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         //处理查询结果
         for (BmobObject *obj in array) {
-            InfoModel *info    = [[InfoModel alloc] init];
-            if ([obj objectForKey:@"title"]) {
-                info.title    = [obj objectForKey:@"title"];
-                info.name = [obj objectForKey:@"user_id"];
-                NSLog(@"%@", info.title);
+            PubModel * info  = [[PubModel alloc] init];
+            if ([[obj objectForKey:@"user_id"] isEqualToString:[EMClient sharedClient].currentUsername]) {
+                NSString *a    = [obj objectForKey:@"objectId"];
+                NSLog(@"id发的内容为:%@, title:%@,发表时间:%@", a, [obj objectForKey:@"title"],[obj objectForKey:@"createdAt"]);
+                info.title = [obj objectForKey:@"title"];
+                NSLog(@"info:%@", info.title);
             }
             [self.dataSource1 addObject:info];
+
         }
-        
-        
         [_tableView reloadData];
     }];
 
-    
+
 
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    NSLog(@"%@", _dataSource1);
+    
+    
     return _dataSource1.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CellOfInfo *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
+    CellOfMyPub *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
     
     if (_dataSource1) {
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -91,13 +92,11 @@
         
     }
     return cell;
-
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
 
 /*
 #pragma mark - Navigation

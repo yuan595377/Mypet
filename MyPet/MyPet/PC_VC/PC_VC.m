@@ -282,7 +282,15 @@
         self.avatar.image = nil;
     
     }
-    
+
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+   
+    MyPubVC *vc = [[MyPubVC alloc]init];
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
 
 
 }

@@ -45,6 +45,7 @@
     BmobObject *obj = [[BmobObject alloc] initWithClassName:STOREAGE_INFO];
     //设置字段值
     [obj setObject:_textView.text forKey:@"title"];
+    [obj setObject:[EMClient sharedClient].currentUsername forKey:@"user_id"];
     //执行保存操作
     [obj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
         
