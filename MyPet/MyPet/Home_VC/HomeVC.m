@@ -88,6 +88,10 @@
         cell.model = self.dataSource1[indexPath.row];
         [cell.contact addTarget:self action:@selector(contact) forControlEvents:UIControlEventTouchDown];
         self.nameId = cell.name.text;
+        if ([self.nameId isEqualToString:[EMClient sharedClient].currentUsername]) {
+            [cell.contact removeFromSuperview];
+        }
+        
         return cell;
         
     }
@@ -96,6 +100,7 @@
 }
 
 - (void)contact {
+    
     chatVC *vc = [[chatVC alloc]initWithConversationChatter:self.nameId conversationType:EMConversationTypeChat];
     [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];
