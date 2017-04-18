@@ -42,7 +42,7 @@
 
 - (void)loginUser {
     //创建BmobObject对象，指定对应要操作的数据表名称
-    BmobObject *obj = [[BmobObject alloc] initWithClassName:[EMClient sharedClient].currentUsername];
+    BmobObject *obj = [[BmobObject alloc] initWithClassName:STOREAGE_INFO];
     //设置字段值
     [obj setObject:_textView.text forKey:@"title"];
     //执行保存操作

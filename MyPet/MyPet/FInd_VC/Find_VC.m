@@ -75,7 +75,6 @@
         
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
         cell.model = self.dataSource[indexPath.row];
         
         return cell;

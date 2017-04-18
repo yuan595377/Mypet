@@ -8,8 +8,10 @@
 
 #import "HomeVC.h"
 
-@interface HomeVC ()
-@property (nonatomic, retain)UILabel *label;
+@interface HomeVC ()<UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, retain)UITableView *tableView;
+@property (nonatomic, retain)NSMutableArray *dataSource1;
+
 @end
 
 @implementation HomeVC
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self createTable];
+   
     
     
 }
@@ -24,31 +28,69 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.label = [[UILabel alloc]initWithFrame:CGRectMake(50, 100, SCREEN_WIDTH, 50)];
-    self.label.backgroundColor = [UIColor redColor];
-    //创建BmobQuery实例，指定对应要操作的数据表名称
-    BmobQuery *query = [BmobQuery queryWithClassName:[EMClient sharedClient].currentUsername];
-    //按updatedAt进行降序排列
-    if (query != nil) {
-        [query orderByDescending:@"updatedAt"];
-        //返回最多20个结果
-        query.limit = 20;
-        //执行查询
-        [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-            
-            //处理查询结果
-            BmobObject *obj =array[0];
-            if (obj) {
-                self.label.text  = [obj objectForKey:@"title"];
-            }
-            
-            
-            
-        }];
+    [self fetchData];
+    
+}
 
+
+- (void)createTable {
+    
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+    [self.view addSubview:self.tableView];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.rowHeight = 100;
+    [self.tableView registerClass:[CellOfInfo class] forCellReuseIdentifier:@"pool"];
+
+}
+
+- (void)fetchData {
+    //创建BmobQuery实例，指定对应要操作的数据表名称
+    BmobQuery *query = [BmobQuery queryWithClassName:STOREAGE_INFO];
+    self.dataSource1 = [NSMutableArray array];
+    //按updatedAt进行降序排列
+    [query orderByDescending:@"updatedAt"];
+    //返回最多20个结果
+    query.limit = 20;
+    //执行查询
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        //处理查询结果
+        for (BmobObject *obj in array) {
+            InfoModel *info    = [[InfoModel alloc] init];
+            if ([obj objectForKey:@"title"]) {
+                info.title    = [obj objectForKey:@"title"];
+                NSLog(@"%@", info.title);
+            }
+            [self.dataSource1 addObject:info];
+        }
+        
+        
+        [_tableView reloadData];
+    }];
+
+    
+
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    
+    return _dataSource1.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CellOfInfo *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
+    
+    if (_dataSource1) {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.model = self.dataSource1[indexPath.row];
+        
+        return cell;
+        
     }
-        [self.view addSubview:self.label];
-   
+    return cell;
+
 }
 
 - (void)didReceiveMemoryWarning {

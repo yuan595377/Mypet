@@ -16,7 +16,11 @@
 #ifdef __OBJC__
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define LAST_RUN_VERSION_KEY @"last_run_version_of_application"
+#define STOREAGE_INFO @"storege_pet_info"
+
+
 #import "PC_VC.h"
 #import "MsgVC.h"
 #import "PublishVC.h"
@@ -43,5 +47,11 @@
 #import <BmobSDK/BmobFile.h>
 #import "PB_vc.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+
+
+//home
+#import "InfoModel.h"
+#import "CellOfInfo.h"
+
 
 #endif

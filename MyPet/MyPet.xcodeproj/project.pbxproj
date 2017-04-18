@@ -45,6 +45,8 @@
 		F3242B881E98898100A39ADD /* tabbar_profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3242B6A1E98898100A39ADD /* tabbar_profile@2x.png */; };
 		F3242B891E98898100A39ADD /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = F3242B6C1E98898100A39ADD /* Contents.json */; };
 		F3242B8A1E98898100A39ADD /* tabbar_profile_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3242B6D1E98898100A39ADD /* tabbar_profile_selected@2x.png */; };
+		F3372CC81EA657020035EA34 /* CellOfInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3372CC71EA657020035EA34 /* CellOfInfo.m */; };
+		F3372CCB1EA657330035EA34 /* InfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3372CCA1EA657330035EA34 /* InfoModel.m */; };
 		F337E7681E878D2C00709A3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E7671E878D2C00709A3B /* main.m */; };
 		F337E76B1E878D2C00709A3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E76A1E878D2C00709A3B /* AppDelegate.m */; };
 		F337E76E1E878D2C00709A3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E76D1E878D2C00709A3B /* ViewController.m */; };
@@ -284,6 +286,10 @@
 		F3242B6A1E98898100A39ADD /* tabbar_profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profile@2x.png"; sourceTree = "<group>"; };
 		F3242B6C1E98898100A39ADD /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		F3242B6D1E98898100A39ADD /* tabbar_profile_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profile_selected@2x.png"; sourceTree = "<group>"; };
+		F3372CC61EA657020035EA34 /* CellOfInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellOfInfo.h; sourceTree = "<group>"; };
+		F3372CC71EA657020035EA34 /* CellOfInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellOfInfo.m; sourceTree = "<group>"; };
+		F3372CC91EA657330035EA34 /* InfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoModel.h; sourceTree = "<group>"; };
+		F3372CCA1EA657330035EA34 /* InfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoModel.m; sourceTree = "<group>"; };
 		F337E7631E878D2C00709A3B /* MyPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F337E7671E878D2C00709A3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F337E7691E878D2C00709A3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -933,6 +939,10 @@
 			children = (
 				F337E7A21E878F7B00709A3B /* HomeVC.h */,
 				F337E7A31E878F7B00709A3B /* HomeVC.m */,
+				F3372CC61EA657020035EA34 /* CellOfInfo.h */,
+				F3372CC71EA657020035EA34 /* CellOfInfo.m */,
+				F3372CC91EA657330035EA34 /* InfoModel.h */,
+				F3372CCA1EA657330035EA34 /* InfoModel.m */,
 				F337E7A41E878F7B00709A3B /* HomeVC.xib */,
 			);
 			path = Home_VC;
@@ -1942,6 +1952,7 @@
 				F3C8B5A61E8F4E870099B846 /* EaseBubbleView+Image.m in Sources */,
 				F3C8B5701E8F4E870099B846 /* EMSDWebImagePrefetcher.m in Sources */,
 				F3C8B5921E8F4E870099B846 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
+				F3372CC81EA657020035EA34 /* CellOfInfo.m in Sources */,
 				F3C8B5B41E8F4E870099B846 /* EaseConversationCell.m in Sources */,
 				F3C8B5A01E8F4E870099B846 /* EaseBaseMessageCell.m in Sources */,
 				F3C8B57A1E8F4E870099B846 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
@@ -1994,6 +2005,7 @@
 				F3C8B56B1E8F4E870099B846 /* EMSDWebImageCompat.m in Sources */,
 				F3C8B5441E8F4E870099B846 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				F337E7A51E878F7B00709A3B /* HomeVC.m in Sources */,
+				F3372CCB1EA657330035EA34 /* InfoModel.m in Sources */,
 				F3C8B5791E8F4E870099B846 /* UIView+EMWebCacheOperation.m in Sources */,
 				F337E7B21E878FBE00709A3B /* PC_VC.m in Sources */,
 				F3C8B57B1E8F4E870099B846 /* PSTCollectionView.m in Sources */,
@@ -2211,6 +2223,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -2240,6 +2254,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;

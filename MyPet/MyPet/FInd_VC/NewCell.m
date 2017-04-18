@@ -71,11 +71,12 @@
 
 
 - (void)setTitle:(NSString *)title imageView1:(UIImageView *)imageView1 pub_time:(NSString *)pub_time{
+    
     self.title.text = title;
     self.pub_time.text = pub_time;
     self.imageView1 = imageView1;
-
-
+    
+    
 }
 
 

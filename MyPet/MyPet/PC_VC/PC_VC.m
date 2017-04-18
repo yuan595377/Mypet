@@ -272,16 +272,16 @@
 
 - (void)getAvatar_nickName {
     
-//    if ([EMClient sharedClient].isLoggedIn) {
-//        BmobObject *obj = [[BmobObject alloc]initWithClassName:[EMClient sharedClient].currentUsername];
-//        
-//        BmobFile *file = (BmobFile*)[obj objectForKey:@"li"];
-//        NSLog(@"url:%@, file:%@, obj:%@", file.url, file, obj);
-//        self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:file.url]]];
-//    }else {
-//        self.avatar.image = nil;
-//    
-//    }
+    if ([EMClient sharedClient].isLoggedIn) {
+        BmobObject *obj = [[BmobObject alloc]initWithClassName:[EMClient sharedClient].currentUsername];
+        
+        BmobFile *file = (BmobFile*)[obj objectForKey:@"li"];
+        NSLog(@"url:%@, file:%@, obj:%@", file.url, file, obj);
+        self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:file.url]]];
+    }else {
+        self.avatar.image = nil;
+    
+    }
     
 
 
