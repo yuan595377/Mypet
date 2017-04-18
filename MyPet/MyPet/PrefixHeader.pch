@@ -55,4 +55,5 @@
 #import "CellOfMyPub.h"
 #import "PubModel.h"
 #import "MyPubVC.h"
+#import "chatVC.h"
 #endif

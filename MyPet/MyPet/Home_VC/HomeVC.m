@@ -11,7 +11,7 @@
 @interface HomeVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)UITableView *tableView;
 @property (nonatomic, retain)NSMutableArray *dataSource1;
-
+@property (nonatomic, retain)NSString *nameId;
 @end
 
 @implementation HomeVC
@@ -86,12 +86,19 @@
     if (_dataSource1) {
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.model = self.dataSource1[indexPath.row];
-        
+        [cell.contact addTarget:self action:@selector(contact) forControlEvents:UIControlEventTouchDown];
+        self.nameId = cell.name.text;
         return cell;
         
     }
     return cell;
 
+}
+
+- (void)contact {
+    chatVC *vc = [[chatVC alloc]initWithConversationChatter:self.nameId conversationType:EMConversationTypeChat];
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
