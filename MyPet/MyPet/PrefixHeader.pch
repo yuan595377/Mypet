@@ -59,5 +59,6 @@
 
 
 #import "NewPC.h"
+#import "setVC.h"
 
 #endif
