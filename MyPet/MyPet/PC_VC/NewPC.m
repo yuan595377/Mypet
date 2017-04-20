@@ -1,22 +1,22 @@
 //
-//  conversationListVc.m
+//  NewPC.m
 //  MyPet
 //
-//  Created by 袁立康 on 17/4/1.
+//  Created by 袁立康 on 17/4/20.
 //  Copyright © 2017年 袁立康. All rights reserved.
 //
 
-#import "conversationListVc.h"
+#import "NewPC.h"
 
-@interface conversationListVc ()
+@interface NewPC ()
 
 @end
 
-@implementation conversationListVc
+@implementation NewPC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
     
 }
 

@@ -92,6 +92,8 @@
 		F375452E1EA84DE900667717 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = F375452D1EA84DE900667717 /* chat.png */; };
 		F38B18081E97C832006C69F8 /* LEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B18071E97C832006C69F8 /* LEActionSheet.m */; };
 		F38B180B1E97C8A8006C69F8 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */; };
+		F38FEA251EA8C20F002CB53D /* NewPC.m in Sources */ = {isa = PBXBuildFile; fileRef = F38FEA231EA8C20F002CB53D /* NewPC.m */; };
+		F38FEA261EA8C20F002CB53D /* NewPC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38FEA241EA8C20F002CB53D /* NewPC.xib */; };
 		F39C7F3B1E9E32BA008705C6 /* welcome.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F39C7F3A1E9E32BA008705C6 /* welcome.jpeg */; };
 		F3A8D13F1EA12E10001C12C4 /* 1logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F3A8D13E1EA12E10001C12C4 /* 1logo.jpeg */; };
 		F3A9D9D91E96908E005FF25C /* msg-2.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A9D9D31E96908E005FF25C /* msg-2.png */; };
@@ -366,6 +368,9 @@
 		F38B18071E97C832006C69F8 /* LEActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEActionSheet.m; sourceTree = "<group>"; };
 		F38B18091E97C8A8006C69F8 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		F38FEA221EA8C20F002CB53D /* NewPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPC.h; sourceTree = "<group>"; };
+		F38FEA231EA8C20F002CB53D /* NewPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPC.m; sourceTree = "<group>"; };
+		F38FEA241EA8C20F002CB53D /* NewPC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPC.xib; sourceTree = "<group>"; };
 		F39C7F3A1E9E32BA008705C6 /* welcome.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcome.jpeg; sourceTree = "<group>"; };
 		F3A8D13E1EA12E10001C12C4 /* 1logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1logo.jpeg; sourceTree = "<group>"; };
 		F3A9D9D31E96908E005FF25C /* msg-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "msg-2.png"; sourceTree = "<group>"; };
@@ -993,6 +998,9 @@
 				F337E7B11E878FBE00709A3B /* PC_VC.xib */,
 				F3660FAA1E88E5F700968B62 /* vcofTest.h */,
 				F3660FAB1E88E5F700968B62 /* vcofTest.m */,
+				F38FEA221EA8C20F002CB53D /* NewPC.h */,
+				F38FEA231EA8C20F002CB53D /* NewPC.m */,
+				F38FEA241EA8C20F002CB53D /* NewPC.xib */,
 				F3A9D9E51E96983D005FF25C /* setVC.h */,
 				F3A9D9E61E96983D005FF25C /* setVC.m */,
 				F3A9D9E71E96983D005FF25C /* setVC.xib */,
@@ -1745,6 +1753,7 @@
 				F3242B7C1E98898100A39ADD /* tabbar_discover@2x.png in Resources */,
 				F3242B741E98898100A39ADD /* tabbar_compose_button@2x.png in Resources */,
 				F3242B711E98898100A39ADD /* Contents.json in Resources */,
+				F38FEA261EA8C20F002CB53D /* NewPC.xib in Resources */,
 				F3242B721E98898100A39ADD /* tabbar_background@2x.png in Resources */,
 				F339B5EE1E9B1F2A0058A38C /* NewCell.xib in Resources */,
 				F36B58331EA522580023A7FD /* back2.png in Resources */,
@@ -1950,6 +1959,7 @@
 				F3C8B5721E8F4E870099B846 /* NSData+EMImageContentType.m in Sources */,
 				F339B5E91E9B14FB0058A38C /* Find_VC.m in Sources */,
 				F3C8B5421E8F4E870099B846 /* EMCDDeviceManager+Media.m in Sources */,
+				F38FEA251EA8C20F002CB53D /* NewPC.m in Sources */,
 				F3C8B5621E8F4E870099B846 /* MWGridCell.m in Sources */,
 				F3C8B5A51E8F4E870099B846 /* EaseBubbleView+Gif.m in Sources */,
 				F3C8B59C1E8F4E870099B846 /* EaseRefreshTableViewController.m in Sources */,

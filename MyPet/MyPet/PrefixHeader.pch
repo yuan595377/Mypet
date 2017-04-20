@@ -56,4 +56,8 @@
 #import "PubModel.h"
 #import "MyPubVC.h"
 #import "chatVC.h"
+
+
+#import "NewPC.h"
+
 #endif
