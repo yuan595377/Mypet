@@ -89,6 +89,7 @@
 		F36B58311EA515E20023A7FD /* login2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F36B58301EA515E20023A7FD /* login2.jpeg */; };
 		F36B58331EA522580023A7FD /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = F36B58321EA522580023A7FD /* back2.png */; };
 		F36B58361EA527510023A7FD /* RegisterVC_2.m in Sources */ = {isa = PBXBuildFile; fileRef = F36B58351EA527510023A7FD /* RegisterVC_2.m */; };
+		F375452E1EA84DE900667717 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = F375452D1EA84DE900667717 /* chat.png */; };
 		F38B18081E97C832006C69F8 /* LEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B18071E97C832006C69F8 /* LEActionSheet.m */; };
 		F38B180B1E97C8A8006C69F8 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */; };
 		F39C7F3B1E9E32BA008705C6 /* welcome.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F39C7F3A1E9E32BA008705C6 /* welcome.jpeg */; };
@@ -360,6 +361,7 @@
 		F36B58321EA522580023A7FD /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2.png; sourceTree = "<group>"; };
 		F36B58341EA527510023A7FD /* RegisterVC_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC_2.h; sourceTree = "<group>"; };
 		F36B58351EA527510023A7FD /* RegisterVC_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC_2.m; sourceTree = "<group>"; };
+		F375452D1EA84DE900667717 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		F38B18061E97C832006C69F8 /* LEActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEActionSheet.h; sourceTree = "<group>"; };
 		F38B18071E97C832006C69F8 /* LEActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEActionSheet.m; sourceTree = "<group>"; };
 		F38B18091E97C8A8006C69F8 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
@@ -961,6 +963,7 @@
 			children = (
 				F337E7A21E878F7B00709A3B /* HomeVC.h */,
 				F337E7A31E878F7B00709A3B /* HomeVC.m */,
+				F375452D1EA84DE900667717 /* chat.png */,
 				F3372CC61EA657020035EA34 /* CellOfInfo.h */,
 				F3372CC71EA657020035EA34 /* CellOfInfo.m */,
 				F3372CC91EA657330035EA34 /* InfoModel.h */,
@@ -1747,6 +1750,7 @@
 				F36B58331EA522580023A7FD /* back2.png in Resources */,
 				F3A9D9DE1E96908E005FF25C /* pub.png in Resources */,
 				F3242B851E98898100A39ADD /* Contents.json in Resources */,
+				F375452E1EA84DE900667717 /* chat.png in Resources */,
 				F337E7B31E878FBE00709A3B /* PC_VC.xib in Resources */,
 				F39C7F3B1E9E32BA008705C6 /* welcome.jpeg in Resources */,
 				F3242B7E1E98898100A39ADD /* tabbar_discover_selected@2x.png in Resources */,

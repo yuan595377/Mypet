@@ -86,24 +86,32 @@
     if (_dataSource1) {
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.model = self.dataSource1[indexPath.row];
-        [cell.contact addTarget:self action:@selector(contact) forControlEvents:UIControlEventTouchDown];
-        self.nameId = cell.name.text;
-        if ([self.nameId isEqualToString:[EMClient sharedClient].currentUsername]) {
-            [cell.contact removeFromSuperview];
-        }
+        [cell.contact addTarget:self action:@selector(contact1:) forControlEvents:UIControlEventTouchDown];
+        [cell.contact setTitle:cell.name.text forState:UIControlStateNormal];
+        
+
+
         
         return cell;
         
     }
     return cell;
-
 }
 
-- (void)contact {
+
+
+- (void)contact1:(UIButton *)button {
+    NSLog(@"button_title:%@, nameId:%@", button.currentTitle, self.nameId);
+    if ([button.currentTitle isEqualToString:[EMClient sharedClient].currentUsername]) {
+        [SVProgressHUD showErrorWithStatus:@"不可以和自己聊天哦"];
+        
+    }else {
+        chatVC *vc = [[chatVC alloc]initWithConversationChatter:button.currentTitle conversationType:EMConversationTypeChat];
+        [vc setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:vc animated:YES];
     
-    chatVC *vc = [[chatVC alloc]initWithConversationChatter:self.nameId conversationType:EMConversationTypeChat];
-    [vc setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:vc animated:YES];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -50,17 +50,20 @@
         make.top.equalTo(self.name.mas_bottom).with.offset(10);
     }];
     
+    
     self.contact = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.contentView addSubview:self.contact];
     [self.contact setTitle:@"联系他" forState:UIControlStateNormal];
-    self.contact.backgroundColor = [UIColor redColor];
+    [self.contact setImage:[UIImage imageNamed:@"chat.png"] forState:UIControlStateNormal];
     [self.contact mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(80, 30));
+        make.size.mas_equalTo(CGSizeMake(30, 30));
         make.left.equalTo(self.contentView).with.offset(10);
         make.top.equalTo(self.title.mas_bottom).with.offset(10);
         
     }];
-//    [self.contact addTarget:self action:@selector(oush) forControlEvents:UIControlEventTouchDown];
+    
+    
+     
     
 }
 

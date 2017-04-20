@@ -16,7 +16,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
     //注册bmob
     [Bmob registerWithAppKey:@"5edb7a137c535854844cb92b8c1b2149"];
     [SMSSDK registerApp:@"133daf526d52f" withSecret:@"0541ccfbdab6bc6b97575558b0fdb3cc"];
@@ -27,20 +26,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
 #pragma mark 创建TabBar
-    
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]){
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
         //第一次启动
-
-        //不是第一次启动了
         self.window.rootViewController = [[ViewController alloc]init];
-        
     }else{
-        self.window.rootViewController = [[ViewController alloc]init];
-
+        DLTabBarController *myTabBar = [[DLTabBarController alloc]init];
+        self.window.rootViewController = myTabBar;
     }
-//    MyTabBar *myTabBar = [[MyTabBar alloc]init];
-//    DLTabBarController *myTabBar = [[DLTabBarController alloc]init];
     [self.window makeKeyAndVisible];
     
     return YES;
