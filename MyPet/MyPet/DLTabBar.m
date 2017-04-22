@@ -24,8 +24,8 @@
     self = [super initWithFrame:frame];
     if (self) {
             UIButton *centerButton = [[UIButton alloc] init];
-        [centerButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
-        [centerButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
+        [centerButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
+        [centerButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateHighlighted];
         [centerButton setImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
         [centerButton setImage:[UIImage imageNamed:@"tabbar_compose_icon_add_highlighted"] forState:UIControlStateHighlighted];
         centerButton.size = centerButton.currentBackgroundImage.size;

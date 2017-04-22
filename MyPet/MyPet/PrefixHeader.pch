@@ -60,5 +60,9 @@
 
 #import "NewPC.h"
 #import "setVC.h"
+#import "MyCodeVC.h"
+#import "ScanVc.h"
+#import "PcVC.h"
+
 
 #endif

@@ -21,6 +21,7 @@
     
     [self setupViewControllers];
     [self setupTabbar];
+    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.8]];;
    
 }
 
@@ -29,7 +30,7 @@
 {
     // 1.初始化子控制器
     HomeVC *home = [[HomeVC alloc] init];
-    [self addChildVc:home title:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
+    [self addChildVc:home title:@"社区" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
     
     conversationListVc *messageCenter = [[conversationListVc alloc] init];
     [self addChildVc:messageCenter title:@"消息" image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
@@ -37,7 +38,7 @@
     Find_VC *discover = [[Find_VC alloc] init];
     [self addChildVc:discover title:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
     
-    NewPC *profile = [[NewPC alloc] init];
+    PcVC *profile = [[PcVC alloc] init];
     [self addChildVc:profile title:@"个人中心" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
 }
 
@@ -100,7 +101,7 @@
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:123/255.0 green:123/255.0 blue:123/255.0 alpha:1];
     NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
-    selectTextAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    selectTextAttrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];

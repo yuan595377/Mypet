@@ -99,7 +99,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="二维码-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="fdZ-o3-FL0">
-                    <rect key="frame" x="8" y="311" width="29" height="30"/>
+                    <rect key="frame" x="16" y="317" width="21" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQF-w9-zrp">
@@ -108,6 +108,9 @@
                     <state key="normal" title="我的二维码">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="ToMyCode:" destination="-1" eventType="touchUpInside" id="TTn-Dc-2AM"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1a-Jb-iDw">
                     <rect key="frame" x="45" y="369" width="330" height="30"/>
@@ -115,9 +118,12 @@
                     <state key="normal" title="扫一扫">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="scan:" destination="-1" eventType="touchUpInside" id="lZ6-5E-W9H"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="扫码.png" translatesAutoresizingMaskIntoConstraints="NO" id="tli-J3-UwN">
-                    <rect key="frame" x="8" y="369" width="29" height="30"/>
+                    <rect key="frame" x="16" y="376" width="21" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSy-3f-6Cd">
@@ -136,7 +142,7 @@
                 <constraint firstItem="uhI-tD-DH8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="QN5-IC-4wZ"/>
                 <constraint firstItem="f5m-1n-nDE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="inf-6K-iIh"/>
             </constraints>
-            <point key="canvasLocation" x="143.5" y="-167.5"/>
+            <point key="canvasLocation" x="260.5" y="-191.5"/>
         </view>
     </objects>
     <resources>

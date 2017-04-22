@@ -14,6 +14,8 @@
 @property (nonatomic, retain)UILabel *pub_time;
 @property (nonatomic, retain)UIImageView *bottomBack;
 @property (nonatomic, retain)NewModel *model;
+@property (nonatomic, assign)NSInteger IDD;
+
 
 - (void)setTitle:(NSString *)title imageView1:(UIImageView *)imageView1 pub_time:(NSString *)pub_time;
 

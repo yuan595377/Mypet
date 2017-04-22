@@ -20,7 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self creatSubViews];
-    self.dataSource = [NSMutableArray array];
     [self fetchData];
 }
 
@@ -37,14 +36,17 @@
 }
 
 - (void)fetchData {
-    
+   self.dataSource = [NSMutableArray array];
   [APPTools GETWithURL:@"http://wp.asopeixun.com/left_category_data?category_id=225" par:nil success:^(id responseObject) {
       NSArray *list1 = [responseObject objectForKey:@"list"];
-      [self.dataSource removeAllObjects];
       for (NSDictionary *dic in list1) {
           NSArray *list2 = [dic objectForKey:@"list"];
           for (NSDictionary *dic2 in list2) {
-              NewModel *model = [[NewModel alloc]initWithDataSource:dic2];
+              NewModel *model = [[NewModel alloc]init];
+              model.title = [dic2 objectForKey:@"title"];
+              model.edittime = [dic2 objectForKey:@"edittime"];
+              model.thumb = [dic2 objectForKey:@"thumb"];
+              model.ID = [NSString stringWithFormat:@"%@", [dic2 objectForKey:@"ID"]].integerValue;
               [self.dataSource addObject:model];
           }
       }
@@ -59,7 +61,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    NSLog(@"dataSource:%lu", (unsigned long)_dataSource.count);
     if (_dataSource) {
         
         return _dataSource.count;
@@ -76,6 +78,7 @@
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.model = self.dataSource[indexPath.row];
+        NSLog(@"id:%ld", (long)cell.IDD);
         
         return cell;
         
@@ -85,12 +88,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    detailVC *vc = [[detailVC alloc]init];
     static NSString *identifier = @"pool";
     NewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     cell.model = self.dataSource[indexPath.row];
-    NSLog(@"model:%@,model_ID:%lu", cell.model,(unsigned long)cell.model.ID);
-    vc.ID = cell.model.ID;
+    
+    detailVC *vc = [[detailVC alloc]init];
+    vc.ID = cell.IDD;
     [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];
 

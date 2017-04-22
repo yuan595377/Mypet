@@ -20,7 +20,7 @@
     
     UIWebView *view = [[UIWebView alloc]initWithFrame:self.view.frame];
     view.delegate = self;
-    NSString *url = [NSString stringWithFormat:@"http://wp.asopeixun.com/?p=%@", @4809];
+    NSString *url = [NSString stringWithFormat:@"http://wp.asopeixun.com/?p=%ld", (long)self.ID];
     [view loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     [self.view addSubview:view];
     

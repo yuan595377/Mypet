@@ -11,5 +11,8 @@
 @interface InfoModel : NSObject
 @property (nonatomic, retain)NSString *title;
 @property (nonatomic, retain)NSString *name;
+@property (nonatomic, retain)NSString *time;
+
+
 - (instancetype)initWithDataSource:(NSDictionary *)dataSource;
 @end

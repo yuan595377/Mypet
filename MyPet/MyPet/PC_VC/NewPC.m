@@ -104,6 +104,25 @@
 }
 
 
+- (IBAction)ToMyCode:(id)sender {
+    MyCodeVC *vc = [[MyCodeVC alloc]init];
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
+
+- (IBAction)scan:(id)sender {
+    
+    ScanVc *vc = [[ScanVc alloc]init];
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

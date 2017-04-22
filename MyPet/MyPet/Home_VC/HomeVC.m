@@ -60,6 +60,7 @@
             if ([obj objectForKey:@"title"]) {
                 info.title    = [obj objectForKey:@"title"];
                 info.name = [obj objectForKey:@"user_id"];
+                info.time = [obj objectForKey:@"updatedAt"];
                 NSLog(@"%@", info.title);
             }
             [self.dataSource1 addObject:info];

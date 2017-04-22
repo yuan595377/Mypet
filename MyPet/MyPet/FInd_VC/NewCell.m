@@ -84,6 +84,7 @@
     
     _pub_time.text = model.edittime;
     _title.text = model.title;
+    _IDD = model.ID;
     [_imageView1 sd_setImageWithURL:[NSURL URLWithString:model.thumb]];
 
 }
