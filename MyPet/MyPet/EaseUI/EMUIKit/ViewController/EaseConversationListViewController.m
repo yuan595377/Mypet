@@ -20,7 +20,8 @@
 #import "EaseLocalDefine.h"
 
 @interface EaseConversationListViewController ()<EMChatManagerDelegate>
-@property (nonatomic, retain)UIImageView *placeholderImg;
+//@property (nonatomic, retain)UIImageView *placeholderImg;
+@property (nonatomic, retain)UILabel *placeholderImg;
 @end
 
 @implementation EaseConversationListViewController
@@ -35,9 +36,12 @@
     if (self.dataArray.count == 0) {
         NSLog(@"暂时没有消息哦");
         self.tableView.hidden = YES;
-        self.placeholderImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
+//        self.placeholderImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
+//        [self.view addSubview:self.placeholderImg];
+//        self.placeholderImg.image = [UIImage imageNamed:@"112.jpeg"];
+        self.placeholderImg = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+        self.placeholderImg.text = @"暂时没有消息哦";
         [self.view addSubview:self.placeholderImg];
-        self.placeholderImg.image = [UIImage imageNamed:@"112.jpeg"];
         self.placeholderImg.center = self.view.center;
         self.placeholderImg.hidden = NO;
         
@@ -82,6 +86,7 @@
     [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
     [self.tabBarController.tabBar setBackgroundColor:[UIColor whiteColor]];
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
+    self.view.backgroundColor = [UIColor whiteColor];
 
 }
 

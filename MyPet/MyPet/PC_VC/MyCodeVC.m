@@ -20,6 +20,7 @@
     
     
     [self createSub];
+    self.view.backgroundColor = [UIColor whiteColor];
     
 }
 

@@ -29,6 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // Device
+    self.view.backgroundColor = [UIColor whiteColor];
     _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
     // Input
