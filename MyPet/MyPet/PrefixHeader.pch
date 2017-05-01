@@ -21,6 +21,7 @@
 #define STOREAGE_INFO @"storege_pet_info"
 
 
+
 #import "PC_VC.h"
 #import "MsgVC.h"
 #import "PublishVC.h"
@@ -63,6 +64,6 @@
 #import "MyCodeVC.h"
 #import "ScanVc.h"
 #import "PcVC.h"
-
+#import "AvatarVC.h"
 
 #endif

@@ -142,6 +142,7 @@
     
     [self tableViewDidTriggerHeaderRefresh];
     [self setupEmotion];
+    self.dataSource = self;
 }
 
 - (void)setupEmotion
@@ -1930,6 +1931,38 @@
         }
     }
 }
+
+
+#pragma mark - EaseMessageViewControllerDataSource
+
+- (id<IMessageModel>)messageViewController:(EaseMessageViewController *)viewController
+                           modelForMessage:(EMMessage *)message
+{
+    
+    id<IMessageModel> model = nil;
+    model = [[EaseMessageModel alloc] initWithMessage:message];
+    if (model.isSender) {
+        NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avatar.png"];
+        if (fullPath) {
+            NSLog(@"有头像路径");
+            model.avatarImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL fileURLWithPath:fullPath]]];
+        }else {
+            model.avatarImage = [UIImage imageNamed:@"EaseUIResource.bundle/user"];
+        }
+        
+
+    }else {
+        
+        model.avatarImage = [UIImage imageNamed:@"EaseUIResource.bundle/user"];
+    }
+    
+    model.nickname = @"";
+    model.failImageName = @"imageDownloadFail";
+    return model;
+}
+
+
+
 
 - (void)_updateMessageStatus:(EMMessage *)aMessage
 {

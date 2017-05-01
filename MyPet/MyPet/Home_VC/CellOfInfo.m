@@ -63,6 +63,19 @@
     }];
     
     
+    self.dec_img = [[UIImageView alloc]init];
+    [self.contentView addSubview:self.dec_img];
+    [self.dec_img mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 20, 300));
+        make.left.equalTo(self.contentView).with.offset(10);
+        make.top.equalTo(self.title.mas_bottom).with.offset(6);
+        
+    }];
+    self.dec_img.image = [UIImage imageNamed:@"home_test.jpeg"];
+
+    
+    
     self.contact = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.contentView addSubview:self.contact];
     [self.contact setTitle:@"联系他" forState:UIControlStateNormal];
@@ -70,11 +83,25 @@
     [self.contact mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(30, 30));
         make.left.equalTo(self.contentView).with.offset(10);
-        make.top.equalTo(self.title.mas_bottom).with.offset(10);
+        make.top.equalTo(self.dec_img.mas_bottom).with.offset(10);
         
     }];
     
-    
+    self.follow = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.contentView addSubview:self.follow];
+    [self.follow setFont:[UIFont systemFontOfSize:13]];
+    [self.follow setTitle:@"+ 关注" forState:UIControlStateNormal];
+    [self.follow mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(60, 20));
+        make.right.equalTo(self.contentView.mas_right).with.offset(-20);
+        make.top.equalTo(self.contentView.mas_top).with.offset(10);
+        
+    }];
+    [self.follow.layer setBorderWidth:3];
+    [self.follow.layer setMasksToBounds:YES];
+    [self.follow.layer setCornerRadius:10.0];
+    self.follow.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor redColor]);
+    [self.follow setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
      
     
 }

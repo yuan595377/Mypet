@@ -39,10 +39,10 @@
 
 - (void)centerButtonAction
 {
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(tabBarDidClickAtCenterButton:)]) {
-        [self.delegate tabBarDidClickAtCenterButton:self];
-    }
+    [SVProgressHUD showSuccessWithStatus:@"点击发布"];
+//    if (self.delegate && [self.delegate respondsToSelector:@selector(tabBarDidClickAtCenterButton:)]) {
+//        [self.delegate tabBarDidClickAtCenterButton:self];
+//    }
 }
 
 - (void)layoutSubviews

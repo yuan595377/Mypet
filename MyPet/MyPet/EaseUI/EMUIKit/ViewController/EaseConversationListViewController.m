@@ -20,7 +20,7 @@
 #import "EaseLocalDefine.h"
 
 @interface EaseConversationListViewController ()<EMChatManagerDelegate>
-
+@property (nonatomic, retain)UIImageView *placeholderImg;
 @end
 
 @implementation EaseConversationListViewController
@@ -31,6 +31,24 @@
     [self tableViewDidTriggerHeaderRefresh];
     [self registerNotifications];
     [self judgeBadge];
+    NSLog(@"消息数目:%lu", (unsigned long)self.dataArray.count);
+    if (self.dataArray.count == 0) {
+        NSLog(@"暂时没有消息哦");
+        self.tableView.hidden = YES;
+        self.placeholderImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
+        [self.view addSubview:self.placeholderImg];
+        self.placeholderImg.image = [UIImage imageNamed:@"112.jpeg"];
+        self.placeholderImg.center = self.view.center;
+        self.placeholderImg.hidden = NO;
+        
+    }else {
+        self.tableView.hidden = NO;
+        self.placeholderImg.hidden = YES;
+      
+    }
+    
+    
+    
     
     
 }

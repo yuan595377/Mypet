@@ -232,6 +232,10 @@
 		F3D3E8AB1EAB77FA00ECE482 /* set4.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D3E8AA1EAB77FA00ECE482 /* set4.png */; };
 		F3D3E8B11EAB826400ECE482 /* mypet.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D3E8B01EAB826400ECE482 /* mypet.png */; };
 		F3D3E8B41EABA78A00ECE482 /* 脚印.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D3E8B31EABA78A00ECE482 /* 脚印.png */; };
+		F3D3E8B61EABBB0200ECE482 /* 112.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F3D3E8B51EABBB0200ECE482 /* 112.jpeg */; };
+		F3D746151EABFEE700232B34 /* home_test.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F3D746141EABFEE700232B34 /* home_test.jpeg */; };
+		F3D746191EAC050000232B34 /* AvatarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D746181EAC050000232B34 /* AvatarVC.m */; };
+		F3D7461B1EAC05BB00232B34 /* 点点.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D7461A1EAC05BB00232B34 /* 点点.png */; };
 		F3FB43F01EA3BE0C005C226B /* PB_vc.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FB43EF1EA3BE0C005C226B /* PB_vc.m */; };
 /* End PBXBuildFile section */
 
@@ -656,6 +660,11 @@
 		F3D3E8B01EAB826400ECE482 /* mypet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mypet.png; sourceTree = "<group>"; };
 		F3D3E8B21EAB9FA600ECE482 /* 123.pic */ = {isa = PBXFileReference; lastKnownFileType = file; path = 123.pic; sourceTree = "<group>"; };
 		F3D3E8B31EABA78A00ECE482 /* 脚印.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "脚印.png"; sourceTree = "<group>"; };
+		F3D3E8B51EABBB0200ECE482 /* 112.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 112.jpeg; sourceTree = "<group>"; };
+		F3D746141EABFEE700232B34 /* home_test.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home_test.jpeg; sourceTree = "<group>"; };
+		F3D746171EAC050000232B34 /* AvatarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarVC.h; sourceTree = "<group>"; };
+		F3D746181EAC050000232B34 /* AvatarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarVC.m; sourceTree = "<group>"; };
+		F3D7461A1EAC05BB00232B34 /* 点点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "点点.png"; sourceTree = "<group>"; };
 		F3FB43EE1EA3BE0C005C226B /* PB_vc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PB_vc.h; sourceTree = "<group>"; };
 		F3FB43EF1EA3BE0C005C226B /* PB_vc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PB_vc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -992,6 +1001,8 @@
 			children = (
 				F337E7A21E878F7B00709A3B /* HomeVC.h */,
 				F337E7A31E878F7B00709A3B /* HomeVC.m */,
+				F3D746141EABFEE700232B34 /* home_test.jpeg */,
+				F3D3E8B51EABBB0200ECE482 /* 112.jpeg */,
 				F375452D1EA84DE900667717 /* chat.png */,
 				F3372CC61EA657020035EA34 /* CellOfInfo.h */,
 				F3372CC71EA657020035EA34 /* CellOfInfo.m */,
@@ -1034,13 +1045,13 @@
 				F38FEA231EA8C20F002CB53D /* NewPC.m */,
 				F3D3E8A11EAB716D00ECE482 /* PcVC.h */,
 				F3D3E8A21EAB716D00ECE482 /* PcVC.m */,
+				F3D7461A1EAC05BB00232B34 /* 点点.png */,
+				F3D746171EAC050000232B34 /* AvatarVC.h */,
+				F3D746181EAC050000232B34 /* AvatarVC.m */,
 				F38FEA241EA8C20F002CB53D /* NewPC.xib */,
 				F3A9D9E51E96983D005FF25C /* setVC.h */,
 				F3A9D9E61E96983D005FF25C /* setVC.m */,
-				F3D3E89B1EAADFBC00ECE482 /* MyCodeVC.h */,
-				F3D3E89C1EAADFBC00ECE482 /* MyCodeVC.m */,
-				F3D3E89E1EAAE2B100ECE482 /* ScanVc.h */,
-				F3D3E89F1EAAE2B100ECE482 /* ScanVc.m */,
+				F3D746161EAC04E600232B34 /* code */,
 				F3A9D9E71E96983D005FF25C /* setVC.xib */,
 				F3372CCC1EA66BFE0035EA34 /* my_pub */,
 			);
@@ -1649,6 +1660,17 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		F3D746161EAC04E600232B34 /* code */ = {
+			isa = PBXGroup;
+			children = (
+				F3D3E89B1EAADFBC00ECE482 /* MyCodeVC.h */,
+				F3D3E89C1EAADFBC00ECE482 /* MyCodeVC.m */,
+				F3D3E89E1EAAE2B100ECE482 /* ScanVc.h */,
+				F3D3E89F1EAAE2B100ECE482 /* ScanVc.m */,
+			);
+			name = code;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1726,7 +1748,7 @@
 					F337E7621E878D2C00709A3B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 98E92X44D4;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1794,6 +1816,7 @@
 				F3242B7C1E98898100A39ADD /* tabbar_discover@2x.png in Resources */,
 				F3242B741E98898100A39ADD /* tabbar_compose_button@2x.png in Resources */,
 				F3242B711E98898100A39ADD /* Contents.json in Resources */,
+				F3D3E8B61EABBB0200ECE482 /* 112.jpeg in Resources */,
 				F38FEA261EA8C20F002CB53D /* NewPC.xib in Resources */,
 				F3242B721E98898100A39ADD /* tabbar_background@2x.png in Resources */,
 				F339B5EE1E9B1F2A0058A38C /* NewCell.xib in Resources */,
@@ -1809,6 +1832,7 @@
 				F3242B6F1E98898100A39ADD /* Contents.json in Resources */,
 				F3A9D9E91E96983D005FF25C /* setVC.xib in Resources */,
 				F3242B791E98898100A39ADD /* Contents.json in Resources */,
+				F3D746151EABFEE700232B34 /* home_test.jpeg in Resources */,
 				F3242B861E98898100A39ADD /* tabbar_message_center_selected@2x.png in Resources */,
 				F3C8A95E1E8E4FF30099B846 /* loginVC.xib in Resources */,
 				F337E7AB1E878F9900709A3B /* MsgVC.xib in Resources */,
@@ -1825,6 +1849,7 @@
 				F38FEA2A1EA8DEDC002CB53D /* 二维码-3.png in Resources */,
 				F3242B881E98898100A39ADD /* tabbar_profile@2x.png in Resources */,
 				F3D3E8A71EAB76C500ECE482 /* myCode.png in Resources */,
+				F3D7461B1EAC05BB00232B34 /* 点点.png in Resources */,
 				F337E7731E878D2C00709A3B /* Assets.xcassets in Resources */,
 				F3A9D9E11E969625005FF25C /* home-2.png in Resources */,
 				F3242B761E98898100A39ADD /* tabbar_compose_button_highlighted@2x.png in Resources */,
@@ -2116,6 +2141,7 @@
 				F3C8B5751E8F4E870099B846 /* UIImage+EMMultiFormat.m in Sources */,
 				F3C8B5AF1E8F4E870099B846 /* EaseTextView.m in Sources */,
 				F3C8B5771E8F4E870099B846 /* UIImageView+EMHighlightedWebCache.m in Sources */,
+				F3D746191EAC050000232B34 /* AvatarVC.m in Sources */,
 				F3C8B5A31E8F4E870099B846 /* EaseMessageTimeCell.m in Sources */,
 				F3C8B5961E8F4E870099B846 /* EaseEmotionEscape.m in Sources */,
 				F3C8B5A11E8F4E870099B846 /* EaseCustomMessageCell.m in Sources */,
@@ -2311,8 +2337,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "4dd2226e-7918-4032-bc3f-dd4f9796a396";
+				PROVISIONING_PROFILE_SPECIFIER = yuan0327;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -2342,8 +2368,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "4dd2226e-7918-4032-bc3f-dd4f9796a396";
+				PROVISIONING_PROFILE_SPECIFIER = yuan0327;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;

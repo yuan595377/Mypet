@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
     [self setSubView];
 }
 
@@ -103,8 +104,10 @@
         case 0:
             if(row == 0)
             {
-            
-                [SVProgressHUD showSuccessWithStatus:@"头像"];
+                AvatarVC *vc = [[AvatarVC alloc]init];
+                [vc setHidesBottomBarWhenPushed:YES];
+                [self.navigationController pushViewController:vc animated:YES];
+                
             }else{
                 [SVProgressHUD showSuccessWithStatus:@"昵称"];
             }

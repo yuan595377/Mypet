@@ -16,6 +16,9 @@
 @property (nonatomic, retain)UILabel *nick_name;
 @property (nonatomic, retain)UILabel *dec;
 @property (nonatomic, retain)UIImageView *avatar;
+
+
+
 @end
 
 @implementation PcVC
@@ -24,6 +27,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setSubView];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    
+    
+
 }
 
 
@@ -44,7 +56,9 @@
     self.avatar = [[UIImageView alloc]init];
     view.backgroundColor = [UIColor whiteColor];
     [view addSubview:self.avatar];
-    self.avatar.backgroundColor = [UIColor redColor];
+    NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avatar.png"];
+    NSLog(@"图片路径:%@", fullPath);
+    [self.avatar sd_setImageWithURL:[NSURL fileURLWithPath:fullPath] placeholderImage:[UIImage imageNamed:@"112.jpeg"]];
     [self.avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(70, 70));
         make.left.equalTo(view).with.offset(10);

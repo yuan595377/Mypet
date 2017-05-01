@@ -13,7 +13,10 @@
 @property (nonatomic, retain)InfoModel *model;
 @property (nonatomic, retain)UILabel *name;
 @property (nonatomic, retain)UIButton *contact;
-
+@property (nonatomic, retain)UIImageView *dec_img;
 @property (nonatomic, retain)UILabel *time;
+@property (nonatomic, retain)UIButton *follow;
+
+
 
 @end

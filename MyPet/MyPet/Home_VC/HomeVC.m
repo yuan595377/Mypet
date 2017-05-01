@@ -39,7 +39,7 @@
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 200;
+    self.tableView.rowHeight = 500;
     [self.tableView registerClass:[CellOfInfo class] forCellReuseIdentifier:@"pool"];
 
 }
@@ -89,7 +89,7 @@
         cell.model = self.dataSource1[indexPath.row];
         [cell.contact addTarget:self action:@selector(contact1:) forControlEvents:UIControlEventTouchDown];
         [cell.contact setTitle:cell.name.text forState:UIControlStateNormal];
-        
+        [cell.follow addTarget:self action:@selector(follow_me:) forControlEvents:UIControlEventTouchDown];
 
 
         
@@ -114,6 +114,21 @@
     }
     
 }
+
+- (void)follow_me:(UIButton *)button {
+    if ([button.currentTitle isEqualToString:@"取消关注"]) {
+        [button setTitle:@"+ 关注" forState:UIControlStateNormal];
+        [SVProgressHUD showSuccessWithStatus:@"已取消关注"];
+    }else {
+    
+       [button setTitle:@"取消关注" forState:UIControlStateNormal];
+       [SVProgressHUD showSuccessWithStatus:@"已关注"];
+    }
+    
+    
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
