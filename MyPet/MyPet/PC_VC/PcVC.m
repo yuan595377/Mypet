@@ -186,7 +186,10 @@
 
 - (void)mymsg {
 
-   [SVProgressHUD showSuccessWithStatus:@"我的资料"];
+    [SVProgressHUD showSuccessWithStatus:@"我的资料"];
+    [ThemeManage shareThemeManage].isNight = ![ThemeManage shareThemeManage].isNight;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"changeColor" object:nil];
+    [[NSUserDefaults standardUserDefaults] setBool:[ThemeManage shareThemeManage].isNight forKey:@"night"];
 
 }
 
