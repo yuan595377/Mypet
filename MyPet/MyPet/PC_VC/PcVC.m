@@ -177,7 +177,9 @@
 
 - (void)pushaction {
     
-    [SVProgressHUD showSuccessWithStatus:@"动态"];
+    MyPubVC *vc = [[MyPubVC alloc]init];
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
 
 }
 

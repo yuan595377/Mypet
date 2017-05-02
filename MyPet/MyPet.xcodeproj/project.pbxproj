@@ -82,6 +82,13 @@
 		F339B5F01E9BE3A60058A38C /* APPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5EF1E9BE3A60058A38C /* APPTools.m */; };
 		F339B5F41E9BE78E0058A38C /* NewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5F31E9BE78E0058A38C /* NewModel.m */; };
 		F339B5F71E9BF7620058A38C /* detailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5F61E9BF7620058A38C /* detailVC.m */; };
+		F33EB5D51EB82317006FD4CC /* ThemeManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F33EB5C81EB82317006FD4CC /* ThemeManage.m */; };
+		F33EB5D61EB82317006FD4CC /* UIButton+ThemeChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F33EB5CA1EB82317006FD4CC /* UIButton+ThemeChange.m */; };
+		F33EB5D71EB82317006FD4CC /* UILabel+ThemeChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F33EB5CC1EB82317006FD4CC /* UILabel+ThemeChange.m */; };
+		F33EB5D81EB82317006FD4CC /* UINavigationBar+ThemeChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F33EB5CE1EB82317006FD4CC /* UINavigationBar+ThemeChange.m */; };
+		F33EB5D91EB82317006FD4CC /* UITabBar+ThemeChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F33EB5D01EB82317006FD4CC /* UITabBar+ThemeChange.m */; };
+		F33EB5DA1EB82317006FD4CC /* UIView+ThemeChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F33EB5D21EB82317006FD4CC /* UIView+ThemeChange.m */; };
+		F33EB5DB1EB82317006FD4CC /* UIView+RemoveNotifition.m in Sources */ = {isa = PBXBuildFile; fileRef = F33EB5D41EB82317006FD4CC /* UIView+RemoveNotifition.m */; settings = {COMPILER_FLAGS = "<-fno-objc-arc.>"; }; };
 		F3660FA91E88C0EE00968B62 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */; };
 		F3660FAC1E88E5F700968B62 /* vcofTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3660FAB1E88E5F700968B62 /* vcofTest.m */; };
 		F36B582D1EA514B40023A7FD /* close2.png in Resources */ = {isa = PBXBuildFile; fileRef = F36B582C1EA514B40023A7FD /* close2.png */; };
@@ -367,6 +374,20 @@
 		F339B5F31E9BE78E0058A38C /* NewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewModel.m; sourceTree = "<group>"; };
 		F339B5F51E9BF7620058A38C /* detailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailVC.h; sourceTree = "<group>"; };
 		F339B5F61E9BF7620058A38C /* detailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailVC.m; sourceTree = "<group>"; };
+		F33EB5C71EB82317006FD4CC /* ThemeManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManage.h; sourceTree = "<group>"; };
+		F33EB5C81EB82317006FD4CC /* ThemeManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManage.m; sourceTree = "<group>"; };
+		F33EB5C91EB82317006FD4CC /* UIButton+ThemeChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ThemeChange.h"; sourceTree = "<group>"; };
+		F33EB5CA1EB82317006FD4CC /* UIButton+ThemeChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ThemeChange.m"; sourceTree = "<group>"; };
+		F33EB5CB1EB82317006FD4CC /* UILabel+ThemeChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ThemeChange.h"; sourceTree = "<group>"; };
+		F33EB5CC1EB82317006FD4CC /* UILabel+ThemeChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ThemeChange.m"; sourceTree = "<group>"; };
+		F33EB5CD1EB82317006FD4CC /* UINavigationBar+ThemeChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+ThemeChange.h"; sourceTree = "<group>"; };
+		F33EB5CE1EB82317006FD4CC /* UINavigationBar+ThemeChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ThemeChange.m"; sourceTree = "<group>"; };
+		F33EB5CF1EB82317006FD4CC /* UITabBar+ThemeChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+ThemeChange.h"; sourceTree = "<group>"; };
+		F33EB5D01EB82317006FD4CC /* UITabBar+ThemeChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+ThemeChange.m"; sourceTree = "<group>"; };
+		F33EB5D11EB82317006FD4CC /* UIView+ThemeChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ThemeChange.h"; sourceTree = "<group>"; };
+		F33EB5D21EB82317006FD4CC /* UIView+ThemeChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ThemeChange.m"; sourceTree = "<group>"; };
+		F33EB5D31EB82317006FD4CC /* UIView+RemoveNotifition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RemoveNotifition.h"; sourceTree = "<group>"; };
+		F33EB5D41EB82317006FD4CC /* UIView+RemoveNotifition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RemoveNotifition.m"; sourceTree = "<group>"; };
 		F35A62241E88BB8800573D21 /* MyPet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPet.entitlements; sourceTree = "<group>"; };
 		F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateFullSDK.a; path = Pods/HyphenateFullSDK/HyphenateFullSDK/lib/libHyphenateFullSDK.a; sourceTree = "<group>"; };
 		F3660FAA1E88E5F700968B62 /* vcofTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcofTest.h; sourceTree = "<group>"; };
@@ -949,6 +970,7 @@
 				F337E7691E878D2C00709A3B /* AppDelegate.h */,
 				F337E76A1E878D2C00709A3B /* AppDelegate.m */,
 				F337E7A11E878EB400709A3B /* PrefixHeader.pch */,
+				F33EB5DC1EB82325006FD4CC /* night */,
 				F339B5E61E9B14E90058A38C /* FInd_VC */,
 				F3242B391E9883DC00A39ADD /* newTabbar */,
 				F3A9D9D21E96908E005FF25C /* im */,
@@ -1102,6 +1124,27 @@
 				F339B5EC1E9B1F2A0058A38C /* NewCell.xib */,
 			);
 			path = FInd_VC;
+			sourceTree = "<group>";
+		};
+		F33EB5DC1EB82325006FD4CC /* night */ = {
+			isa = PBXGroup;
+			children = (
+				F33EB5C71EB82317006FD4CC /* ThemeManage.h */,
+				F33EB5C81EB82317006FD4CC /* ThemeManage.m */,
+				F33EB5C91EB82317006FD4CC /* UIButton+ThemeChange.h */,
+				F33EB5CA1EB82317006FD4CC /* UIButton+ThemeChange.m */,
+				F33EB5CB1EB82317006FD4CC /* UILabel+ThemeChange.h */,
+				F33EB5CC1EB82317006FD4CC /* UILabel+ThemeChange.m */,
+				F33EB5CD1EB82317006FD4CC /* UINavigationBar+ThemeChange.h */,
+				F33EB5CE1EB82317006FD4CC /* UINavigationBar+ThemeChange.m */,
+				F33EB5CF1EB82317006FD4CC /* UITabBar+ThemeChange.h */,
+				F33EB5D01EB82317006FD4CC /* UITabBar+ThemeChange.m */,
+				F33EB5D11EB82317006FD4CC /* UIView+ThemeChange.h */,
+				F33EB5D21EB82317006FD4CC /* UIView+ThemeChange.m */,
+				F33EB5D31EB82317006FD4CC /* UIView+RemoveNotifition.h */,
+				F33EB5D41EB82317006FD4CC /* UIView+RemoveNotifition.m */,
+			);
+			name = night;
 			sourceTree = "<group>";
 		};
 		F3A9D9D21E96908E005FF25C /* im */ = {
@@ -2031,6 +2074,7 @@
 				F3C8B5421E8F4E870099B846 /* EMCDDeviceManager+Media.m in Sources */,
 				F38FEA251EA8C20F002CB53D /* NewPC.m in Sources */,
 				F3C8B5621E8F4E870099B846 /* MWGridCell.m in Sources */,
+				F33EB5D91EB82317006FD4CC /* UITabBar+ThemeChange.m in Sources */,
 				F3C8B5A51E8F4E870099B846 /* EaseBubbleView+Gif.m in Sources */,
 				F3C8B59C1E8F4E870099B846 /* EaseRefreshTableViewController.m in Sources */,
 				F3C8B5B31E8F4E870099B846 /* EaseRecordView.m in Sources */,
@@ -2049,6 +2093,7 @@
 				F3A9D9E81E96983D005FF25C /* setVC.m in Sources */,
 				F339B5F41E9BE78E0058A38C /* NewModel.m in Sources */,
 				F3CB24FD1E8A8A8C00EBA1E9 /* MASViewAttribute.m in Sources */,
+				F33EB5D81EB82317006FD4CC /* UINavigationBar+ThemeChange.m in Sources */,
 				F3C8B5B21E8F4E870099B846 /* EaseChatBarMoreView.m in Sources */,
 				F3C8B5831E8F4E870099B846 /* PSTGridLayoutInfo.m in Sources */,
 				F337E76E1E878D2C00709A3B /* ViewController.m in Sources */,
@@ -2068,6 +2113,7 @@
 				F3C8B57F1E8F4E870099B846 /* PSTCollectionViewFlowLayout.m in Sources */,
 				F337E7681E878D2C00709A3B /* main.m in Sources */,
 				F3C8B56C1E8F4E870099B846 /* EMSDWebImageDecoder.m in Sources */,
+				F33EB5D51EB82317006FD4CC /* ThemeManage.m in Sources */,
 				F3C8B54D1E8F4E870099B846 /* MBProgressHUD.m in Sources */,
 				F3C8B5B11E8F4E870099B846 /* EaseFacialView.m in Sources */,
 				F3C8B5891E8F4E870099B846 /* EaseConversationModel.m in Sources */,
@@ -2112,8 +2158,10 @@
 				F3C8B5AC1E8F4E870099B846 /* EaseChatToolbar.m in Sources */,
 				F3C8B5881E8F4E870099B846 /* EaseSDKHelper.m in Sources */,
 				F3C8B5681E8F4E870099B846 /* MWZoomingScrollView.m in Sources */,
+				F33EB5DB1EB82317006FD4CC /* UIView+RemoveNotifition.m in Sources */,
 				F3C8B58E1E8F4E870099B846 /* NSString+Valid.m in Sources */,
 				F3C8B56B1E8F4E870099B846 /* EMSDWebImageCompat.m in Sources */,
+				F33EB5D71EB82317006FD4CC /* UILabel+ThemeChange.m in Sources */,
 				F3C8B5441E8F4E870099B846 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				F337E7A51E878F7B00709A3B /* HomeVC.m in Sources */,
 				F3372CCB1EA657330035EA34 /* InfoModel.m in Sources */,
@@ -2138,6 +2186,7 @@
 				F3C8B5761E8F4E870099B846 /* UIImage+EMWebP.m in Sources */,
 				F3C8B5971E8F4E870099B846 /* EaseEmotionManager.m in Sources */,
 				F3C8B5711E8F4E870099B846 /* MKAnnotationView+EMWebCache.m in Sources */,
+				F33EB5DA1EB82317006FD4CC /* UIView+ThemeChange.m in Sources */,
 				F3C8B5751E8F4E870099B846 /* UIImage+EMMultiFormat.m in Sources */,
 				F3C8B5AF1E8F4E870099B846 /* EaseTextView.m in Sources */,
 				F3C8B5771E8F4E870099B846 /* UIImageView+EMHighlightedWebCache.m in Sources */,
@@ -2168,6 +2217,7 @@
 				F3C8B5931E8F4E870099B846 /* EaseMessageReadManager.m in Sources */,
 				F337E7AE1E878FAC00709A3B /* PublishVC.m in Sources */,
 				F3C8B5671E8F4E870099B846 /* MWTapDetectingView.m in Sources */,
+				F33EB5D61EB82317006FD4CC /* UIButton+ThemeChange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

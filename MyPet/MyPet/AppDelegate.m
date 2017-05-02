@@ -20,6 +20,10 @@
     [Bmob registerWithAppKey:@"5edb7a137c535854844cb92b8c1b2149"];
     [SMSSDK registerApp:@"133daf526d52f" withSecret:@"0541ccfbdab6bc6b97575558b0fdb3cc"];
     //注册环信
+    
+    //获取夜间模式状态
+    [ThemeManage shareThemeManage].isNight = [[NSUserDefaults standardUserDefaults] boolForKey:@"night"];
+    
     EMOptions *options = [EMOptions optionsWithAppkey:@"1834751360#pan"];
     [[EMClient sharedClient]initializeSDKWithOptions:options];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
@@ -32,6 +36,7 @@
         self.window.rootViewController = [[ViewController alloc]init];
     }else{
         DLTabBarController *myTabBar = [[DLTabBarController alloc]init];
+        [myTabBar.tabBar NightWithType:UIViewColorTypeNormal];
         self.window.rootViewController = myTabBar;
     }
     [self.window makeKeyAndVisible];

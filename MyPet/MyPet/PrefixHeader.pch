@@ -66,4 +66,14 @@
 #import "PcVC.h"
 #import "AvatarVC.h"
 
+//夜间模式
+#import "ThemeManage.h"
+#import "UIView+ThemeChange.h"
+#import "UILabel+ThemeChange.h"
+#import "UIButton+ThemeChange.h"
+#import "UITabBar+ThemeChange.h"
+#import "UINavigationBar+ThemeChange.h"
+#import "UIView+RemoveNotifition.h"
+
+
 #endif
