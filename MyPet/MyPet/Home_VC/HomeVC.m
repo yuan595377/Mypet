@@ -82,21 +82,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CellOfInfo *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
     
-    if (_dataSource1) {
+    
+        CellOfInfo *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.model = self.dataSource1[indexPath.row];
         [cell.contact addTarget:self action:@selector(contact1:) forControlEvents:UIControlEventTouchDown];
         [cell.contact setTitle:cell.name.text forState:UIControlStateNormal];
         [cell.follow addTarget:self action:@selector(follow_me:) forControlEvents:UIControlEventTouchDown];
-
-
-        
         return cell;
-        
-    }
-    return cell;
+
 }
 
 
