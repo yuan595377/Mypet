@@ -22,11 +22,9 @@
 
 
 
-#import "PC_VC.h"
 #import "MsgVC.h"
 #import "PublishVC.h"
 #import "HOMEVC.h"
-#import "MyTabBar.h"
 #import <BmobSDK/Bmob.h>
 #import <HyphenateFullSDK/EMSDKFull.h>
 #import "Masonry.h"
@@ -59,12 +57,13 @@
 #import "chatVC.h"
 
 
-#import "NewPC.h"
 #import "setVC.h"
 #import "MyCodeVC.h"
 #import "ScanVc.h"
 #import "PcVC.h"
 #import "AvatarVC.h"
+#import "MyInfoVC.h"
+
 
 #import "ThemeManage.h"
 #import "UIView+ThemeChange.h"

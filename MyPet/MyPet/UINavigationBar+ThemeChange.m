@@ -14,7 +14,7 @@
 {
     [super changeColor];
     
-    [self setBarTintColor:[ThemeManage shareThemeManage].bgColor];
+    [self setBarTintColor:[ThemeManage shareThemeManage].bgColor1];
     [self setBackgroundColor:[UIColor clearColor]];
     [self setTitleTextAttributes:@{NSForegroundColorAttributeName: [ThemeManage shareThemeManage].navBarColor}];
     

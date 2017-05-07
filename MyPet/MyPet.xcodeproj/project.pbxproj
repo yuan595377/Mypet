@@ -58,14 +58,11 @@
 		F337E7761E878D2C00709A3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F337E7741E878D2C00709A3B /* LaunchScreen.storyboard */; };
 		F337E7811E878D2C00709A3B /* MyPetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E7801E878D2C00709A3B /* MyPetTests.m */; };
 		F337E78C1E878D2C00709A3B /* MyPetUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E78B1E878D2C00709A3B /* MyPetUITests.m */; };
-		F337E7A01E878E8100709A3B /* MyTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E79F1E878E8100709A3B /* MyTabBar.m */; };
 		F337E7A51E878F7B00709A3B /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E7A31E878F7B00709A3B /* HomeVC.m */; };
 		F337E7A61E878F7B00709A3B /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F337E7A41E878F7B00709A3B /* HomeVC.xib */; };
 		F337E7AA1E878F9900709A3B /* MsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E7A81E878F9900709A3B /* MsgVC.m */; };
 		F337E7AB1E878F9900709A3B /* MsgVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F337E7A91E878F9900709A3B /* MsgVC.xib */; };
 		F337E7AE1E878FAC00709A3B /* PublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E7AD1E878FAC00709A3B /* PublishVC.m */; };
-		F337E7B21E878FBE00709A3B /* PC_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F337E7B01E878FBE00709A3B /* PC_VC.m */; };
-		F337E7B31E878FBE00709A3B /* PC_VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F337E7B11E878FBE00709A3B /* PC_VC.xib */; };
 		F337E7B51E87903F00709A3B /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F337E7B41E87903F00709A3B /* libiconv.tbd */; };
 		F337E7B71E87904B00709A3B /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F337E7B61E87904B00709A3B /* libstdc++.6.0.9.tbd */; };
 		F337E7B91E87905600709A3B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F337E7B81E87905600709A3B /* libsqlite3.tbd */; };
@@ -82,8 +79,8 @@
 		F339B5F01E9BE3A60058A38C /* APPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5EF1E9BE3A60058A38C /* APPTools.m */; };
 		F339B5F41E9BE78E0058A38C /* NewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5F31E9BE78E0058A38C /* NewModel.m */; };
 		F339B5F71E9BF7620058A38C /* detailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5F61E9BF7620058A38C /* detailVC.m */; };
+		F353BD6B1EBB861F0067C985 /* MyInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F353BD6A1EBB861F0067C985 /* MyInfoVC.m */; };
 		F3660FA91E88C0EE00968B62 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */; };
-		F3660FAC1E88E5F700968B62 /* vcofTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3660FAB1E88E5F700968B62 /* vcofTest.m */; };
 		F36B582D1EA514B40023A7FD /* close2.png in Resources */ = {isa = PBXBuildFile; fileRef = F36B582C1EA514B40023A7FD /* close2.png */; };
 		F36B582F1EA5156C0023A7FD /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = F36B582E1EA5156C0023A7FD /* close.png */; };
 		F36B58311EA515E20023A7FD /* login2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F36B58301EA515E20023A7FD /* login2.jpeg */; };
@@ -92,8 +89,6 @@
 		F375452E1EA84DE900667717 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = F375452D1EA84DE900667717 /* chat.png */; };
 		F38B18081E97C832006C69F8 /* LEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B18071E97C832006C69F8 /* LEActionSheet.m */; };
 		F38B180B1E97C8A8006C69F8 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */; };
-		F38FEA251EA8C20F002CB53D /* NewPC.m in Sources */ = {isa = PBXBuildFile; fileRef = F38FEA231EA8C20F002CB53D /* NewPC.m */; };
-		F38FEA261EA8C20F002CB53D /* NewPC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38FEA241EA8C20F002CB53D /* NewPC.xib */; };
 		F38FEA281EA8DE9D002CB53D /* 二维码.png in Resources */ = {isa = PBXBuildFile; fileRef = F38FEA271EA8DE9D002CB53D /* 二维码.png */; };
 		F38FEA2A1EA8DEDC002CB53D /* 二维码-3.png in Resources */ = {isa = PBXBuildFile; fileRef = F38FEA291EA8DEDC002CB53D /* 二维码-3.png */; };
 		F38FEA2C1EA8DF45002CB53D /* 扫码.png in Resources */ = {isa = PBXBuildFile; fileRef = F38FEA2B1EA8DF45002CB53D /* 扫码.png */; };
@@ -339,8 +334,6 @@
 		F337E7871E878D2C00709A3B /* MyPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F337E78B1E878D2C00709A3B /* MyPetUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPetUITests.m; sourceTree = "<group>"; };
 		F337E78D1E878D2C00709A3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F337E79E1E878E8100709A3B /* MyTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBar.h; sourceTree = "<group>"; };
-		F337E79F1E878E8100709A3B /* MyTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBar.m; sourceTree = "<group>"; };
 		F337E7A11E878EB400709A3B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F337E7A21E878F7B00709A3B /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		F337E7A31E878F7B00709A3B /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
@@ -350,9 +343,6 @@
 		F337E7A91E878F9900709A3B /* MsgVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MsgVC.xib; sourceTree = "<group>"; };
 		F337E7AC1E878FAC00709A3B /* PublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishVC.h; sourceTree = "<group>"; };
 		F337E7AD1E878FAC00709A3B /* PublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishVC.m; sourceTree = "<group>"; };
-		F337E7AF1E878FBE00709A3B /* PC_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PC_VC.h; sourceTree = "<group>"; };
-		F337E7B01E878FBE00709A3B /* PC_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PC_VC.m; sourceTree = "<group>"; };
-		F337E7B11E878FBE00709A3B /* PC_VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PC_VC.xib; sourceTree = "<group>"; };
 		F337E7B41E87903F00709A3B /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		F337E7B61E87904B00709A3B /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		F337E7B81E87905600709A3B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -374,10 +364,10 @@
 		F339B5F31E9BE78E0058A38C /* NewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewModel.m; sourceTree = "<group>"; };
 		F339B5F51E9BF7620058A38C /* detailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailVC.h; sourceTree = "<group>"; };
 		F339B5F61E9BF7620058A38C /* detailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailVC.m; sourceTree = "<group>"; };
+		F353BD691EBB861F0067C985 /* MyInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoVC.h; sourceTree = "<group>"; };
+		F353BD6A1EBB861F0067C985 /* MyInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoVC.m; sourceTree = "<group>"; };
 		F35A62241E88BB8800573D21 /* MyPet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPet.entitlements; sourceTree = "<group>"; };
 		F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHyphenateFullSDK.a; path = Pods/HyphenateFullSDK/HyphenateFullSDK/lib/libHyphenateFullSDK.a; sourceTree = "<group>"; };
-		F3660FAA1E88E5F700968B62 /* vcofTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcofTest.h; sourceTree = "<group>"; };
-		F3660FAB1E88E5F700968B62 /* vcofTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcofTest.m; sourceTree = "<group>"; };
 		F36B582C1EA514B40023A7FD /* close2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close2.png; path = ../close2.png; sourceTree = "<group>"; };
 		F36B582E1EA5156C0023A7FD /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		F36B58301EA515E20023A7FD /* login2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login2.jpeg; sourceTree = "<group>"; };
@@ -389,9 +379,6 @@
 		F38B18071E97C832006C69F8 /* LEActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEActionSheet.m; sourceTree = "<group>"; };
 		F38B18091E97C8A8006C69F8 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
-		F38FEA221EA8C20F002CB53D /* NewPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPC.h; sourceTree = "<group>"; };
-		F38FEA231EA8C20F002CB53D /* NewPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPC.m; sourceTree = "<group>"; };
-		F38FEA241EA8C20F002CB53D /* NewPC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPC.xib; sourceTree = "<group>"; };
 		F38FEA271EA8DE9D002CB53D /* 二维码.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二维码.png"; sourceTree = "<group>"; };
 		F38FEA291EA8DEDC002CB53D /* 二维码-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二维码-3.png"; sourceTree = "<group>"; };
 		F38FEA2B1EA8DF45002CB53D /* 扫码.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "扫码.png"; sourceTree = "<group>"; };
@@ -1063,29 +1050,16 @@
 		F337E79B1E878E4C00709A3B /* PC_VC */ = {
 			isa = PBXGroup;
 			children = (
-				F337E7AF1E878FBE00709A3B /* PC_VC.h */,
-				F337E7B01E878FBE00709A3B /* PC_VC.m */,
-				F337E7B11E878FBE00709A3B /* PC_VC.xib */,
-				F3D3E8A61EAB76C500ECE482 /* myCode.png */,
-				F38FEA291EA8DEDC002CB53D /* 二维码-3.png */,
-				F38FEA271EA8DE9D002CB53D /* 二维码.png */,
-				F38FEA2B1EA8DF45002CB53D /* 扫码.png */,
-				F3D3E8B31EABA78A00ECE482 /* 脚印.png */,
-				F3D3E8B21EAB9FA600ECE482 /* 123.pic */,
-				F3D3E8B01EAB826400ECE482 /* mypet.png */,
-				F3D3E8AA1EAB77FA00ECE482 /* set4.png */,
-				F3660FAA1E88E5F700968B62 /* vcofTest.h */,
-				F3660FAB1E88E5F700968B62 /* vcofTest.m */,
-				F38FEA221EA8C20F002CB53D /* NewPC.h */,
-				F38FEA231EA8C20F002CB53D /* NewPC.m */,
+				F353BD681EBB85E80067C985 /* new_img */,
 				F3D3E8A11EAB716D00ECE482 /* PcVC.h */,
 				F3D3E8A21EAB716D00ECE482 /* PcVC.m */,
 				F3D7461A1EAC05BB00232B34 /* 点点.png */,
 				F3D746171EAC050000232B34 /* AvatarVC.h */,
 				F3D746181EAC050000232B34 /* AvatarVC.m */,
-				F38FEA241EA8C20F002CB53D /* NewPC.xib */,
 				F3A9D9E51E96983D005FF25C /* setVC.h */,
 				F3A9D9E61E96983D005FF25C /* setVC.m */,
+				F353BD691EBB861F0067C985 /* MyInfoVC.h */,
+				F353BD6A1EBB861F0067C985 /* MyInfoVC.m */,
 				F3D746161EAC04E600232B34 /* code */,
 				F3A9D9E71E96983D005FF25C /* setVC.xib */,
 				F3372CCC1EA66BFE0035EA34 /* my_pub */,
@@ -1105,8 +1079,6 @@
 		F337E79D1E878E7300709A3B /* Other_VC */ = {
 			isa = PBXGroup;
 			children = (
-				F337E79E1E878E8100709A3B /* MyTabBar.h */,
-				F337E79F1E878E8100709A3B /* MyTabBar.m */,
 				F3C8A93E1E8E3B8F0099B846 /* RegisterVC.h */,
 				F3C8A93F1E8E3B900099B846 /* RegisterVC.m */,
 				F36B58341EA527510023A7FD /* RegisterVC_2.h */,
@@ -1137,6 +1109,21 @@
 				F339B5EC1E9B1F2A0058A38C /* NewCell.xib */,
 			);
 			path = FInd_VC;
+			sourceTree = "<group>";
+		};
+		F353BD681EBB85E80067C985 /* new_img */ = {
+			isa = PBXGroup;
+			children = (
+				F3D3E8A61EAB76C500ECE482 /* myCode.png */,
+				F38FEA291EA8DEDC002CB53D /* 二维码-3.png */,
+				F38FEA271EA8DE9D002CB53D /* 二维码.png */,
+				F38FEA2B1EA8DF45002CB53D /* 扫码.png */,
+				F3D3E8B31EABA78A00ECE482 /* 脚印.png */,
+				F3D3E8B21EAB9FA600ECE482 /* 123.pic */,
+				F3D3E8B01EAB826400ECE482 /* mypet.png */,
+				F3D3E8AA1EAB77FA00ECE482 /* set4.png */,
+			);
+			name = new_img;
 			sourceTree = "<group>";
 		};
 		F3A9D9D21E96908E005FF25C /* im */ = {
@@ -1852,14 +1839,12 @@
 				F3242B741E98898100A39ADD /* tabbar_compose_button@2x.png in Resources */,
 				F3242B711E98898100A39ADD /* Contents.json in Resources */,
 				F3D3E8B61EABBB0200ECE482 /* 112.jpeg in Resources */,
-				F38FEA261EA8C20F002CB53D /* NewPC.xib in Resources */,
 				F3242B721E98898100A39ADD /* tabbar_background@2x.png in Resources */,
 				F339B5EE1E9B1F2A0058A38C /* NewCell.xib in Resources */,
 				F36B58331EA522580023A7FD /* back2.png in Resources */,
 				F3A9D9DE1E96908E005FF25C /* pub.png in Resources */,
 				F3242B851E98898100A39ADD /* Contents.json in Resources */,
 				F375452E1EA84DE900667717 /* chat.png in Resources */,
-				F337E7B31E878FBE00709A3B /* PC_VC.xib in Resources */,
 				F39C7F3B1E9E32BA008705C6 /* welcome.jpeg in Resources */,
 				F3242B7E1E98898100A39ADD /* tabbar_discover_selected@2x.png in Resources */,
 				F3CB24F81E8A8A8C00EBA1E9 /* Info.plist in Resources */,
@@ -2064,7 +2049,6 @@
 				F3C8B5721E8F4E870099B846 /* NSData+EMImageContentType.m in Sources */,
 				F339B5E91E9B14FB0058A38C /* Find_VC.m in Sources */,
 				F3C8B5421E8F4E870099B846 /* EMCDDeviceManager+Media.m in Sources */,
-				F38FEA251EA8C20F002CB53D /* NewPC.m in Sources */,
 				F3C8B5621E8F4E870099B846 /* MWGridCell.m in Sources */,
 				F3B6B9A71EB8F05A002C2F2B /* UITabBar+ThemeChange.m in Sources */,
 				F3C8B5A51E8F4E870099B846 /* EaseBubbleView+Gif.m in Sources */,
@@ -2132,6 +2116,7 @@
 				F3C8B5451E8F4E870099B846 /* EMCDDeviceManager+Remind.m in Sources */,
 				F309CD601E8F89D1001B178C /* conversationListVc.m in Sources */,
 				F3C8B5A21E8F4E870099B846 /* EaseMessageCell.m in Sources */,
+				F353BD6B1EBB861F0067C985 /* MyInfoVC.m in Sources */,
 				F3C8B59F1E8F4E870099B846 /* EaseUserCell.m in Sources */,
 				F3C8B5841E8F4E870099B846 /* PSTGridLayoutItem.m in Sources */,
 				F3CB25011E8A8A8C00EBA1E9 /* View+MASAdditions.m in Sources */,
@@ -2158,14 +2143,12 @@
 				F337E7A51E878F7B00709A3B /* HomeVC.m in Sources */,
 				F3372CCB1EA657330035EA34 /* InfoModel.m in Sources */,
 				F3C8B5791E8F4E870099B846 /* UIView+EMWebCacheOperation.m in Sources */,
-				F337E7B21E878FBE00709A3B /* PC_VC.m in Sources */,
 				F3C8B57B1E8F4E870099B846 /* PSTCollectionView.m in Sources */,
 				F3C8B56A1E8F4E870099B846 /* EMSDImageCache.m in Sources */,
 				F3CB24FF1E8A8A8C00EBA1E9 /* NSArray+MASAdditions.m in Sources */,
 				F3CB25001E8A8A8C00EBA1E9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				F3C8B5861E8F4E870099B846 /* PSTGridLayoutSection.m in Sources */,
 				F3C8A95D1E8E4FF30099B846 /* loginVC.m in Sources */,
-				F3660FAC1E88E5F700968B62 /* vcofTest.m in Sources */,
 				F3C8A9411E8E3B900099B846 /* RegisterVC.m in Sources */,
 				F3C8B5851E8F4E870099B846 /* PSTGridLayoutRow.m in Sources */,
 				F3C8B56D1E8F4E870099B846 /* EMSDWebImageDownloader.m in Sources */,
@@ -2193,7 +2176,6 @@
 				F3C8B56E1E8F4E870099B846 /* EMSDWebImageDownloaderOperation.m in Sources */,
 				F3C8B5801E8F4E870099B846 /* PSTCollectionViewItemKey.m in Sources */,
 				F3C8B57D1E8F4E870099B846 /* PSTCollectionViewController.m in Sources */,
-				F337E7A01E878E8100709A3B /* MyTabBar.m in Sources */,
 				F3D3E89D1EAADFBC00ECE482 /* MyCodeVC.m in Sources */,
 				F3C8B5611E8F4E870099B846 /* MWCaptionView.m in Sources */,
 				F3FB43F01EA3BE0C005C226B /* PB_vc.m in Sources */,

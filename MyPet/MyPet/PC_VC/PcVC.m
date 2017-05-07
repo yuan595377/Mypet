@@ -186,16 +186,19 @@
 
 - (void)mymsg {
 
-    [SVProgressHUD showSuccessWithStatus:@"我的资料"];
-    [ThemeManage shareThemeManage].isNight = ![ThemeManage shareThemeManage].isNight;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"changeColor" object:nil];
-    [[NSUserDefaults standardUserDefaults] setBool:[ThemeManage shareThemeManage].isNight forKey:@"night"];
+    MyInfoVC *vc = [[MyInfoVC alloc]init];
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
 
 }
 
+
 - (void)folo {
 
-  [SVProgressHUD showSuccessWithStatus:@"我的关注"];
+    [ThemeManage shareThemeManage].isNight = ![ThemeManage shareThemeManage].isNight;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"changeColor" object:nil];
+    [[NSUserDefaults standardUserDefaults] setBool:[ThemeManage shareThemeManage].isNight forKey:@"night"];
+    //夜间模式
 }
 
 - (void)fan {

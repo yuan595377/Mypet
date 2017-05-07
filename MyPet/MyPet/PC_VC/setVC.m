@@ -41,7 +41,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 3;
+    return 2;
 }
 
 
@@ -50,8 +50,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 2;
-    }else if (section == 1) {
         return 3;
     }else {
         return 1;
@@ -69,23 +67,14 @@
         case 0:
             if(row == 0)
             {
-                cell.textLabel.text =  @"头像";
-            
-            }else{
-                cell.textLabel.text =  @"昵称";
-            }
-            break;
-        case 1:
-            if(row == 0)
-            {
                 cell.textLabel.text =  @"夜间模式";
             }else if(row == 1){
                 cell.textLabel.text =  @"意见反馈";
             }else {
-              cell.textLabel.text =  @"评分";
+                cell.textLabel.text =  @"评分";
             }
             break;
-        case 2:
+        case 1:
             cell.textLabel.text =  @"退出登录";
             break;
             default:
@@ -104,17 +93,6 @@
         case 0:
             if(row == 0)
             {
-                AvatarVC *vc = [[AvatarVC alloc]init];
-                [vc setHidesBottomBarWhenPushed:YES];
-                [self.navigationController pushViewController:vc animated:YES];
-                
-            }else{
-                [SVProgressHUD showSuccessWithStatus:@"昵称"];
-            }
-            break;
-        case 1:
-            if(row == 0)
-            {
                 [SVProgressHUD showSuccessWithStatus:@""];
             }else if(row == 1){
                 [SVProgressHUD showSuccessWithStatus:@""];
@@ -122,7 +100,8 @@
                 [SVProgressHUD showSuccessWithStatus:@""];
             }
             break;
-        case 2:
+
+        case 1:
                 [self logOut];
             break;
         default:

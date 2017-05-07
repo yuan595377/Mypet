@@ -21,7 +21,7 @@
     
     [self setupViewControllers];
     [self setupTabbar];
-    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.8]];;
+    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:0.19 green:0.21 blue:0.23 alpha:1.00]];;
    
 }
 
@@ -53,15 +53,10 @@
 -(void)tabBarDidClickAtCenterButton:(DLTabBar *)tabBar
 {
     
-    BHBItem * item0 = [[BHBItem alloc]initWithTitle:@"Text" Icon:@"images.bundle/tabbar_compose_idea"];
-
-        
         PB_vc *vc = [[PB_vc alloc]init];
        [self presentViewController:vc animated:YES completion:^{
            
        }];
-
-    
     
 }
 
@@ -75,13 +70,13 @@
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:123/255.0 green:123/255.0 blue:123/255.0 alpha:1];
     NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
-    selectTextAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    selectTextAttrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];
     [nav.navigationBar NightWithType:UIViewColorTypeNormal];
     [nav.navigationBar setBarTintColor:[UIColor colorWithRed:1.00 green:0.53 blue:0.49 alpha:1.00]];
-    [nav.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],UITextAttributeTextColor,nil]];
+    [nav.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,nil]];
 
 
     [self addChildViewController:nav];

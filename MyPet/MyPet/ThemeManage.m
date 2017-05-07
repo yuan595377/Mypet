@@ -32,14 +32,16 @@ static ThemeManage *manage;
         self.navBarColor = [UIColor whiteColor];
         self.color2 = [UIColor colorWithRed:0.2 green:0.31 blue:0.43 alpha:1];
         self.textColorGray = [UIColor whiteColor];
+        self.bgColor1 = [UIColor colorWithRed:0.19 green:0.21 blue:0.23 alpha:1.00];
     }
     else{
-        self.bgColor = [UIColor whiteColor];
+        self.bgColor = [UIColor colorWithRed:0.19 green:0.21 blue:0.23 alpha:1.00];
         self.textColor = [UIColor blackColor];
         self.color1 = [UIColor colorWithRed:0.06 green:0.25 blue:0.48 alpha:1];
-        self.navBarColor = [UIColor colorWithRed:0.31 green:0.73 blue:0.58 alpha:1];
+        self.navBarColor = [UIColor whiteColor];
         self.color2 = [UIColor colorWithRed:0.57 green:0.66 blue:0.77 alpha:1];
         self.textColorGray = [UIColor grayColor];
+        self.bgColor1 = [UIColor colorWithRed:1.00 green:0.56 blue:0.58 alpha:1.00];
     }
     
     static dispatch_once_t onceToken;

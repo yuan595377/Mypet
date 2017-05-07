@@ -31,6 +31,7 @@
 - (void)createLayOut {
     //设置标题
     self.title = [[UILabel alloc]init];
+    [self.title NightWithType:UIViewColorTypeClear];
     [self.title setFont:[UIFont systemFontOfSize:15]];
     [self.contentView addSubview:self.title];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {

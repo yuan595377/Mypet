@@ -65,7 +65,12 @@
                 info.title = [obj objectForKey:@"title"];
                 NSLog(@"info:%@", info.title);
             }
-            [self.dataSource1 addObject:info];
+            
+            if (info.title) {
+                [self.dataSource1 addObject:info];
+            }
+            
+            
 
         }
         [_tableView reloadData];

@@ -1,13 +1,13 @@
 //
-//  NewPC.h
+//  MyInfoVC.h
 //  MyPet
 //
-//  Created by 袁立康 on 17/4/20.
+//  Created by 袁立康 on 17/5/4.
 //  Copyright © 2017年 袁立康. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface NewPC : UIViewController
+@interface MyInfoVC : UIViewController
 
 @end
