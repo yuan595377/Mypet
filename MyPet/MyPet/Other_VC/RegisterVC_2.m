@@ -102,7 +102,7 @@
     
     self.labelOfdec = [[UILabel alloc]init];
     [self.view addSubview:self.labelOfdec];
-    self.labelOfdec.text = @"登录代表您已同意";
+    self.labelOfdec.text = @"注册代表您已同意";
     [self.labelOfdec mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(150, 30));
         make.left.equalTo(self.choose.mas_right).with.offset(5);
