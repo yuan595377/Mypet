@@ -53,7 +53,11 @@
 -(void)tabBarDidClickAtCenterButton:(DLTabBar *)tabBar
 {
     
-        PB_vc *vc = [[PB_vc alloc]init];
+    if (![EMClient sharedClient].isLoggedIn) {
+        [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        return;
+    }
+       PB_vc *vc = [[PB_vc alloc]init];
        [self presentViewController:vc animated:YES completion:^{
            
        }];

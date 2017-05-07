@@ -177,6 +177,11 @@
 
 - (void)pushaction {
     
+    if (![EMClient sharedClient].isLoggedIn) {
+        [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        return;
+    }
+    
     MyPubVC *vc = [[MyPubVC alloc]init];
     [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];
@@ -185,7 +190,12 @@
 
 
 - (void)mymsg {
-
+    
+    if (![EMClient sharedClient].isLoggedIn) {
+        [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        return;
+    }
+    
     MyInfoVC *vc = [[MyInfoVC alloc]init];
     [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];
@@ -194,7 +204,13 @@
 
 
 - (void)folo {
-
+    
+    if (![EMClient sharedClient].isLoggedIn) {
+        [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        return;
+    }
+    
+    
     [ThemeManage shareThemeManage].isNight = ![ThemeManage shareThemeManage].isNight;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"changeColor" object:nil];
     [[NSUserDefaults standardUserDefaults] setBool:[ThemeManage shareThemeManage].isNight forKey:@"night"];
@@ -202,6 +218,12 @@
 }
 
 - (void)fan {
+    
+    if (![EMClient sharedClient].isLoggedIn) {
+        [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        return;
+    }
+    
   [SVProgressHUD showSuccessWithStatus:@"我的粉丝"];
 }
 
@@ -264,11 +286,16 @@
     long row = indexPath.row;
     switch (section) {
         case 0:
+            if (![EMClient sharedClient].isLoggedIn) {
+                [SVProgressHUD showErrorWithStatus:@"请先登录"];
+                return;
+            }
             [SVProgressHUD showSuccessWithStatus:@"我的宠物"];
             break;
         case 1:
             if(row == 0)
             {
+                
                 [self goMycCode];
             }else if(row == 1){
                 [self goScanMyCode];
@@ -292,7 +319,10 @@
 }
 
 - (void)goMycCode {
-
+    if (![EMClient sharedClient].isLoggedIn) {
+        [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        return;
+    }
     MyCodeVC *vc = [[MyCodeVC alloc]init];
     [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];
@@ -300,6 +330,10 @@
 
 
 - (void)goScanMyCode {
+    if (![EMClient sharedClient].isLoggedIn) {
+        [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        return;
+    }
     ScanVc *vc = [[ScanVc alloc]init];
     [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];

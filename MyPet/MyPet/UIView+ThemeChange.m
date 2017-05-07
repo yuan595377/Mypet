@@ -35,7 +35,7 @@
     //type为NSNumber型, 变为NSInteger
     switch ([self.type integerValue]) {
         case UIViewColorTypeNormal:
-            self.backgroundColor = [ThemeManage shareThemeManage].bgColor;
+            self.backgroundColor = [ThemeManage shareThemeManage].bgColor2;
             break;
         case UIViewColorType1:
             self.backgroundColor = [ThemeManage shareThemeManage].color1;

@@ -18,8 +18,10 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
   
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
     if (self) {
         //布局
+        [self.contentView NightWithType:UIViewColorTypeNormal];
         [self createLayOut];
         
     }
@@ -34,6 +36,7 @@
     
     self.name = [[UILabel alloc]init];
     [self.name setFont:[UIFont systemFontOfSize:15]];
+    [self.name NightWithType:UIViewColorTypeNormal];
     [self.contentView addSubview:self.name];
     [self.name mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 150, 20));
@@ -43,6 +46,7 @@
     
     
     self.time = [[UILabel alloc]init];
+    [self.time NightWithType:UIViewColorTypeNormal];
     [self.time setFont:[UIFont systemFontOfSize:15]];
     [self.contentView addSubview:self.time];
     [self.time mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -54,6 +58,7 @@
     
     
     self.title = [[UILabel alloc]init];
+    [self.title NightWithType:UIViewColorTypeNormal];
     [self.title setFont:[UIFont systemFontOfSize:15]];
     [self.contentView addSubview:self.title];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {

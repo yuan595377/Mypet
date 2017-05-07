@@ -7,7 +7,6 @@
 //
 
 #import "setVC.h"
-#import "ViewController.h"
 @interface setVC ()<LEActionSheetDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)UITableView *tableView;
 @end
@@ -75,7 +74,13 @@
             }
             break;
         case 1:
-            cell.textLabel.text =  @"退出登录";
+            if (![EMClient sharedClient].isLoggedIn) {
+                cell.hidden = YES;
+                
+            }else {
+                cell.textLabel.text =  @"退出登录";
+            }
+            
             break;
             default:
             break;

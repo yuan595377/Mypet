@@ -27,6 +27,7 @@ static ThemeManage *manage;
     
     if (self.isNight) {
         self.bgColor = [UIColor colorWithRed:0.06 green:0.08 blue:0.1 alpha:1];
+        self.bgColor2 = [UIColor colorWithRed:0.08 green:0.11 blue:0.13 alpha:1];
         self.textColor = [UIColor whiteColor];
         self.color1 = [UIColor colorWithRed:0.08 green:0.11 blue:0.13 alpha:1];
         self.navBarColor = [UIColor whiteColor];
@@ -35,6 +36,7 @@ static ThemeManage *manage;
         self.bgColor1 = [UIColor colorWithRed:0.19 green:0.21 blue:0.23 alpha:1.00];
     }
     else{
+        self.bgColor2 = [UIColor whiteColor];
         self.bgColor = [UIColor colorWithRed:0.19 green:0.21 blue:0.23 alpha:1.00];
         self.textColor = [UIColor blackColor];
         self.color1 = [UIColor colorWithRed:0.06 green:0.25 blue:0.48 alpha:1];

@@ -92,6 +92,14 @@
 
 - (void)contact1:(UIButton *)button {
     
+    if (![EMClient sharedClient].isLoggedIn) {
+        [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [UIApplication sharedApplication].keyWindow.rootViewController = [[ViewController alloc]init];
+        return;
+    }
+    
+    
     if ([button.currentTitle isEqualToString:[EMClient sharedClient].currentUsername]) {
         [SVProgressHUD showErrorWithStatus:@"不可以和自己聊天哦"];
         

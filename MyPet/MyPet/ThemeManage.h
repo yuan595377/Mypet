@@ -14,6 +14,7 @@
 #pragma mark - 颜色属性
 @property(nonatomic, retain)UIColor *bgColor;
 @property(nonatomic, retain)UIColor *bgColor1;
+@property(nonatomic, retain)UIColor *bgColor2;
 @property(nonatomic, retain)UIColor *color1;
 @property(nonatomic, retain)UIColor *color2;
 @property(nonatomic, retain)UIColor *textColor;

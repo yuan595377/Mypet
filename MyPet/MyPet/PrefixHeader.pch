@@ -63,7 +63,7 @@
 #import "PcVC.h"
 #import "AvatarVC.h"
 #import "MyInfoVC.h"
-
+#import "ViewController.h"
 
 #import "ThemeManage.h"
 #import "UIView+ThemeChange.h"
