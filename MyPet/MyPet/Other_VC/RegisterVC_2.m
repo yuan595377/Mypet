@@ -13,6 +13,11 @@
 @property (nonatomic, retain)UITextField *username2;
 @property (nonatomic, retain)UIButton *login;
 @property (nonatomic, retain)UIButton *send;
+@property (nonatomic, retain)UIButton *choose;
+@property (nonatomic, retain)UIButton *procol;
+@property (nonatomic, retain)UILabel *labelOfdec;
+
+
 @end
 
 @implementation RegisterVC_2
@@ -20,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
     self.button_close = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.button_close];
     [self.button_close setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
@@ -83,9 +89,68 @@
     }];
     [self.login addTarget:self action:@selector(registerq) forControlEvents:UIControlEventTouchDown];
 
+    self.choose = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.choose];
+    [self.choose setImage:[UIImage imageNamed:@"对勾.png"] forState:UIControlStateNormal];
+    [self.choose mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+        make.left.equalTo(self.view).with.offset(10);
+        make.top.equalTo(self.login.mas_bottom).with.offset(30);
+    }];
+    self.choose.tag = 1;
+    [self.choose addTarget:self action:@selector(chooseimg:) forControlEvents:UIControlEventTouchDown];
+    
+    self.labelOfdec = [[UILabel alloc]init];
+    [self.view addSubview:self.labelOfdec];
+    self.labelOfdec.text = @"登录代表您已同意";
+    [self.labelOfdec mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(150, 30));
+        make.left.equalTo(self.choose.mas_right).with.offset(5);
+        make.top.equalTo(self.login.mas_bottom).with.offset(30);
+        
+        
+    }];
+    
+    
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:@"昵宠用户协议"];
+    NSRange strRange = {0, [str length]};
+    [str addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:strRange];
+    self.procol = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.procol setAttributedTitle:str forState:UIControlStateNormal];
+    
+    [self.view addSubview:self.procol];
+    [self.procol mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(150, 30));
+        make.left.equalTo(self.labelOfdec.mas_right).with.offset(5);
+        make.top.equalTo(self.login.mas_bottom).with.offset(30);
+    }];
+    [self.procol addTarget:self action:@selector(jumpTopro) forControlEvents:UIControlEventTouchDown];
+    
+}
+
+- (void)chooseimg:(UIButton *)button {
+    if (button.tag == 1) {
+        button.tag = 0;
+        [self.choose setImage:[UIImage imageNamed:@"圆.png"] forState:UIControlStateNormal];
+    }else {
+        button.tag = 1;
+        [self.choose setImage:[UIImage imageNamed:@"对勾.png"] forState:UIControlStateNormal];
+        
+        
+    }
+    
+}
+
+- (void)jumpTopro {
+    
+    ProcoVC *vc = [[ProcoVC alloc]init];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
     
     
 }
+
 
 - (void)try {
     [self dismissViewControllerAnimated:YES completion:nil];

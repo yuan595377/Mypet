@@ -12,6 +12,9 @@
 		E9A91CA30C4D5D6E3F200CC2 /* libPods-MyPet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D401018F7BC5C18A13BC526 /* libPods-MyPet.a */; };
 		F309CD5D1E8F5575001B178C /* chatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F309CD5C1E8F5575001B178C /* chatVC.m */; };
 		F309CD601E8F89D1001B178C /* conversationListVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F309CD5F1E8F89D1001B178C /* conversationListVc.m */; };
+		F311362D1EBF41860022220D /* 对勾.png in Resources */ = {isa = PBXBuildFile; fileRef = F311362C1EBF41860022220D /* 对勾.png */; };
+		F311362F1EBF418B0022220D /* 圆.png in Resources */ = {isa = PBXBuildFile; fileRef = F311362E1EBF418B0022220D /* 圆.png */; };
+		F31136321EBF62B30022220D /* ProcoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F31136311EBF62B30022220D /* ProcoVC.m */; };
 		F3242B341E98833800A39ADD /* DLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F3242B311E98833800A39ADD /* DLTabBar.m */; };
 		F3242B351E98833800A39ADD /* DLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3242B331E98833800A39ADD /* DLTabBarController.m */; };
 		F3242B381E9883D600A39ADD /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F3242B371E9883D600A39ADD /* UIView+Extension.m */; };
@@ -272,6 +275,10 @@
 		F309CD5C1E8F5575001B178C /* chatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatVC.m; sourceTree = "<group>"; };
 		F309CD5E1E8F89D1001B178C /* conversationListVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conversationListVc.h; sourceTree = "<group>"; };
 		F309CD5F1E8F89D1001B178C /* conversationListVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = conversationListVc.m; sourceTree = "<group>"; };
+		F311362C1EBF41860022220D /* 对勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对勾.png"; sourceTree = "<group>"; };
+		F311362E1EBF418B0022220D /* 圆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆.png"; sourceTree = "<group>"; };
+		F31136301EBF62B30022220D /* ProcoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcoVC.h; sourceTree = "<group>"; };
+		F31136311EBF62B30022220D /* ProcoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcoVC.m; sourceTree = "<group>"; };
 		F3242B301E98833800A39ADD /* DLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabBar.h; sourceTree = "<group>"; };
 		F3242B311E98833800A39ADD /* DLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabBar.m; sourceTree = "<group>"; };
 		F3242B321E98833800A39ADD /* DLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabBarController.h; sourceTree = "<group>"; };
@@ -1086,8 +1093,12 @@
 				F3C8A9401E8E3B900099B846 /* RegisterVC.xib */,
 				F309CD5B1E8F5575001B178C /* chatVC.h */,
 				F309CD5C1E8F5575001B178C /* chatVC.m */,
+				F311362C1EBF41860022220D /* 对勾.png */,
+				F311362E1EBF418B0022220D /* 圆.png */,
 				F3C8A95A1E8E4FF30099B846 /* loginVC.h */,
 				F3C8A95B1E8E4FF30099B846 /* loginVC.m */,
+				F31136301EBF62B30022220D /* ProcoVC.h */,
+				F31136311EBF62B30022220D /* ProcoVC.m */,
 				F3C8A95C1E8E4FF30099B846 /* loginVC.xib */,
 				F3FB43EE1EA3BE0C005C226B /* PB_vc.h */,
 				F3FB43EF1EA3BE0C005C226B /* PB_vc.m */,
@@ -1854,6 +1865,7 @@
 				F3242B791E98898100A39ADD /* Contents.json in Resources */,
 				F3D746151EABFEE700232B34 /* home_test.jpeg in Resources */,
 				F3242B861E98898100A39ADD /* tabbar_message_center_selected@2x.png in Resources */,
+				F311362F1EBF418B0022220D /* 圆.png in Resources */,
 				F3C8A95E1E8E4FF30099B846 /* loginVC.xib in Resources */,
 				F337E7AB1E878F9900709A3B /* MsgVC.xib in Resources */,
 				F3C8B5871E8F4E870099B846 /* MWPhotoBrowser.bundle in Resources */,
@@ -1869,6 +1881,7 @@
 				F38FEA2A1EA8DEDC002CB53D /* 二维码-3.png in Resources */,
 				F3242B881E98898100A39ADD /* tabbar_profile@2x.png in Resources */,
 				F3D3E8A71EAB76C500ECE482 /* myCode.png in Resources */,
+				F311362D1EBF41860022220D /* 对勾.png in Resources */,
 				F3D7461B1EAC05BB00232B34 /* 点点.png in Resources */,
 				F337E7731E878D2C00709A3B /* Assets.xcassets in Resources */,
 				F3A9D9E11E969625005FF25C /* home-2.png in Resources */,
@@ -2082,6 +2095,7 @@
 				F3C8B5701E8F4E870099B846 /* EMSDWebImagePrefetcher.m in Sources */,
 				F3C8B5921E8F4E870099B846 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				F3372CC81EA657020035EA34 /* CellOfInfo.m in Sources */,
+				F31136321EBF62B30022220D /* ProcoVC.m in Sources */,
 				F3C8B5B41E8F4E870099B846 /* EaseConversationCell.m in Sources */,
 				F3D3E8A31EAB716D00ECE482 /* PcVC.m in Sources */,
 				F3C8B5A01E8F4E870099B846 /* EaseBaseMessageCell.m in Sources */,

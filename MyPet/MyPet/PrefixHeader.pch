@@ -46,6 +46,8 @@
 #import <BmobSDK/BmobFile.h>
 #import "PB_vc.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "ProcoVC.h"
+
 
 
 //home

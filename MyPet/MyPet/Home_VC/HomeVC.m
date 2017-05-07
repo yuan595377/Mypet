@@ -7,7 +7,6 @@
 //
 
 #import "HomeVC.h"
-
 @interface HomeVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)UITableView *tableView;
 @property (nonatomic, retain)NSMutableArray *dataSource1;
@@ -63,7 +62,8 @@
                 info.time = [obj objectForKey:@"updatedAt"];
                 NSLog(@"%@", info.title);
             }
-            [self.dataSource1 addObject:info];
+            
+                [self.dataSource1 addObject:info];
         }
         [_tableView reloadData];
     }];
@@ -78,9 +78,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-        CellOfInfo *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.model = self.dataSource1[indexPath.row];
+    static NSString *CellIdentifier = @"pool";
+    CellOfInfo *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    if (cell == nil) {
+        
+        cell = [[CellOfInfo alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
+    }
+        cell.model = [self.dataSource1 objectAtIndex:indexPath.row];
         [cell.contact addTarget:self action:@selector(contact1:) forControlEvents:UIControlEventTouchDown];
         [cell.contact setTitle:cell.name.text forState:UIControlStateNormal];
         [cell.follow addTarget:self action:@selector(follow_me:) forControlEvents:UIControlEventTouchDown];
@@ -112,15 +119,13 @@
 }
 
 - (void)follow_me:(UIButton *)button {
-    if ([button.currentTitle isEqualToString:@"取消关注"]) {
-        [button setTitle:@"+ 关注" forState:UIControlStateNormal];
-        [SVProgressHUD showSuccessWithStatus:@"已取消关注"];
-    }else {
     
-       [button setTitle:@"取消关注" forState:UIControlStateNormal];
-       [SVProgressHUD showSuccessWithStatus:@"已关注"];
-    }
+    [SVProgressHUD showSuccessWithStatus:@"举报成功"];
+
 }
+
+
+
 
 
 - (void)didReceiveMemoryWarning {

@@ -95,7 +95,7 @@
     self.follow = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.contentView addSubview:self.follow];
     [self.follow setFont:[UIFont systemFontOfSize:13]];
-    [self.follow setTitle:@"+ 关注" forState:UIControlStateNormal];
+    [self.follow setTitle:@"举报" forState:UIControlStateNormal];
     [self.follow mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(60, 20));
         make.right.equalTo(self.contentView.mas_right).with.offset(-20);
