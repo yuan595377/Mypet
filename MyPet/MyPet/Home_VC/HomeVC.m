@@ -37,7 +37,7 @@
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 500;
+    self.tableView.rowHeight = 460;
     [self.tableView registerClass:[CellOfInfo class] forCellReuseIdentifier:@"pool"];
 
 }

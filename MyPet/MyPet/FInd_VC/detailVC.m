@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     UIWebView *view = [[UIWebView alloc]initWithFrame:self.view.frame];
     view.delegate = self;
     NSString *url = [NSString stringWithFormat:@"http://wp.asopeixun.com/?p=%ld", (long)self.ID];
