@@ -2420,7 +2420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyPet/MyPet.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 98E92X44D4;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyPet/PrefixHeader.pch";
@@ -2439,8 +2439,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4dd2226e-7918-4032-bc3f-dd4f9796a396";
-				PROVISIONING_PROFILE_SPECIFIER = yuan0327;
+				PROVISIONING_PROFILE = "c637d168-2fc8-420d-930b-f378f8082a8e";
+				PROVISIONING_PROFILE_SPECIFIER = 20170507yu;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -2451,7 +2451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyPet/MyPet.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 98E92X44D4;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyPet/PrefixHeader.pch";
@@ -2470,8 +2470,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4dd2226e-7918-4032-bc3f-dd4f9796a396";
-				PROVISIONING_PROFILE_SPECIFIER = yuan0327;
+				PROVISIONING_PROFILE = "c637d168-2fc8-420d-930b-f378f8082a8e";
+				PROVISIONING_PROFILE_SPECIFIER = 20170507yu;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;

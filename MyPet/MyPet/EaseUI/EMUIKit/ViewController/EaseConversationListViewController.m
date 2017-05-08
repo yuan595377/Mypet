@@ -39,7 +39,7 @@
 //        self.placeholderImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
 //        [self.view addSubview:self.placeholderImg];
 //        self.placeholderImg.image = [UIImage imageNamed:@"112.jpeg"];
-        self.placeholderImg = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+        self.placeholderImg = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
         self.placeholderImg.text = @"暂时没有消息哦";
         [self.view addSubview:self.placeholderImg];
         self.placeholderImg.center = self.view.center;

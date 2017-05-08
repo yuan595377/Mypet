@@ -11,6 +11,7 @@
 @interface MyPubVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)UITableView *tableView;
 @property (nonatomic, retain)NSMutableArray *dataSource1;
+@property (nonatomic, retain)UILabel *placeholderImg;
 
 @end
 
@@ -19,14 +20,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
     self.dataSource1 = [NSMutableArray array];
     [self fetchData];
     [self createTable];
+    
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    if (self.dataSource1.count == 0) {
+        NSLog(@"暂时没有动态哦");
+        self.tableView.hidden = YES;
+        //        self.placeholderImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
+        //        [self.view addSubview:self.placeholderImg];
+        //        self.placeholderImg.image = [UIImage imageNamed:@"112.jpeg"];
+        self.placeholderImg = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
+        self.placeholderImg.text = @"暂时没有动态哦";
+        [self.view addSubview:self.placeholderImg];
+        self.placeholderImg.center = self.view.center;
+        self.placeholderImg.hidden = NO;
+        
+    }else {
+        self.tableView.hidden = NO;
+        self.placeholderImg.hidden = YES;
+        
+    }
     
 }
 
