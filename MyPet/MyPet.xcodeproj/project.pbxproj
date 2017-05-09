@@ -233,7 +233,6 @@
 		F3C8B5B31E8F4E870099B846 /* EaseRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B5391E8F4E870099B846 /* EaseRecordView.m */; };
 		F3C8B5B41E8F4E870099B846 /* EaseConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B53C1E8F4E870099B846 /* EaseConversationCell.m */; };
 		F3C8B5B51E8F4E870099B846 /* EaseUIResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F3C8B53E1E8F4E870099B846 /* EaseUIResource.bundle */; };
-		F3CB24F81E8A8A8C00EBA1E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3CB24DE1E8A8A8C00EBA1E9 /* Info.plist */; };
 		F3CB24F91E8A8A8C00EBA1E9 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB24E01E8A8A8C00EBA1E9 /* MASCompositeConstraint.m */; };
 		F3CB24FA1E8A8A8C00EBA1E9 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB24E31E8A8A8C00EBA1E9 /* MASConstraint.m */; };
 		F3CB24FB1E8A8A8C00EBA1E9 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CB24E51E8A8A8C00EBA1E9 /* MASConstraintMaker.m */; };
@@ -666,7 +665,6 @@
 		F3C8B53B1E8F4E870099B846 /* EaseConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseConversationCell.h; sourceTree = "<group>"; };
 		F3C8B53C1E8F4E870099B846 /* EaseConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseConversationCell.m; sourceTree = "<group>"; };
 		F3C8B53E1E8F4E870099B846 /* EaseUIResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseUIResource.bundle; sourceTree = "<group>"; };
-		F3CB24DE1E8A8A8C00EBA1E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3CB24DF1E8A8A8C00EBA1E9 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		F3CB24E01E8A8A8C00EBA1E9 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		F3CB24E11E8A8A8C00EBA1E9 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -1713,7 +1711,6 @@
 		F3CB24DD1E8A8A8C00EBA1E9 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				F3CB24DE1E8A8A8C00EBA1E9 /* Info.plist */,
 				F3CB24DF1E8A8A8C00EBA1E9 /* MASCompositeConstraint.h */,
 				F3CB24E01E8A8A8C00EBA1E9 /* MASCompositeConstraint.m */,
 				F3CB24E11E8A8A8C00EBA1E9 /* MASConstraint+Private.h */,
@@ -1917,7 +1914,6 @@
 				F39C7F3B1E9E32BA008705C6 /* welcome.jpeg in Resources */,
 				F3242B7E1E98898100A39ADD /* tabbar_discover_selected@2x.png in Resources */,
 				F31136421EBF7FA10022220D /* 1.jpg in Resources */,
-				F3CB24F81E8A8A8C00EBA1E9 /* Info.plist in Resources */,
 				F337E7A61E878F7B00709A3B /* HomeVC.xib in Resources */,
 				F3242B6F1E98898100A39ADD /* Contents.json in Resources */,
 				F3A9D9E91E96983D005FF25C /* setVC.xib in Resources */,
@@ -2439,8 +2435,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c637d168-2fc8-420d-930b-f378f8082a8e";
-				PROVISIONING_PROFILE_SPECIFIER = 20170507yu;
+				PROVISIONING_PROFILE = "38278ca6-d828-4261-94c8-b207ca819af3";
+				PROVISIONING_PROFILE_SPECIFIER = needtest20170508;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -2470,8 +2466,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c637d168-2fc8-420d-930b-f378f8082a8e";
-				PROVISIONING_PROFILE_SPECIFIER = 20170507yu;
+				PROVISIONING_PROFILE = "38278ca6-d828-4261-94c8-b207ca819af3";
+				PROVISIONING_PROFILE_SPECIFIER = needtest20170508;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
