@@ -176,6 +176,7 @@
     
     if (!error)
     {   [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+        [SVProgressHUD setMinimumDismissTimeInterval:1];
         [[EMClient sharedClient].options setIsAutoLogin:YES];
         [self dismissViewControllerAnimated:YES completion:nil];
         [self.navigationController popViewControllerAnimated:YES];

@@ -90,6 +90,7 @@
         if (!error) {
             //其他代码
             [SVProgressHUD showSuccessWithStatus:@"发送成功"];
+            [SVProgressHUD setMinimumDismissTimeInterval:1];
             [self dismissViewControllerAnimated:YES completion:nil];
             [UIApplication sharedApplication].keyWindow.rootViewController = [[DLTabBarController alloc]init];
         }

@@ -19,6 +19,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         //布局
+        [self.contentView NightWithType:UIViewColorTypeNormal];
         [self createLayOut];
         
     }
@@ -29,6 +30,7 @@
     //设置标题
     self.title = [[UILabel alloc]init];
     [self.title setFont:[UIFont systemFontOfSize:15]];
+    [self.title NightWithType:UIViewColorTypeNormal];
     [self.contentView addSubview:self.title];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 150, 60));
@@ -39,6 +41,7 @@
     //设置时间
     self.pub_time = [[UILabel alloc]init];
     [self.pub_time setFont:[UIFont systemFontOfSize:14]];
+    [self.pub_time NightWithType:UIViewColorTypeNormal];
     [self.contentView addSubview:self.pub_time];
     [self.pub_time mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(200, 40));

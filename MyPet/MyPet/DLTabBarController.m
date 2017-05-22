@@ -55,6 +55,8 @@
     
     if (![EMClient sharedClient].isLoggedIn) {
         [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        [SVProgressHUD setMinimumDismissTimeInterval:1];
+        
         return;
     }
        PB_vc *vc = [[PB_vc alloc]init];

@@ -101,6 +101,7 @@
     
     if (![EMClient sharedClient].isLoggedIn) {
         [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        [SVProgressHUD setMinimumDismissTimeInterval:1];
         [self dismissViewControllerAnimated:YES completion:nil];
         [UIApplication sharedApplication].keyWindow.rootViewController = [[ViewController alloc]init];
         return;
@@ -109,6 +110,7 @@
     
     if ([button.currentTitle isEqualToString:[EMClient sharedClient].currentUsername]) {
         [SVProgressHUD showErrorWithStatus:@"不可以和自己聊天哦"];
+        [SVProgressHUD setMinimumDismissTimeInterval:1];
         
     }else {
         chatVC *vc = [[chatVC alloc]initWithConversationChatter:button.currentTitle conversationType:EMConversationTypeChat];
@@ -121,6 +123,7 @@
 - (void)follow_me:(UIButton *)button {
     
     [SVProgressHUD showSuccessWithStatus:@"举报成功"];
+    [SVProgressHUD setMinimumDismissTimeInterval:1];
 
 }
 

@@ -41,6 +41,7 @@
 
 - (void)setSubView {
     self.tableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
+    [self.tableView NightWithType:UIViewColorTypeNormal];
     [self.view addSubview:self.tableView];
     [self setHeaderView];
     self.tableView.delegate = self;
@@ -53,6 +54,7 @@
 - (void)setHeaderView {
     
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 189)];
+    [view NightWithType:UIViewColorTypeNormal];
     self.avatar = [[UIImageView alloc]init];
     view.backgroundColor = [UIColor whiteColor];
     [view addSubview:self.avatar];
@@ -68,6 +70,7 @@
     self.avatar.layer.masksToBounds = YES;
 
     self.nick_name = [[UILabel alloc]init];
+    [self.nick_name NightWithType:UIViewColorTypeNormal];
     [view addSubview:_nick_name];
     [self.nick_name mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(170, 20));
@@ -78,6 +81,7 @@
     self.nick_name.text = [EMClient sharedClient].currentUsername;
     
     self.dec = [[UILabel alloc]init];
+    [self.dec NightWithType:UIViewColorTypeNormal];
     [view addSubview:_dec];
     [self.dec mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(170, 20));
@@ -89,6 +93,7 @@
     self.dec.text = @"爱宠日记";
     
     UIView *view4 = [[UIView alloc]init];
+    [view4 NightWithType:UIViewColorTypeNormal];
     view4.backgroundColor = [UIColor colorWithRed:0.67 green:0.67 blue:0.67 alpha:0.5];
     [view addSubview:view4];
     [view4 mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -97,7 +102,9 @@
         make.top.equalTo(_avatar.mas_bottom).with.offset(20);
     }];
     
+    
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button1 NightWithType:UIViewColorTypeNormal];
     [view addSubview:button1];
     [button1 setFont:[UIFont systemFontOfSize:13]];
     [button1 setTitleColor:[UIColor blackColor]forState:UIControlStateNormal];
@@ -106,12 +113,12 @@
         make.size.mas_equalTo(CGSizeMake(40, 25));
         make.left.equalTo(view).with.offset(30);
         make.top.equalTo(view4.mas_bottom).with.offset(10);
-        
     }];
     [button1 addTarget:self action:@selector(pushaction) forControlEvents:UIControlEventTouchDown];
     
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button2 NightWithType:UIViewColorTypeNormal];
     [view addSubview:button2];
     [button2 setFont:[UIFont systemFontOfSize:13]];
     [button2 setTitleColor:[UIColor blackColor]forState:UIControlStateNormal];
@@ -126,6 +133,7 @@
     
     
     UIButton *button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button3 NightWithType:UIViewColorTypeNormal];
     [view addSubview:button3];
     [button3 setFont:[UIFont systemFontOfSize:13]];
     [button3 setTitleColor:[UIColor blackColor]forState:UIControlStateNormal];
@@ -149,6 +157,7 @@
     }];
     
     UIButton *button4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button4 NightWithType:UIViewColorTypeNormal];
     [view addSubview:button4];
     [button4 setFont:[UIFont systemFontOfSize:13]];
     [button4 setTitleColor:[UIColor blackColor]forState:UIControlStateNormal];
@@ -251,6 +260,8 @@
     long section = indexPath.section;
     long row = indexPath.row;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
+    [cell NightWithType:UIViewColorTypeNormal];
+    [cell.textLabel NightWithType:UIViewColorTypeNormal];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     switch (section) {

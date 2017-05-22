@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <PgySDK/PgyManager.h>
+#import <PgyUpdate/PgyUpdateManager.h>
 @interface AppDelegate ()
 
 @end
@@ -17,7 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //注册bmob
-    
+    //启动基本SDK
+    [[PgyManager sharedPgyManager] startManagerWithAppId:@"16e9996a6781ae3ffe8d55f877dabe12"];
+    //启动更新检查SDK
+    [[PgyUpdateManager sharedPgyManager] startManagerWithAppId:@"16e9996a6781ae3ffe8d55f877dabe12"];
     //获取夜间模式状态
     [ThemeManage shareThemeManage].isNight = [[NSUserDefaults standardUserDefaults] boolForKey:@"night"];
     

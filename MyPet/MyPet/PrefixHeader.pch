@@ -75,4 +75,7 @@
 #import "UINavigationBar+ThemeChange.h"
 #import "UIView+RemoveNotifition.h"
 
+
+#import <WXApi.h>
+
 #endif
