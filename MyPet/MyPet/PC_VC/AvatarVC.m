@@ -137,6 +137,12 @@
         if (isSuccessful) {
             [obj setObject:file1  forKey:@"img"];
             [obj setObject:file1.url forKey:@"avatar"];
+            BmobUser *bUser = [BmobUser currentUser];
+            //更新number为30
+            [bUser setObject:file1.url forKey:@"avatar"];
+            [bUser updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                NSLog(@"error %@",[error description]);
+            }];
             //此处相当于新建一条记录,         //关联至已有的记录请使用 [obj updateInBackground];
             [obj saveInBackground];
             //打印file文件的url地址

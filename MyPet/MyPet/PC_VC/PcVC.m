@@ -31,8 +31,11 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
+    [super viewWillAppear:animated];
+    BmobUser *user = [BmobUser currentUser];
+    NSString *str = [NSString stringWithFormat:@"%@", [user objectForKey:@"avatar"]];
+    [self.avatar sd_setImageWithURL:[NSURL URLWithString:str]];
     
     
 

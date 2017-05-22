@@ -180,6 +180,18 @@
     
     EMError *error = [[EMClient sharedClient] registerWithUsername:self.userName password:self.password];
     
+    BmobUser *bUser = [[BmobUser alloc] init];
+    [bUser setUsername:self.userName];
+    [bUser setPassword:self.password];
+    [bUser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error){
+        if (isSuccessful){
+            NSLog(@"Sign up successfully");
+        } else {
+            NSLog(@"%@",error);
+        }
+    }];
+    
+    
     if (error==nil) {
         NSLog(@"环信注册成功");
         //注册成功后立即登录
