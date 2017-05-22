@@ -31,23 +31,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (self.dataSource1.count == 0) {
-        NSLog(@"暂时没有动态哦");
-        self.tableView.hidden = YES;
-        //        self.placeholderImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
-        //        [self.view addSubview:self.placeholderImg];
-        //        self.placeholderImg.image = [UIImage imageNamed:@"112.jpeg"];
-        self.placeholderImg = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
-        self.placeholderImg.text = @"暂时没有动态哦";
-        [self.view addSubview:self.placeholderImg];
-        self.placeholderImg.center = self.view.center;
-        self.placeholderImg.hidden = NO;
-        
-    }else {
-        self.tableView.hidden = NO;
-        self.placeholderImg.hidden = YES;
-        
-    }
+    
     
 }
 
@@ -83,6 +67,7 @@
         for (BmobObject *obj in array) {
             PubModel * info  = [[PubModel alloc] init];
             if ([[obj objectForKey:@"user_id"] isEqualToString:[EMClient sharedClient].currentUsername]) {
+                
                 NSString *a = [obj objectForKey:@"objectId"];
                 info.title = [obj objectForKey:@"title"];
                 
