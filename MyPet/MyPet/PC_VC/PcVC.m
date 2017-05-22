@@ -220,9 +220,6 @@
     }
     
     
-    [ThemeManage shareThemeManage].isNight = ![ThemeManage shareThemeManage].isNight;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"changeColor" object:nil];
-    [[NSUserDefaults standardUserDefaults] setBool:[ThemeManage shareThemeManage].isNight forKey:@"night"];
     //夜间模式
 }
 

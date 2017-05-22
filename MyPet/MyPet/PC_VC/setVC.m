@@ -78,7 +78,9 @@
                 cell.hidden = YES;
                 
             }else {
+                cell.accessoryType = UITableViewCellStyleDefault;
                 cell.textLabel.text =  @"退出登录";
+                cell.textLabel.textAlignment = NSTextAlignmentCenter;
             }
             
             break;
@@ -98,11 +100,13 @@
         case 0:
             if(row == 0)
             {
-                [SVProgressHUD showSuccessWithStatus:@""];
+                [ThemeManage shareThemeManage].isNight = ![ThemeManage shareThemeManage].isNight;
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"changeColor" object:nil];
+                [[NSUserDefaults standardUserDefaults] setBool:[ThemeManage shareThemeManage].isNight forKey:@"night"];
             }else if(row == 1){
                 [SVProgressHUD showSuccessWithStatus:@""];
             }else {
-                [SVProgressHUD showSuccessWithStatus:@""];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/nico%E6%98%B5%E5%AE%A0/id1227545531?mt=8"]];
             }
             break;
 

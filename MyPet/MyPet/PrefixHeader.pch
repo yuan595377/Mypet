@@ -76,6 +76,5 @@
 #import "UIView+RemoveNotifition.h"
 
 
-#import <WXApi.h>
 
 #endif
