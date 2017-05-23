@@ -18,8 +18,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+//    self.dataSource = self;
     
 }
+
+//- (id<IConversationModel>)conversationListViewController:(EaseConversationListViewController *)conversationListViewController
+//                                    modelForConversation:(EMConversation *)conversation {
+//    EaseConversationModel *model = [[EaseConversationModel alloc]initWithConversation:conversation];
+//    model.avatarURLPath =
+//
+//
+//}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

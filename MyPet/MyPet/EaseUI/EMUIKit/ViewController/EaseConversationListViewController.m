@@ -19,7 +19,7 @@
 #import "NSDate+Category.h"
 #import "EaseLocalDefine.h"
 
-@interface EaseConversationListViewController ()<EMChatManagerDelegate>
+@interface EaseConversationListViewController ()<EMChatManagerDelegate,EaseConversationListViewControllerDataSource>
 //@property (nonatomic, retain)UIImageView *placeholderImg;
 @property (nonatomic, retain)UILabel *placeholderImg;
 @end
@@ -83,11 +83,23 @@
     [self.tabBarController.tabBar setBackgroundColor:[UIColor whiteColor]];
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
     self.view.backgroundColor = [UIColor whiteColor];
-
+    self.dataSource = self;
 }
 
 
+- (id<IConversationModel>)conversationListViewController:(EaseConversationListViewController *)conversationListViewController
+                                    modelForConversation:(EMConversation *)conversation{
+    EaseConversationModel *model = [[EaseConversationModel alloc]initWithConversation:conversation];
+    
+    for (EaseConversationModel *model in self.dataArray) {
+        
+        NSLog(@"username:%@", model.title);
+        
+    }
+    
+    return model;
 
+}
 
 - (void)didReceiveMessages:(NSArray *)aMessages {
     
@@ -112,6 +124,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+
     return [self.dataArray count];
 }
 
@@ -131,9 +144,6 @@
     
     id<IConversationModel> model = [self.dataArray objectAtIndex:indexPath.row];
     cell.model = model;
-    
-    
-    
     
     if (_dataSource && [_dataSource respondsToSelector:@selector(conversationListViewController:latestMessageTitleForConversationModel:)]) {
         NSMutableAttributedString *attributedText = [[_dataSource conversationListViewController:self latestMessageTitleForConversationModel:model] mutableCopy];

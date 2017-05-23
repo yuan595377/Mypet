@@ -149,6 +149,9 @@
     [button3 addTarget:self action:@selector(fan) forControlEvents:UIControlEventTouchDown];
     
     UIImageView *i = [[UIImageView alloc]init];
+    i.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(mymsg)];
+    [i addGestureRecognizer:tap];
     [view addSubview:i];
     i.image = [UIImage imageNamed:@"脚印.png"];
     [i mas_makeConstraints:^(MASConstraintMaker *make) {
