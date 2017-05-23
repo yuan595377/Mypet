@@ -1943,10 +1943,10 @@
     id<IMessageModel> model = nil;
     model = [[EaseMessageModel alloc] initWithMessage:message];
     if (model.isSender) {
-        NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avatar.png"];
-        if (fullPath) {
-            NSLog(@"有头像路径");
-            model.avatarImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL fileURLWithPath:fullPath]]];
+        BmobUser *user = [BmobUser currentUser];
+        NSString *avatar = [NSString stringWithFormat:@"%@", [user objectForKey:@"avatar"]];
+        if (avatar) {
+            model.avatarURLPath = avatar;
         }else {
             model.avatarImage = [UIImage imageNamed:@"EaseUIResource.bundle/user"];
         }

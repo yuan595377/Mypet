@@ -36,9 +36,6 @@
     if (self.dataArray.count == 0) {
         NSLog(@"暂时没有消息哦");
         self.tableView.hidden = YES;
-//        self.placeholderImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
-//        [self.view addSubview:self.placeholderImg];
-//        self.placeholderImg.image = [UIImage imageNamed:@"112.jpeg"];
         self.placeholderImg = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
         self.placeholderImg.text = @"暂时没有消息哦";
         [self.view addSubview:self.placeholderImg];
@@ -83,7 +80,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
     [self.tabBarController.tabBar setBackgroundColor:[UIColor whiteColor]];
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -135,6 +131,9 @@
     
     id<IConversationModel> model = [self.dataArray objectAtIndex:indexPath.row];
     cell.model = model;
+    
+    
+    
     
     if (_dataSource && [_dataSource respondsToSelector:@selector(conversationListViewController:latestMessageTitleForConversationModel:)]) {
         NSMutableAttributedString *attributedText = [[_dataSource conversationListViewController:self latestMessageTitleForConversationModel:model] mutableCopy];
@@ -318,7 +317,7 @@
             timeInterval = timeInterval / 1000;
         }
         NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"YYYY-MM-dd"];
+        [formatter setDateFormat:@"MM-dd"];
         latestMessageTime = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:timeInterval]];
     }
     return latestMessageTime;

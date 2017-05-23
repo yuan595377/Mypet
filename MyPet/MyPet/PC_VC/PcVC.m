@@ -35,7 +35,7 @@
     [super viewWillAppear:animated];
     BmobUser *user = [BmobUser currentUser];
     NSString *str = [NSString stringWithFormat:@"%@", [user objectForKey:@"avatar"]];
-    [self.avatar sd_setImageWithURL:[NSURL URLWithString:str]];
+    [self.avatar sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:[UIImage imageNamed:@"EaseUIResource.bundle/user"]];
     
     
 
@@ -63,7 +63,6 @@
     [view addSubview:self.avatar];
     NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avatar.png"];
     NSLog(@"图片路径:%@", fullPath);
-    [self.avatar sd_setImageWithURL:[NSURL fileURLWithPath:fullPath] placeholderImage:[UIImage imageNamed:@"112.jpeg"]];
     [self.avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(70, 70));
         make.left.equalTo(view).with.offset(10);
