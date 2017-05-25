@@ -96,6 +96,7 @@
 		F339B5F01E9BE3A60058A38C /* APPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5EF1E9BE3A60058A38C /* APPTools.m */; };
 		F339B5F41E9BE78E0058A38C /* NewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5F31E9BE78E0058A38C /* NewModel.m */; };
 		F339B5F71E9BF7620058A38C /* detailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F339B5F61E9BF7620058A38C /* detailVC.m */; };
+		F352B40C1ED65FA700310670 /* 加号1.png in Resources */ = {isa = PBXBuildFile; fileRef = F352B40B1ED65FA700310670 /* 加号1.png */; };
 		F353BD6B1EBB861F0067C985 /* MyInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F353BD6A1EBB861F0067C985 /* MyInfoVC.m */; };
 		F3660FA91E88C0EE00968B62 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3660FA81E88C0EE00968B62 /* libHyphenateFullSDK.a */; };
 		F36B582D1EA514B40023A7FD /* close2.png in Resources */ = {isa = PBXBuildFile; fileRef = F36B582C1EA514B40023A7FD /* close2.png */; };
@@ -398,6 +399,7 @@
 		F339B5F31E9BE78E0058A38C /* NewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewModel.m; sourceTree = "<group>"; };
 		F339B5F51E9BF7620058A38C /* detailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailVC.h; sourceTree = "<group>"; };
 		F339B5F61E9BF7620058A38C /* detailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailVC.m; sourceTree = "<group>"; };
+		F352B40B1ED65FA700310670 /* 加号1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加号1.png"; sourceTree = "<group>"; };
 		F353BD691EBB861F0067C985 /* MyInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoVC.h; sourceTree = "<group>"; };
 		F353BD6A1EBB861F0067C985 /* MyInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoVC.m; sourceTree = "<group>"; };
 		F35A62241E88BB8800573D21 /* MyPet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPet.entitlements; sourceTree = "<group>"; };
@@ -1025,6 +1027,7 @@
 				F3B6B9A01EB8F05A002C2F2B /* UIView+ThemeChange.m */,
 				F3B6B9A11EB8F05A002C2F2B /* UIView+RemoveNotifition.h */,
 				F3B6B9A21EB8F05A002C2F2B /* UIView+RemoveNotifition.m */,
+				F352B40B1ED65FA700310670 /* 加号1.png */,
 				F339B5E61E9B14E90058A38C /* FInd_VC */,
 				F3242B391E9883DC00A39ADD /* newTabbar */,
 				F3A9D9D21E96908E005FF25C /* im */,
@@ -1954,6 +1957,7 @@
 				F337E7711E878D2C00709A3B /* Main.storyboard in Resources */,
 				F3A9D9E41E969743005FF25C /* setting.png in Resources */,
 				F3242B731E98898100A39ADD /* Contents.json in Resources */,
+				F352B40C1ED65FA700310670 /* 加号1.png in Resources */,
 				F3242B7D1E98898100A39ADD /* Contents.json in Resources */,
 				F3D3E8B41EABA78A00ECE482 /* 脚印.png in Resources */,
 				F3242B811E98898100A39ADD /* Contents.json in Resources */,

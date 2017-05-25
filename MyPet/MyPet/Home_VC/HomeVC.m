@@ -62,6 +62,7 @@
                 info.title    = [obj objectForKey:@"title"];
                 info.name = [obj objectForKey:@"user_id"];
                 info.time = [obj objectForKey:@"updatedAt"];
+                info.url = [obj objectForKey:@"PubImg"];
                 NSLog(@"%@", info.title);
             }
             

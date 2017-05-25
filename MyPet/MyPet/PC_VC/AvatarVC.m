@@ -49,6 +49,7 @@
 }
 
 - (void)jumpAvatar {
+     
     LEActionSheet *actionSheet = [[LEActionSheet alloc] initWithTitle:@"点击更换头像"
                                                              delegate:self
                                                     cancelButtonTitle:@"取消"

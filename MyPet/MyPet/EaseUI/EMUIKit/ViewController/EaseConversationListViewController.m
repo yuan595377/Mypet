@@ -91,12 +91,20 @@
                                     modelForConversation:(EMConversation *)conversation{
     EaseConversationModel *model = [[EaseConversationModel alloc]initWithConversation:conversation];
     
-    for (EaseConversationModel *model in self.dataArray) {
-        
-        NSLog(@"username:%@", model.title);
-        
-    }
+    NSArray *array = [[EMClient sharedClient].chatManager getAllConversations];
+    for (EMConversation *con in array) {
+        BmobQuery *query = [BmobUser query];
+        [query whereKey:@"username" equalTo:con.conversationId];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+            for (BmobUser *user in array) {
+                    model.avatarURLPath = [NSString stringWithFormat:@"%@", [user objectForKey:@"avatar"]];
+                
+                
+            }
+        }];
     
+    }
+    NSLog(@"1111:%@", model.avatarURLPath);
     return model;
 
 }

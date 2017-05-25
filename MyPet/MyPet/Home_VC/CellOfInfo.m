@@ -78,11 +78,6 @@
         
     }];
     
-    NSMutableArray *arr = @[@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg",@"5.jpg",@"6",@"7.jpg",@"8.jpg",@"9.jpg",@"10.jpg",@"11.jpg",@"12.jpg",@"13.jpg",@"14.jpg"].mutableCopy;
-//    NSInteger a = [self noRepeatNumberFrom:arr];
-    int x = arc4random() % 14;
-    self.dec_img.image = [UIImage imageNamed:[arr objectAtIndex:x]];
-
     
     
     self.contact = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -140,6 +135,7 @@
     self.title.text = model.title;
     self.name.text = model.name;
     self.time.text = model.time;
+    [self.dec_img sd_setImageWithURL:[NSURL  URLWithString:model.url]];
 }
 
 
