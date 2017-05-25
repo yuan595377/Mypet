@@ -12,6 +12,7 @@
 		E9A91CA30C4D5D6E3F200CC2 /* libPods-MyPet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D401018F7BC5C18A13BC526 /* libPods-MyPet.a */; };
 		F309CD5D1E8F5575001B178C /* chatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F309CD5C1E8F5575001B178C /* chatVC.m */; };
 		F309CD601E8F89D1001B178C /* conversationListVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F309CD5F1E8F89D1001B178C /* conversationListVc.m */; };
+		F30B4AE91ED729D700152393 /* 消息.png in Resources */ = {isa = PBXBuildFile; fileRef = F30B4AE81ED729D700152393 /* 消息.png */; };
 		F311362D1EBF41860022220D /* 对勾.png in Resources */ = {isa = PBXBuildFile; fileRef = F311362C1EBF41860022220D /* 对勾.png */; };
 		F311362F1EBF418B0022220D /* 圆.png in Resources */ = {isa = PBXBuildFile; fileRef = F311362E1EBF418B0022220D /* 圆.png */; };
 		F31136321EBF62B30022220D /* ProcoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F31136311EBF62B30022220D /* ProcoVC.m */; };
@@ -289,6 +290,7 @@
 		F309CD5C1E8F5575001B178C /* chatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatVC.m; sourceTree = "<group>"; };
 		F309CD5E1E8F89D1001B178C /* conversationListVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conversationListVc.h; sourceTree = "<group>"; };
 		F309CD5F1E8F89D1001B178C /* conversationListVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = conversationListVc.m; sourceTree = "<group>"; };
+		F30B4AE81ED729D700152393 /* 消息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息.png"; sourceTree = "<group>"; };
 		F311362C1EBF41860022220D /* 对勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对勾.png"; sourceTree = "<group>"; };
 		F311362E1EBF418B0022220D /* 圆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆.png"; sourceTree = "<group>"; };
 		F31136301EBF62B30022220D /* ProcoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcoVC.h; sourceTree = "<group>"; };
@@ -1146,6 +1148,7 @@
 				F309CD5C1E8F5575001B178C /* chatVC.m */,
 				F311362C1EBF41860022220D /* 对勾.png */,
 				F311362E1EBF418B0022220D /* 圆.png */,
+				F30B4AE81ED729D700152393 /* 消息.png */,
 				F3C8A95A1E8E4FF30099B846 /* loginVC.h */,
 				F3C8A95B1E8E4FF30099B846 /* loginVC.m */,
 				F31136301EBF62B30022220D /* ProcoVC.h */,
@@ -1935,6 +1938,7 @@
 				F3A9D9DA1E96908E005FF25C /* msg.png in Resources */,
 				F3242B701E98898100A39ADD /* main_badge@2x.png in Resources */,
 				F3242B841E98898100A39ADD /* tabbar_message_center@2x.png in Resources */,
+				F30B4AE91ED729D700152393 /* 消息.png in Resources */,
 				F311364E1EBF7FA10022220D /* 13.jpg in Resources */,
 				F3242B6E1E98898100A39ADD /* Contents.json in Resources */,
 				F311364A1EBF7FA10022220D /* 9.jpg in Resources */,

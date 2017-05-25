@@ -64,7 +64,7 @@
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 150, 30));
         make.left.equalTo(self.contentView).with.offset(10);
-        make.top.equalTo(self.time.mas_bottom).with.offset(10);
+        make.top.equalTo(self.time.mas_bottom).with.offset(5);
     }];
     
     
@@ -83,10 +83,10 @@
     self.contact = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.contentView addSubview:self.contact];
     [self.contact setTitle:@"联系他" forState:UIControlStateNormal];
-    [self.contact setImage:[UIImage imageNamed:@"chat.png"] forState:UIControlStateNormal];
+    [self.contact setImage:[UIImage imageNamed:@"消息.png"] forState:UIControlStateNormal];
     [self.contact mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(30, 30));
-        make.left.equalTo(self.contentView).with.offset(10);
+        make.size.mas_equalTo(CGSizeMake(20, 20));
+        make.left.equalTo(self.contentView).with.offset(20);
         make.top.equalTo(self.dec_img.mas_bottom).with.offset(10);
         
     }];

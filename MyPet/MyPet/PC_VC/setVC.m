@@ -68,7 +68,7 @@
             {
                 cell.textLabel.text =  @"夜间模式";
             }else if(row == 1){
-                cell.textLabel.text =  @"意见反馈";
+                cell.textLabel.text =  @"清除缓存";
             }else {
                 cell.textLabel.text =  @"评分";
             }
@@ -104,7 +104,7 @@
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"changeColor" object:nil];
                 [[NSUserDefaults standardUserDefaults] setBool:[ThemeManage shareThemeManage].isNight forKey:@"night"];
             }else if(row == 1){
-                [SVProgressHUD showSuccessWithStatus:@""];
+                [SVProgressHUD showSuccessWithStatus:@"已清除缓存"];
             }else {
                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/nico%E6%98%B5%E5%AE%A0/id1227545531?mt=8"]];
             }

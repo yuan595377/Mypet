@@ -28,7 +28,7 @@
     self.textView = [[UITextView alloc]initWithFrame:CGRectMake(0, 60, SCREEN_WIDTH, [UIScreen mainScreen].bounds.size.height - 400) textContainer:nil];
     _textView.textColor = [UIColor blueColor];
     _textView.font = [UIFont systemFontOfSize:15.0];
-    _textView.backgroundColor = [UIColor cyanColor];
+    _textView.backgroundColor = [UIColor whiteColor];
     _textView.opaque = YES;
     _textView.alpha = 1.0;
     _textView.delegate = self;
@@ -44,10 +44,10 @@
     
     _im = [[UIImageView alloc]init];
     [self.view addSubview:_im];
+    [_im sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"加号1.png"]];
     _im.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(chooseImg)];
     [_im addGestureRecognizer:tap];
-    _im.backgroundColor = [UIColor cyanColor];
     [self.im mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(60, 60));
         make.left.equalTo(self.view).with.offset(20);
