@@ -61,7 +61,7 @@
             if ([obj objectForKey:@"title"]) {
                 info.title    = [obj objectForKey:@"title"];
                 info.name = [obj objectForKey:@"user_id"];
-                info.time = [obj objectForKey:@"updatedAt"];
+                info.time = [obj objectForKey:@"Pub_time"];
                 info.url = [obj objectForKey:@"PubImg"];
                 if ([[NSString stringWithFormat:@"%@", [obj objectForKey:@"is_close"]] isEqualToString:@"1"]) {
                     info.is_close = @"已接单";

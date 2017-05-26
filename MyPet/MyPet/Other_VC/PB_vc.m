@@ -97,13 +97,30 @@
 
 
 - (void)loginUser {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    // ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
+    
+    [formatter setDateFormat:@"MM-dd HH:mm"];
+    
+    //现在时间,你可以输出来看下是什么格式
+    
+    NSDate *datenow = [NSDate date];
+    
+    //----------将nsdate按formatter格式转成nsstring
+    
+    NSString *nowtimeStr = [formatter stringFromDate:datenow];
+    
+    NSLog(@"nowtimeStr =  %@",nowtimeStr);
+    
+    
     //创建BmobObject对象，指定对应要操作的数据表名称
     _obj = [[BmobObject alloc] initWithClassName:STOREAGE_INFO];
     //设置字段值
     [_obj setObject:_textView.text forKey:@"title"];
     [_obj setObject:[EMClient sharedClient].currentUsername forKey:@"user_id"];
     [_obj setObject:self.url forKey:@"PubImg"];
-    
+    [_obj setObject:nowtimeStr forKey:@"Pub_time"];
     
     //执行保存操作
     [_obj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
