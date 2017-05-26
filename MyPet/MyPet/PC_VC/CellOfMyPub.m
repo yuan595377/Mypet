@@ -41,8 +41,19 @@
     }];
     
     
+    _bu = [Mybutton buttonWithType:UIButtonTypeCustom];
+    [_bu setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_bu setTitle:@"关闭接单" forState:UIControlStateNormal];
+    [self.contentView addSubview:_bu];
+    [_bu mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(80, 30));
+        make.right.equalTo(self.title).with.offset(30);
+        make.top.equalTo(self.contentView.mas_top).with.offset(30);
+        
+    }];
     
 }
+
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -53,6 +64,7 @@
 
 - (void)setModel:(PubModel *)model {
     self.title.text = model.title;
+    self.objectID = model.objectID;
 
 }
 

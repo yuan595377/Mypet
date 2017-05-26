@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self fetchData];
+    
     [self createTable];
     
     
@@ -28,7 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    
+    [self fetchData];
     
 }
 
@@ -63,7 +63,15 @@
                 info.name = [obj objectForKey:@"user_id"];
                 info.time = [obj objectForKey:@"updatedAt"];
                 info.url = [obj objectForKey:@"PubImg"];
-                NSLog(@"%@", info.title);
+                if ([[NSString stringWithFormat:@"%@", [obj objectForKey:@"is_close"]] isEqualToString:@"1"]) {
+                    info.is_close = @"已接单";
+                }else {
+                    info.is_close = @"";
+                
+                }
+                
+                
+    
             }
             
                 [self.dataSource1 addObject:info];
@@ -94,6 +102,11 @@
         [cell.contact addTarget:self action:@selector(contact1:) forControlEvents:UIControlEventTouchDown];
         [cell.contact setTitle:cell.name.text forState:UIControlStateNormal];
         [cell.follow addTarget:self action:@selector(follow_me:) forControlEvents:UIControlEventTouchDown];
+    
+    
+    
+    
+    
         return cell;
 
 }
@@ -116,7 +129,8 @@
         [SVProgressHUD setMinimumDismissTimeInterval:1];
         
     }else {
-        chatVC *vc = [[chatVC alloc]initWithConversationChatter:button.currentTitle conversationType:EMConversationTypeChat];
+        EaseMessageViewController *vc = [[EaseMessageViewController alloc]initWithConversationChatter:button.currentTitle conversationType:EMConversationTypeChat];
+        
         [vc setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:vc animated:YES];
     }

@@ -7,7 +7,7 @@
 //
 
 #import "MyPubVC.h"
-
+#import "Mybutton.h"
 @interface MyPubVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)UITableView *tableView;
 @property (nonatomic, retain)NSMutableArray *dataSource1;
@@ -68,7 +68,7 @@
             PubModel * info  = [[PubModel alloc] init];
             if ([[obj objectForKey:@"user_id"] isEqualToString:[EMClient sharedClient].currentUsername]) {
                 
-                NSString *a = [obj objectForKey:@"objectId"];
+                info.objectID = [obj objectForKey:@"objectId"];
                 info.title = [obj objectForKey:@"title"];
                 
             }
@@ -79,7 +79,6 @@
         [_tableView reloadData];
     }];
 
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -88,13 +87,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CellOfMyPub *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
     
+    CellOfMyPub *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
     if (_dataSource1) {
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.model = self.dataSource1[indexPath.row];
-        
+        cell.bu.object_ID = cell.objectID;
+        [cell.bu addTarget:self action:@selector(jum:) forControlEvents:UIControlEventTouchDown];
         return cell;
         
     }
@@ -102,6 +102,19 @@
     
 }
 
+
+- (void)jum:(Mybutton *)bt {
+    
+    
+    
+    
+    BmobObjectsBatch *batch = [[BmobObjectsBatch alloc] init] ;
+    [batch updateBmobObjectWithClassName:STOREAGE_INFO objectId:bt.object_ID parameters:@{@"is_close":@1}];
+    [batch batchObjectsInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+        NSLog(@"batch error %@",[error description]);
+    }];
+
+}
 
 
 

@@ -10,4 +10,5 @@
 
 @interface PubModel : NSObject
 @property (nonatomic,retain)NSString *title;
+@property (nonatomic, retain)NSString *objectID;
 @end

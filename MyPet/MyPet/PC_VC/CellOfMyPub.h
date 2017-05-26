@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Mybutton.h"
 @class PubModel;
 @interface CellOfMyPub : UITableViewCell
 @property (nonatomic, retain)UILabel *title;
 @property (nonatomic, retain)PubModel *model;
+@property (nonatomic, retain)Mybutton *bu;
+@property (nonatomic, retain)NSString *objectID;
+
+
 @end

@@ -91,6 +91,17 @@
         
     }];
     
+    
+    self.labelOfJudge = [[UILabel alloc]init];
+    [self.labelOfJudge NightWithType:UIViewColorTypeNormal];
+    [self.labelOfJudge setFont:[UIFont systemFontOfSize:15]];
+    [self.contentView addSubview:self.labelOfJudge];
+    [self.labelOfJudge mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(80, 30));
+        make.right.equalTo(self.contentView.mas_right).with.offset(-20);
+        make.top.equalTo(self.dec_img.mas_bottom).with.offset(5);
+    }];
+    
     self.follow = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.contentView addSubview:self.follow];
     [self.follow setFont:[UIFont systemFontOfSize:13]];
@@ -136,6 +147,8 @@
     self.name.text = model.name;
     self.time.text = model.time;
     [self.dec_img sd_setImageWithURL:[NSURL  URLWithString:model.url]];
+    self.labelOfJudge.text = model.is_close;
+
 }
 
 

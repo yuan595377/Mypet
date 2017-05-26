@@ -13,6 +13,7 @@
 @property (nonatomic, retain)NSString *name;
 @property (nonatomic, retain)NSString *time;
 @property (nonatomic, retain)NSString *url;
+@property (nonatomic, retain)NSString *is_close;
 
 - (instancetype)initWithDataSource:(NSDictionary *)dataSource;
 @end

@@ -17,6 +17,6 @@
 @property (nonatomic, retain)UILabel *time;
 @property (nonatomic, retain)UIButton *follow;
 
-
+@property (nonatomic, retain)UILabel *labelOfJudge;
 
 @end
