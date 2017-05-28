@@ -98,14 +98,11 @@
         cell = [[CellOfInfo alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         
     }
+    
         cell.model = [self.dataSource1 objectAtIndex:indexPath.row];
         [cell.contact addTarget:self action:@selector(contact1:) forControlEvents:UIControlEventTouchDown];
         [cell.contact setTitle:cell.name.text forState:UIControlStateNormal];
         [cell.follow addTarget:self action:@selector(follow_me:) forControlEvents:UIControlEventTouchDown];
-    
-    
-    
-    
     
         return cell;
 
@@ -123,14 +120,13 @@
         return;
     }
     
-    
     if ([button.currentTitle isEqualToString:[EMClient sharedClient].currentUsername]) {
         [SVProgressHUD showErrorWithStatus:@"不可以和自己聊天哦"];
         [SVProgressHUD setMinimumDismissTimeInterval:1];
         
     }else {
         EaseMessageViewController *vc = [[EaseMessageViewController alloc]initWithConversationChatter:button.currentTitle conversationType:EMConversationTypeChat];
-        
+        vc.userId = button.currentTitle;
         [vc setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:vc animated:YES];
     }

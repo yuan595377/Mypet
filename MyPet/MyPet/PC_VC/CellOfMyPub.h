@@ -14,6 +14,7 @@
 @property (nonatomic, retain)PubModel *model;
 @property (nonatomic, retain)Mybutton *bu;
 @property (nonatomic, retain)NSString *objectID;
-
+@property (nonatomic, retain)UIImageView *Img;
+@property (nonatomic, assign)NSNumber *closenum;
 
 @end

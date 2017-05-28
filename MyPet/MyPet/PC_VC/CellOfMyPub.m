@@ -52,6 +52,15 @@
         
     }];
     
+    
+    self.Img = [[UIImageView alloc]init];
+    [self.contentView addSubview:self.Img];
+    [self.Img mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 150, 200));
+        make.left.equalTo(self.contentView).with.offset(10);
+        make.top.equalTo(self.title.mas_bottom).with.offset(10);
+    }];
+    
 }
 
 
@@ -63,9 +72,16 @@
 }
 
 - (void)setModel:(PubModel *)model {
+    
     self.title.text = model.title;
     self.objectID = model.objectID;
-
+    [self.Img sd_setImageWithURL:[NSURL URLWithString:model.url] placeholderImage:nil];
+    self.closenum = model.closenum;
+    if ([self.closenum isEqual:@1]) {
+        [self.bu setTitle:@"已接单" forState:UIControlStateNormal];
+    }else {
+        [self.bu setTitle:@"关闭接单" forState:UIControlStateNormal];
+    }
 }
 
 @end

@@ -42,7 +42,7 @@
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 100;
+    self.tableView.rowHeight = 300;
     [self.tableView registerClass:[CellOfMyPub class] forCellReuseIdentifier:@"pool"];
     
 }
@@ -70,6 +70,8 @@
                 
                 info.objectID = [obj objectForKey:@"objectId"];
                 info.title = [obj objectForKey:@"title"];
+                info.url = [obj objectForKey:@"PubImg"];
+                info.closenum = [NSNumber numberWithInteger:[NSString stringWithFormat:@"%@",[obj objectForKey:@"is_close"]].integerValue];
                 
             }
             if (info.title) {
@@ -105,15 +107,16 @@
 
 - (void)jum:(Mybutton *)bt {
     
-    
-    
+    if ([bt.currentTitle isEqualToString:@"关闭接单"]) {
+        
+        [bt setTitle:@"已接单" forState:UIControlStateNormal];
+    }
     
     BmobObjectsBatch *batch = [[BmobObjectsBatch alloc] init] ;
     [batch updateBmobObjectWithClassName:STOREAGE_INFO objectId:bt.object_ID parameters:@{@"is_close":@1}];
     [batch batchObjectsInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
-        NSLog(@"batch error %@",[error description]);
+        [SVProgressHUD showSuccessWithStatus:@"关闭接单"];
     }];
-
 }
 
 

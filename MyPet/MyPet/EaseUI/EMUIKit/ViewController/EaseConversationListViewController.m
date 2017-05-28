@@ -48,10 +48,6 @@
       
     }
     
-    
-    
-    
-    
 }
 
 - (void)judgeBadge {
@@ -66,8 +62,6 @@
     if (unread != 0) {
         self.navigationController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", unread];
     }
-    
-
 }
 
 
@@ -89,8 +83,8 @@
 
 - (id<IConversationModel>)conversationListViewController:(EaseConversationListViewController *)conversationListViewController
                                     modelForConversation:(EMConversation *)conversation{
-    EaseConversationModel *model = [[EaseConversationModel alloc]initWithConversation:conversation];
     
+    EaseConversationModel *model = [[EaseConversationModel alloc]initWithConversation:conversation];
     NSArray *array = [[EMClient sharedClient].chatManager getAllConversations];
     for (EMConversation *con in array) {
         BmobQuery *query = [BmobUser query];
@@ -98,13 +92,10 @@
         [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
             for (BmobUser *user in array) {
                     model.avatarURLPath = [NSString stringWithFormat:@"%@", [user objectForKey:@"avatar"]];
-                
-                
             }
         }];
     
     }
-    NSLog(@"1111:%@", model.avatarURLPath);
     return model;
 
 }
@@ -188,6 +179,7 @@
         EaseConversationModel *model = [self.dataArray objectAtIndex:indexPath.row];
         EaseMessageViewController *viewController = [[EaseMessageViewController alloc] initWithConversationChatter:model.conversation.conversationId conversationType:model.conversation.type];
         viewController.title = model.title;
+        viewController.userId = model.conversation.conversationId;
         [viewController setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:viewController animated:YES];
         

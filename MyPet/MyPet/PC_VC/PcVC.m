@@ -7,7 +7,7 @@
 //
 
 #import "PcVC.h"
-
+#import "FollowVcViewController.h"
 @interface PcVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)UITableView *tableView;
 @property (nonatomic, retain)UILabel *follow;
@@ -223,6 +223,11 @@
         [SVProgressHUD showErrorWithStatus:@"请先登录"];
         return;
     }
+    
+    FollowVcViewController *vc = [[FollowVcViewController alloc]init];
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+    
     
     
     //夜间模式

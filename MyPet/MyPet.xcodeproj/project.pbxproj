@@ -243,6 +243,9 @@
 		F3D746151EABFEE700232B34 /* home_test.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F3D746141EABFEE700232B34 /* home_test.jpeg */; };
 		F3D746191EAC050000232B34 /* AvatarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D746181EAC050000232B34 /* AvatarVC.m */; };
 		F3D7461B1EAC05BB00232B34 /* 点点.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D7461A1EAC05BB00232B34 /* 点点.png */; };
+		F3E5FB101EDAB6D1007D1D6D /* FollowVcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FB0F1EDAB6D1007D1D6D /* FollowVcViewController.m */; };
+		F3E5FB131EDAB9BA007D1D6D /* followModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FB121EDAB9BA007D1D6D /* followModel.m */; };
+		F3E5FB161EDABAEF007D1D6D /* FollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FB151EDABAEF007D1D6D /* FollowCell.m */; };
 		F3FB43F01EA3BE0C005C226B /* PB_vc.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FB43EF1EA3BE0C005C226B /* PB_vc.m */; };
 /* End PBXBuildFile section */
 
@@ -685,6 +688,12 @@
 		F3D746171EAC050000232B34 /* AvatarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarVC.h; sourceTree = "<group>"; };
 		F3D746181EAC050000232B34 /* AvatarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarVC.m; sourceTree = "<group>"; };
 		F3D7461A1EAC05BB00232B34 /* 点点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "点点.png"; sourceTree = "<group>"; };
+		F3E5FB0E1EDAB6D1007D1D6D /* FollowVcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowVcViewController.h; sourceTree = "<group>"; };
+		F3E5FB0F1EDAB6D1007D1D6D /* FollowVcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowVcViewController.m; sourceTree = "<group>"; };
+		F3E5FB111EDAB9BA007D1D6D /* followModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = followModel.h; sourceTree = "<group>"; };
+		F3E5FB121EDAB9BA007D1D6D /* followModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = followModel.m; sourceTree = "<group>"; };
+		F3E5FB141EDABAEF007D1D6D /* FollowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowCell.h; sourceTree = "<group>"; };
+		F3E5FB151EDABAEF007D1D6D /* FollowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowCell.m; sourceTree = "<group>"; };
 		F3FB43EE1EA3BE0C005C226B /* PB_vc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PB_vc.h; sourceTree = "<group>"; };
 		F3FB43EF1EA3BE0C005C226B /* PB_vc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PB_vc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1071,6 +1080,12 @@
 				F3D7461A1EAC05BB00232B34 /* 点点.png */,
 				F3D746171EAC050000232B34 /* AvatarVC.h */,
 				F3D746181EAC050000232B34 /* AvatarVC.m */,
+				F3E5FB0E1EDAB6D1007D1D6D /* FollowVcViewController.h */,
+				F3E5FB0F1EDAB6D1007D1D6D /* FollowVcViewController.m */,
+				F3E5FB141EDABAEF007D1D6D /* FollowCell.h */,
+				F3E5FB151EDABAEF007D1D6D /* FollowCell.m */,
+				F3E5FB111EDAB9BA007D1D6D /* followModel.h */,
+				F3E5FB121EDAB9BA007D1D6D /* followModel.m */,
 				F3A9D9E51E96983D005FF25C /* setVC.h */,
 				F3A9D9E61E96983D005FF25C /* setVC.m */,
 				F353BD691EBB861F0067C985 /* MyInfoVC.h */,
@@ -2075,6 +2090,7 @@
 				F3B6B9A71EB8F05A002C2F2B /* UITabBar+ThemeChange.m in Sources */,
 				F3C8B5A51E8F4E870099B846 /* EaseBubbleView+Gif.m in Sources */,
 				F3C8B59C1E8F4E870099B846 /* EaseRefreshTableViewController.m in Sources */,
+				F3E5FB101EDAB6D1007D1D6D /* FollowVcViewController.m in Sources */,
 				F3C8B5B31E8F4E870099B846 /* EaseRecordView.m in Sources */,
 				F3C8B5901E8F4E870099B846 /* UIViewController+HUD.m in Sources */,
 				F3C8B5741E8F4E870099B846 /* UIImage+EMGIF.m in Sources */,
@@ -2190,9 +2206,11 @@
 				F3C8B5AF1E8F4E870099B846 /* EaseTextView.m in Sources */,
 				F3C8B5771E8F4E870099B846 /* UIImageView+EMHighlightedWebCache.m in Sources */,
 				F3D746191EAC050000232B34 /* AvatarVC.m in Sources */,
+				F3E5FB161EDABAEF007D1D6D /* FollowCell.m in Sources */,
 				F3C8B5A31E8F4E870099B846 /* EaseMessageTimeCell.m in Sources */,
 				F3C8B5961E8F4E870099B846 /* EaseEmotionEscape.m in Sources */,
 				F3C8B5A11E8F4E870099B846 /* EaseCustomMessageCell.m in Sources */,
+				F3E5FB131EDAB9BA007D1D6D /* followModel.m in Sources */,
 				F3C8B54C1E8F4E870099B846 /* MBProgressHUD+Add.m in Sources */,
 				F3C8B58A1E8F4E870099B846 /* EaseMessageModel.m in Sources */,
 				F3C8B5911E8F4E870099B846 /* EaseChineseToPinyin.m in Sources */,

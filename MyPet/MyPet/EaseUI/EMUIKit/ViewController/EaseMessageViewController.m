@@ -48,8 +48,8 @@
     UIMenuItem *_deleteMenuItem;
     UILongPressGestureRecognizer *_lpgr;
     NSMutableArray *_atTargets;
-    
     dispatch_queue_t _messageQueue;
+    
 }
 
 @property (strong, nonatomic) id<IMessageModel> playingVoiceModel;
@@ -91,13 +91,36 @@
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    
+    self.title = self.userId;
     //设置关注按钮
     
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Show" style:UIBarButtonItemStylePlain
+                                                                     target:self action:@selector(follow:)];
+    
+    self.navigationItem.rightBarButtonItem = anotherButton;
     
     
+    
+    
+    
+    BmobUser *user = [BmobUser currentUser];
+    
+    if ([user objectForKey:@"follow_list"]) {
+        NSMutableArray *a = [user objectForKey:@"follow_list"];
+        if (![a containsObject:self.userId]) {
+            self.navigationItem.rightBarButtonItem.title = @"关注";
+        }else {
+            self.navigationItem.rightBarButtonItem.title = @"取消关注";
+        }
+    
+    } else {
+       self.navigationItem.rightBarButtonItem.title = @"关注";
+    
+    
+    }
     
     
     // Do any additional setup after loading the view.
@@ -151,7 +174,49 @@
     [self tableViewDidTriggerHeaderRefresh];
     [self setupEmotion];
     self.dataSource = self;
+    
 }
+
+
+
+- (void)follow:(UIButton *)bt {
+    
+    if ([self.navigationItem.rightBarButtonItem.title isEqualToString:@"关注"]) {
+        self.navigationItem.rightBarButtonItem.title = @"取消关注";
+        //设置我的
+        BmobUser *user = [BmobUser currentUser];
+        if ([user objectForKey:@"follow_list"]) {
+            NSMutableArray *a = [user objectForKey:@"follow_list"];
+            [a addObject:self.userId];
+            [user setObject:a forKey:@"follow_list"];
+            [user updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                NSLog(@"error %@",[error description]);
+            }];
+            
+        }else {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:self.userId];
+            [user setObject:arr forKey:@"follow_list"];
+            [user updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                NSLog(@"error %@",[error description]);
+            }];
+        }
+        
+    }else {
+        
+        self.navigationItem.rightBarButtonItem.title = @"关注";
+        BmobUser *user = [BmobUser currentUser];
+        NSMutableArray *a = [user objectForKey:@"follow_list"];
+        [a removeObject:self.userId];
+        [user updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+            NSLog(@"error %@",[error description]);
+        }];
+        
+        
+    }
+
+}
+
 
 - (void)setupEmotion
 {

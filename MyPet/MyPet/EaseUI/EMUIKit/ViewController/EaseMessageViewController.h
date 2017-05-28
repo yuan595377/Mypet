@@ -154,8 +154,8 @@ shouldSendHasReadAckForMessage:(EMMessage *)message
 
 
 @property (weak, nonatomic) id<EaseMessageViewControllerDelegate> delegate;
-
 @property (weak, nonatomic) id<EaseMessageViewControllerDataSource> dataSource;
+@property (weak, nonatomic) NSString *userId;
 
 /*!
  @property

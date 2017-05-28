@@ -11,4 +11,6 @@
 @interface PubModel : NSObject
 @property (nonatomic,retain)NSString *title;
 @property (nonatomic, retain)NSString *objectID;
+@property (nonatomic, retain)NSString *url;
+@property (nonatomic, assign)NSNumber *closenum;
 @end

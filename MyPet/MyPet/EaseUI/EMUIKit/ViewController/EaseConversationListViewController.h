@@ -60,7 +60,7 @@ typedef NS_ENUM(int, DXDeleteConvesationType) {
 
 - (void)tableViewDidTriggerHeaderRefresh;
 
-
+@property (nonatomic, retain)NSString *useId;
 - (void)refreshAndSortView;
 
 @end
