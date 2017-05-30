@@ -173,6 +173,8 @@
 - (void)login2 {
 
     EMError *error = [[EMClient sharedClient] loginWithUsername:self.username.text password:self.password.text];
+    [BmobUser loginWithUsernameInBackground:self.username.text
+                                   password:self.password.text];
     
     if (!error)
     {   [SVProgressHUD showSuccessWithStatus:@"登录成功"];

@@ -146,7 +146,7 @@
 
 
 - (void)logout {
-    
+    [BmobUser logout];
   [[EMClient sharedClient] logout:YES completion:^(EMError *aError) {
       [self dismissViewControllerAnimated:YES completion:nil];
       [UIApplication sharedApplication].keyWindow.rootViewController = [[ViewController alloc]init];

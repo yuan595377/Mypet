@@ -196,6 +196,8 @@
         NSLog(@"环信注册成功");
         //注册成功后立即登录
         EMError *error = [[EMClient sharedClient] loginWithUsername:self.userName password:self.password];
+        [BmobUser loginWithUsernameInBackground:self.userName
+                                       password:self.password];
         if (!error) {
             [SVProgressHUD showSuccessWithStatus:@"注册成功"];
             NSTimeInterval time = 1;
