@@ -71,6 +71,7 @@
     self.avatar.layer.cornerRadius = 35;
     self.avatar.layer.masksToBounds = YES;
 
+    
     self.nick_name = [[UILabel alloc]init];
     [self.nick_name NightWithType:UIViewColorTypeNormal];
     [view addSubview:_nick_name];

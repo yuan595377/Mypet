@@ -27,6 +27,9 @@
 
 - (void)setSubView {
 
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(save)];
+    self.navigationItem.rightBarButtonItem = rightItem;
     self.textView = [[UITextView alloc]initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 48) textContainer:nil];
     _textView.textColor = [UIColor blueColor];
     _textView.font = [UIFont systemFontOfSize:15.0];
@@ -43,8 +46,7 @@
     [_textView becomeFirstResponder];
     [self.view addSubview: _textView];
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(save)];
-    self.navigationItem.rightBarButtonItem = rightItem;
+    
     
 
 }

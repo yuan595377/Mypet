@@ -141,6 +141,7 @@
     if (buttonIndex == 0) {
         [self logout];
     }
+
 }
 
 

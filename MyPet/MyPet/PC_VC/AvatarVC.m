@@ -24,26 +24,25 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
     [super viewWillAppear:animated];
     UIBarButtonItem *but = [[UIBarButtonItem alloc]initWithTitle:@"更换头像" style:UIBarButtonItemStylePlain target:self action:@selector(jumpAvatar)];
     [but setTintColor:[UIColor whiteColor]];
     self.navigationItem.rightBarButtonItem = but;
 
-    
-  
 }
 
 
 
 
 - (void)setAvatar {
+    
     self.im = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
     self.im.center = self.view.center;
     [self.view addSubview:self.im];
     NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avatar.png"];
     NSLog(@"图片路径:%@", fullPath);
     [self.im sd_setImageWithURL:[NSURL fileURLWithPath:fullPath] placeholderImage:[UIImage imageNamed:@"112.jpeg"]];
-    
     
 
 }
