@@ -19,7 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self fetchData];
     [self createTable];
+
     
     
 }
@@ -28,7 +30,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    [self fetchData];
+    [self.tableView reloadData];
     
 }
 
@@ -57,8 +59,8 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         //处理查询结果
         for (BmobObject *obj in array) {
-            InfoModel *info    = [[InfoModel alloc] init];
             if ([obj objectForKey:@"title"]) {
+                InfoModel *info    = [[InfoModel alloc] init];
                 info.title    = [obj objectForKey:@"title"];
                 info.name = [obj objectForKey:@"user_id"];
                 info.time = [obj objectForKey:@"Pub_time"];
@@ -69,12 +71,11 @@
                     info.is_close = @"";
                 
                 }
-                
-                
+                [self.dataSource1 addObject:info];
     
             }
             
-                [self.dataSource1 addObject:info];
+            
         }
         [_tableView reloadData];
     }];
@@ -91,19 +92,17 @@
     
     static NSString *CellIdentifier = @"pool";
     CellOfInfo *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    if (cell == nil) {
-        
-        cell = [[CellOfInfo alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        
-    }
-    
+    if (_dataSource1) {
         cell.model = [self.dataSource1 objectAtIndex:indexPath.row];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell.contact addTarget:self action:@selector(contact1:) forControlEvents:UIControlEventTouchDown];
         [cell.contact setTitle:cell.name.text forState:UIControlStateNormal];
         [cell.follow addTarget:self action:@selector(follow_me:) forControlEvents:UIControlEventTouchDown];
-    
+        return cell;
+        
+    }
+
         return cell;
 
 }

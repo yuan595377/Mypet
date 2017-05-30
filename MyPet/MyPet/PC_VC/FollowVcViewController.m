@@ -37,9 +37,11 @@
 }
 
 - (void)fetchData {
+
     _arr = [NSMutableArray array];
     BmobUser *user = [BmobUser currentUser];
     NSArray *a = [user objectForKey:@"follow_list"];
+    NSLog(@"aaaa:%@, user%@", a,user);
     for (NSString *str in a) {
         followModel *model = [[followModel alloc]init];
         model.username = str;

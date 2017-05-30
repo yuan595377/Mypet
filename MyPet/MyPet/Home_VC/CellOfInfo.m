@@ -62,7 +62,7 @@
     [self.title setFont:[UIFont systemFontOfSize:15]];
     [self.contentView addSubview:self.title];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 150, 30));
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 50, 30));
         make.left.equalTo(self.contentView).with.offset(10);
         make.top.equalTo(self.time.mas_bottom).with.offset(5);
     }];

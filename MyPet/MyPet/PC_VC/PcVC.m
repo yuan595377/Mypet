@@ -308,7 +308,7 @@
                 [SVProgressHUD showErrorWithStatus:@"请先登录"];
                 return;
             }
-            [SVProgressHUD showSuccessWithStatus:@"我的宠物"];
+            [self goMyPet];
             break;
         case 1:
             if(row == 0)
@@ -326,6 +326,14 @@
             
             
     }
+}
+
+
+- (void)goMyPet {
+    PetVC *vc = [[PetVC alloc]init];
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 - (void)goSet {

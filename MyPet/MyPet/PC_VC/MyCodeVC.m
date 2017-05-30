@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self createSub];
     self.view.backgroundColor = [UIColor whiteColor];
     

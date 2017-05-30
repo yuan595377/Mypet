@@ -246,6 +246,12 @@
 		F3E5FB101EDAB6D1007D1D6D /* FollowVcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FB0F1EDAB6D1007D1D6D /* FollowVcViewController.m */; };
 		F3E5FB131EDAB9BA007D1D6D /* followModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FB121EDAB9BA007D1D6D /* followModel.m */; };
 		F3E5FB161EDABAEF007D1D6D /* FollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FB151EDABAEF007D1D6D /* FollowCell.m */; };
+		F3F135281EDD057900C3C780 /* PetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F135271EDD057900C3C780 /* PetVC.m */; };
+		F3F1352C1EDD2C5A00C3C780 /* petNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1352B1EDD2C5A00C3C780 /* petNameVC.m */; };
+		F3F1352F1EDD60F000C3C780 /* PetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1352E1EDD60F000C3C780 /* PetCell.m */; };
+		F3F135331EDD656F00C3C780 /* 添加.png in Resources */ = {isa = PBXBuildFile; fileRef = F3F135321EDD656F00C3C780 /* 添加.png */; };
+		F3F135351EDD65FA00C3C780 /* 添加-3.png in Resources */ = {isa = PBXBuildFile; fileRef = F3F135341EDD65FA00C3C780 /* 添加-3.png */; };
+		F3F135371EDD666800C3C780 /* 添加-4.png in Resources */ = {isa = PBXBuildFile; fileRef = F3F135361EDD666800C3C780 /* 添加-4.png */; };
 		F3FB43F01EA3BE0C005C226B /* PB_vc.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FB43EF1EA3BE0C005C226B /* PB_vc.m */; };
 /* End PBXBuildFile section */
 
@@ -694,6 +700,15 @@
 		F3E5FB121EDAB9BA007D1D6D /* followModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = followModel.m; sourceTree = "<group>"; };
 		F3E5FB141EDABAEF007D1D6D /* FollowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowCell.h; sourceTree = "<group>"; };
 		F3E5FB151EDABAEF007D1D6D /* FollowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowCell.m; sourceTree = "<group>"; };
+		F3F135261EDD057900C3C780 /* PetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetVC.h; sourceTree = "<group>"; };
+		F3F135271EDD057900C3C780 /* PetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetVC.m; sourceTree = "<group>"; };
+		F3F1352A1EDD2C5A00C3C780 /* petNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = petNameVC.h; sourceTree = "<group>"; };
+		F3F1352B1EDD2C5A00C3C780 /* petNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = petNameVC.m; sourceTree = "<group>"; };
+		F3F1352D1EDD60F000C3C780 /* PetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetCell.h; sourceTree = "<group>"; };
+		F3F1352E1EDD60F000C3C780 /* PetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetCell.m; sourceTree = "<group>"; };
+		F3F135321EDD656F00C3C780 /* 添加.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加.png"; sourceTree = "<group>"; };
+		F3F135341EDD65FA00C3C780 /* 添加-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加-3.png"; sourceTree = "<group>"; };
+		F3F135361EDD666800C3C780 /* 添加-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加-4.png"; sourceTree = "<group>"; };
 		F3FB43EE1EA3BE0C005C226B /* PB_vc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PB_vc.h; sourceTree = "<group>"; };
 		F3FB43EF1EA3BE0C005C226B /* PB_vc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PB_vc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1090,6 +1105,7 @@
 				F3A9D9E61E96983D005FF25C /* setVC.m */,
 				F353BD691EBB861F0067C985 /* MyInfoVC.h */,
 				F353BD6A1EBB861F0067C985 /* MyInfoVC.m */,
+				F3F135291EDD057E00C3C780 /* PET */,
 				F3D746161EAC04E600232B34 /* code */,
 				F3A9D9E71E96983D005FF25C /* setVC.xib */,
 				F3372CCC1EA66BFE0035EA34 /* my_pub */,
@@ -1727,6 +1743,22 @@
 			name = code;
 			sourceTree = "<group>";
 		};
+		F3F135291EDD057E00C3C780 /* PET */ = {
+			isa = PBXGroup;
+			children = (
+				F3F135261EDD057900C3C780 /* PetVC.h */,
+				F3F135271EDD057900C3C780 /* PetVC.m */,
+				F3F135361EDD666800C3C780 /* 添加-4.png */,
+				F3F135341EDD65FA00C3C780 /* 添加-3.png */,
+				F3F135321EDD656F00C3C780 /* 添加.png */,
+				F3F1352D1EDD60F000C3C780 /* PetCell.h */,
+				F3F1352E1EDD60F000C3C780 /* PetCell.m */,
+				F3F1352A1EDD2C5A00C3C780 /* petNameVC.h */,
+				F3F1352B1EDD2C5A00C3C780 /* petNameVC.m */,
+			);
+			name = PET;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1868,6 +1900,7 @@
 				F3242B411E98863500A39ADD /* images.bundle in Resources */,
 				F38FEA281EA8DE9D002CB53D /* 二维码.png in Resources */,
 				F3A9D9E21E969625005FF25C /* home.png in Resources */,
+				F3F135331EDD656F00C3C780 /* 添加.png in Resources */,
 				F3242B7B1E98898100A39ADD /* Contents.json in Resources */,
 				F3242B7C1E98898100A39ADD /* tabbar_discover@2x.png in Resources */,
 				F3242B741E98898100A39ADD /* tabbar_compose_button@2x.png in Resources */,
@@ -1900,6 +1933,7 @@
 				F30B4AE91ED729D700152393 /* 消息.png in Resources */,
 				F3242B6E1E98898100A39ADD /* Contents.json in Resources */,
 				F3242B831E98898100A39ADD /* Contents.json in Resources */,
+				F3F135371EDD666800C3C780 /* 添加-4.png in Resources */,
 				F3242B871E98898100A39ADD /* Contents.json in Resources */,
 				F38FEA2A1EA8DEDC002CB53D /* 二维码-3.png in Resources */,
 				F3242B881E98898100A39ADD /* tabbar_profile@2x.png in Resources */,
@@ -1911,6 +1945,7 @@
 				F3242B761E98898100A39ADD /* tabbar_compose_button_highlighted@2x.png in Resources */,
 				F3242B821E98898100A39ADD /* tabbar_home_selected@2x.png in Resources */,
 				F3C8A9421E8E3B900099B846 /* RegisterVC.xib in Resources */,
+				F3F135351EDD65FA00C3C780 /* 添加-3.png in Resources */,
 				F36B58311EA515E20023A7FD /* login2.jpeg in Resources */,
 				F3242B7F1E98898100A39ADD /* Contents.json in Resources */,
 				F3242B801E98898100A39ADD /* tabbar_home@2x.png in Resources */,
@@ -2108,6 +2143,7 @@
 				F339B5F41E9BE78E0058A38C /* NewModel.m in Sources */,
 				F3CB24FD1E8A8A8C00EBA1E9 /* MASViewAttribute.m in Sources */,
 				F3B6B9A61EB8F05A002C2F2B /* UINavigationBar+ThemeChange.m in Sources */,
+				F3F1352F1EDD60F000C3C780 /* PetCell.m in Sources */,
 				F3C8B5B21E8F4E870099B846 /* EaseChatBarMoreView.m in Sources */,
 				F3C8B5831E8F4E870099B846 /* PSTGridLayoutInfo.m in Sources */,
 				F337E76E1E878D2C00709A3B /* ViewController.m in Sources */,
@@ -2118,6 +2154,7 @@
 				F36B58361EA527510023A7FD /* RegisterVC_2.m in Sources */,
 				F3C8B5A61E8F4E870099B846 /* EaseBubbleView+Image.m in Sources */,
 				F3C8B5701E8F4E870099B846 /* EMSDWebImagePrefetcher.m in Sources */,
+				F3F1352C1EDD2C5A00C3C780 /* petNameVC.m in Sources */,
 				F3C8B5921E8F4E870099B846 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				F3372CC81EA657020035EA34 /* CellOfInfo.m in Sources */,
 				F31136321EBF62B30022220D /* ProcoVC.m in Sources */,
@@ -2175,6 +2212,7 @@
 				F3C8B5AC1E8F4E870099B846 /* EaseChatToolbar.m in Sources */,
 				F3C8B5881E8F4E870099B846 /* EaseSDKHelper.m in Sources */,
 				F3C8B5681E8F4E870099B846 /* MWZoomingScrollView.m in Sources */,
+				F3F135281EDD057900C3C780 /* PetVC.m in Sources */,
 				F3B6B9A91EB8F05A002C2F2B /* UIView+RemoveNotifition.m in Sources */,
 				F3C8B58E1E8F4E870099B846 /* NSString+Valid.m in Sources */,
 				F3C8B56B1E8F4E870099B846 /* EMSDWebImageCompat.m in Sources */,

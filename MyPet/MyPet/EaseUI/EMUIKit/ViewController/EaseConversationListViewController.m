@@ -36,10 +36,9 @@
     if (self.dataArray.count == 0) {
         NSLog(@"暂时没有消息哦");
         self.tableView.hidden = YES;
-        self.placeholderImg = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
+        self.placeholderImg = [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - 50, 200, 200, 100)];
         self.placeholderImg.text = @"暂时没有消息哦";
         [self.view addSubview:self.placeholderImg];
-        self.placeholderImg.center = self.view.center;
         self.placeholderImg.hidden = NO;
         
     }else {

@@ -75,6 +75,7 @@
 #import "UINavigationBar+ThemeChange.h"
 #import "UIView+RemoveNotifition.h"
 
-
-
+#import "PetVC.h"
+#import "petNameVC.h"
+#import "PetCell.h"
 #endif
