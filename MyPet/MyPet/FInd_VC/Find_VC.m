@@ -9,7 +9,7 @@
 #import "Find_VC.h"
 #import "NewModel.h"
 #import "detailVC.h"
-@interface Find_VC ()<UITableViewDelegate, UITableViewDataSource>
+@interface Find_VC ()<UITableViewDelegate, UITableViewDataSource,UIViewControllerPreviewingDelegate>
 @property (nonatomic, retain)UITableView *tableView;
 @property (nonatomic, retain)NSMutableArray *dataSource;
 @end
@@ -73,6 +73,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"pool";
     NewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    [self registerForPreviewingWithDelegate:self sourceView:cell];
     if (_dataSource) {
         
         
@@ -85,6 +86,31 @@
     }
     return cell;
 }
+
+- (nullable UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
+    //浅按
+    
+    NSIndexPath *indexPath = [_tableView indexPathForCell:(UITableViewCell* )[previewingContext sourceView]];
+    
+    NewModel *model = [[NewModel alloc]init];
+    model = self.dataSource[indexPath.row];
+    detailVC *vc = [[detailVC alloc]init];
+    vc.ID = model.ID;
+    return vc;
+}
+
+
+- (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
+    NSIndexPath *indexPath = [_tableView indexPathForCell:(UITableViewCell* )[previewingContext sourceView]];
+    
+    NewModel *model = [[NewModel alloc]init];
+    model = self.dataSource[indexPath.row];
+    detailVC *vc = [[detailVC alloc]init];
+    vc.ID = model.ID;
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self showViewController:vc sender:self];
+}
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     

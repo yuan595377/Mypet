@@ -32,7 +32,7 @@
     HomeVC *home = [[HomeVC alloc] init];
     [self addChildVc:home title:@"社区" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
     
-    conversationListVc *messageCenter = [[conversationListVc alloc] init];
+    EaseConversationListViewController *messageCenter = [[EaseConversationListViewController alloc] init];
     [self addChildVc:messageCenter title:@"消息" image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
     
     Find_VC *discover = [[Find_VC alloc] init];

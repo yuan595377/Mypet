@@ -18,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //图标
+    UIApplicationShortcutItem *item1 = [[UIApplicationShortcutItem alloc]initWithType:@"one" localizedTitle:@"社区" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeHome] userInfo:nil];
+    UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc]initWithType:@"two" localizedTitle:@"发布" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeAdd] userInfo:nil];
+    //显示顺序.
+    [UIApplication sharedApplication].shortcutItems = @[item1, item2];
     
     //注册bmob
     //启动基本SDK
@@ -49,6 +54,20 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+
+    if ([shortcutItem.type isEqualToString:@"one"]) {
+        //跳转社区
+        
+    }else if([shortcutItem.type isEqualToString:@"two"]) {
+        
+        PB_vc *vc = [[PB_vc alloc]init];
+        [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+        NSLog(@"进入");
+    }
+    
 }
 
 

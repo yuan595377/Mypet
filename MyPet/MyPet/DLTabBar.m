@@ -50,7 +50,6 @@
 
     [super layoutSubviews];
     
-
     self.centerButton.centerX = self.width * 0.5;
     self.centerButton.centerY = self.height * 0.5;
 

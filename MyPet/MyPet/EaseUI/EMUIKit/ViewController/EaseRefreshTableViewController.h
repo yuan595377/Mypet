@@ -14,7 +14,7 @@
 
 #define KCELLDEFAULTHEIGHT 50
 
-@interface EaseRefreshTableViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface EaseRefreshTableViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,UIViewControllerPreviewingDelegate>
 {
     NSArray *_rightItems;
 }

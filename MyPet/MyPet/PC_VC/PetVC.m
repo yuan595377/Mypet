@@ -149,8 +149,18 @@
 
 - (void)localNotic:(UIButton *)bt {
     
-     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"Clock-alarm://"]];
-
+    NSURL *url = [NSURL
+                  URLWithString:@"prefs:root=NOTES"];
+    
+    if ([[UIApplication
+          sharedApplication]
+         canOpenURL:url]) {
+        
+        [[UIApplication
+          sharedApplication] 
+         openURL:url];
+        
+    }
 }
 
 

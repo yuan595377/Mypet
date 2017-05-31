@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>PetWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F30173E01EDF2587006F5294</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F337E7621E878D2C00709A3B</key>
 		<dict>
 			<key>primary</key>

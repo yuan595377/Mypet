@@ -149,7 +149,8 @@
 {
     static NSString *CellIdentifier = @"UITableViewCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+    [self registerForPreviewingWithDelegate:self sourceView:cell];
+
     // Configure the cell...
     
     return cell;
@@ -197,5 +198,27 @@
         }
     });
 }
+
+
+- (nullable UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
+    //浅按
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell* )[previewingContext sourceView]];
+    
+    EaseConversationModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    EaseMessageViewController *viewController = [[EaseMessageViewController alloc] initWithConversationChatter:model.conversation.conversationId conversationType:model.conversation.type];
+    return viewController;
+}
+
+
+- (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell* )[previewingContext sourceView]];
+    
+    EaseConversationModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    EaseMessageViewController *viewController = [[EaseMessageViewController alloc] initWithConversationChatter:model.conversation.conversationId conversationType:model.conversation.type];
+    [self showViewController:viewController sender:self];
+}
+
 
 @end

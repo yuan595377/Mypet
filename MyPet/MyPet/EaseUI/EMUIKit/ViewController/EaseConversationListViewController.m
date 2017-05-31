@@ -20,8 +20,9 @@
 #import "EaseLocalDefine.h"
 
 @interface EaseConversationListViewController ()<EMChatManagerDelegate,EaseConversationListViewControllerDataSource>
-//@property (nonatomic, retain)UIImageView *placeholderImg;
+
 @property (nonatomic, retain)UILabel *placeholderImg;
+
 @end
 
 @implementation EaseConversationListViewController
@@ -130,7 +131,8 @@
 {
     NSString *CellIdentifier = [EaseConversationCell cellIdentifierWithModel:nil];
     EaseConversationCell *cell = (EaseConversationCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+    [self registerForPreviewingWithDelegate:self sourceView:cell];
+
     // Configure the cell...
     if (cell == nil) {
         cell = [[EaseConversationCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -184,6 +186,28 @@
         
     }
 }
+
+- (nullable UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
+    //浅按
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell* )[previewingContext sourceView]];
+    
+    EaseConversationModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    EaseMessageViewController *viewController = [[EaseMessageViewController alloc] initWithConversationChatter:model.conversation.conversationId conversationType:model.conversation.type];
+    return viewController;
+}
+
+
+- (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell* )[previewingContext sourceView]];
+    
+    EaseConversationModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    EaseMessageViewController *viewController = [[EaseMessageViewController alloc] initWithConversationChatter:model.conversation.conversationId conversationType:model.conversation.type];
+    [self showViewController:viewController sender:self];
+}
+
+
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
@@ -331,5 +355,8 @@
     }
     return latestMessageTime;
 }
+
+
+
 
 @end

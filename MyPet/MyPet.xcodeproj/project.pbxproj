@@ -10,6 +10,10 @@
 		3B9EEAC4F0F6CA022175B6DA /* libPods-MyPetUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF04AF4F23D2D82D0D4BF706 /* libPods-MyPetUITests.a */; };
 		DAC6C36230785F3E8DD2CCD3 /* libPods-MyPetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14860BD93314E6982ED07B8 /* libPods-MyPetTests.a */; };
 		E9A91CA30C4D5D6E3F200CC2 /* libPods-MyPet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D401018F7BC5C18A13BC526 /* libPods-MyPet.a */; };
+		F30173E31EDF2587006F5294 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30173E21EDF2587006F5294 /* NotificationCenter.framework */; };
+		F30173E71EDF2587006F5294 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30173E61EDF2587006F5294 /* TodayViewController.m */; };
+		F30173EA1EDF2587006F5294 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F30173E81EDF2587006F5294 /* MainInterface.storyboard */; };
+		F30173EE1EDF2587006F5294 /* PetWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F30173E11EDF2587006F5294 /* PetWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F309CD5D1E8F5575001B178C /* chatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F309CD5C1E8F5575001B178C /* chatVC.m */; };
 		F309CD601E8F89D1001B178C /* conversationListVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F309CD5F1E8F89D1001B178C /* conversationListVc.m */; };
 		F30B4AE91ED729D700152393 /* 消息.png in Resources */ = {isa = PBXBuildFile; fileRef = F30B4AE81ED729D700152393 /* 消息.png */; };
@@ -256,6 +260,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F30173EC1EDF2587006F5294 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F337E75B1E878D2C00709A3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F30173E01EDF2587006F5294;
+			remoteInfo = PetWidget;
+		};
 		F337E77D1E878D2C00709A3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F337E75B1E878D2C00709A3B /* Project object */;
@@ -272,6 +283,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F30173F21EDF2587006F5294 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F30173EE1EDF2587006F5294 /* PetWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		27D63179CB4CC3560F981B6F /* Pods-MyPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPet.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPet/Pods-MyPet.release.xcconfig"; sourceTree = "<group>"; };
 		6D401018F7BC5C18A13BC526 /* libPods-MyPet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +307,12 @@
 		B909B5B34CD1EA8846FDEEE9 /* Pods-MyPetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPetUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPetUITests/Pods-MyPetUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CF04AF4F23D2D82D0D4BF706 /* libPods-MyPetUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPetUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14860BD93314E6982ED07B8 /* libPods-MyPetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30173E11EDF2587006F5294 /* PetWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PetWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30173E21EDF2587006F5294 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		F30173E51EDF2587006F5294 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		F30173E61EDF2587006F5294 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		F30173E91EDF2587006F5294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		F30173EB1EDF2587006F5294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F309CD5B1E8F5575001B178C /* chatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatVC.h; sourceTree = "<group>"; };
 		F309CD5C1E8F5575001B178C /* chatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatVC.m; sourceTree = "<group>"; };
 		F309CD5E1E8F89D1001B178C /* conversationListVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conversationListVc.h; sourceTree = "<group>"; };
@@ -714,6 +745,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F30173DE1EDF2587006F5294 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30173E31EDF2587006F5294 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F337E7601E878D2C00709A3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -784,8 +823,20 @@
 				6D401018F7BC5C18A13BC526 /* libPods-MyPet.a */,
 				F14860BD93314E6982ED07B8 /* libPods-MyPetTests.a */,
 				CF04AF4F23D2D82D0D4BF706 /* libPods-MyPetUITests.a */,
+				F30173E21EDF2587006F5294 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F30173E41EDF2587006F5294 /* PetWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F30173E51EDF2587006F5294 /* TodayViewController.h */,
+				F30173E61EDF2587006F5294 /* TodayViewController.m */,
+				F30173E81EDF2587006F5294 /* MainInterface.storyboard */,
+				F30173EB1EDF2587006F5294 /* Info.plist */,
+			);
+			path = PetWidget;
 			sourceTree = "<group>";
 		};
 		F3242B391E9883DC00A39ADD /* newTabbar */ = {
@@ -972,6 +1023,7 @@
 				F337E7651E878D2C00709A3B /* MyPet */,
 				F337E77F1E878D2C00709A3B /* MyPetTests */,
 				F337E78A1E878D2C00709A3B /* MyPetUITests */,
+				F30173E41EDF2587006F5294 /* PetWidget */,
 				F337E7641E878D2C00709A3B /* Products */,
 				89006B9595A5AD44DD307E67 /* Pods */,
 				CC0EB54F39B2A11CDF22842B /* Frameworks */,
@@ -984,6 +1036,7 @@
 				F337E7631E878D2C00709A3B /* MyPet.app */,
 				F337E77C1E878D2C00709A3B /* MyPetTests.xctest */,
 				F337E7871E878D2C00709A3B /* MyPetUITests.xctest */,
+				F30173E11EDF2587006F5294 /* PetWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1762,6 +1815,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F30173E01EDF2587006F5294 /* PetWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F30173EF1EDF2587006F5294 /* Build configuration list for PBXNativeTarget "PetWidget" */;
+			buildPhases = (
+				F30173DD1EDF2587006F5294 /* Sources */,
+				F30173DE1EDF2587006F5294 /* Frameworks */,
+				F30173DF1EDF2587006F5294 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PetWidget;
+			productName = PetWidget;
+			productReference = F30173E11EDF2587006F5294 /* PetWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F337E7621E878D2C00709A3B /* MyPet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F337E7901E878D2C00709A3B /* Build configuration list for PBXNativeTarget "MyPet" */;
@@ -1772,10 +1842,12 @@
 				F337E7611E878D2C00709A3B /* Resources */,
 				FEB56229EF3C3BC602DB034C /* [CP] Embed Pods Frameworks */,
 				0863CBA51744EF2CBBF17097 /* [CP] Copy Pods Resources */,
+				F30173F21EDF2587006F5294 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F30173ED1EDF2587006F5294 /* PBXTargetDependency */,
 			);
 			name = MyPet;
 			productName = MyPet;
@@ -1833,11 +1905,19 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "袁立康";
 				TargetAttributes = {
+					F30173E01EDF2587006F5294 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 98E92X44D4;
+						ProvisioningStyle = Automatic;
+					};
 					F337E7621E878D2C00709A3B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 98E92X44D4;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -1873,11 +1953,20 @@
 				F337E7621E878D2C00709A3B /* MyPet */,
 				F337E77B1E878D2C00709A3B /* MyPetTests */,
 				F337E7861E878D2C00709A3B /* MyPetUITests */,
+				F30173E01EDF2587006F5294 /* PetWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F30173DF1EDF2587006F5294 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30173EA1EDF2587006F5294 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F337E7611E878D2C00709A3B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2114,6 +2203,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F30173DD1EDF2587006F5294 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30173E71EDF2587006F5294 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F337E75F1E878D2C00709A3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2294,6 +2391,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F30173ED1EDF2587006F5294 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F30173E01EDF2587006F5294 /* PetWidget */;
+			targetProxy = F30173EC1EDF2587006F5294 /* PBXContainerItemProxy */;
+		};
 		F337E77E1E878D2C00709A3B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F337E7621E878D2C00709A3B /* MyPet */;
@@ -2307,6 +2409,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F30173E81EDF2587006F5294 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F30173E91EDF2587006F5294 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		F337E76F1E878D2C00709A3B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2326,6 +2436,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F30173F01EDF2587006F5294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 98E92X44D4;
+				INFOPLIST_FILE = PetWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet.PetWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F30173F11EDF2587006F5294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 98E92X44D4;
+				INFOPLIST_FILE = PetWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet.PetWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		F337E78E1E878D2C00709A3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2422,7 +2556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyPet/MyPet.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 98E92X44D4;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyPet/PrefixHeader.pch";
@@ -2441,8 +2575,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "38278ca6-d828-4261-94c8-b207ca819af3";
-				PROVISIONING_PROFILE_SPECIFIER = needtest20170508;
+				PROVISIONING_PROFILE = "4dd2226e-7918-4032-bc3f-dd4f9796a396";
+				PROVISIONING_PROFILE_SPECIFIER = yuan0327;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -2453,7 +2587,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyPet/MyPet.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 98E92X44D4;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyPet/PrefixHeader.pch";
@@ -2472,8 +2606,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "38278ca6-d828-4261-94c8-b207ca819af3";
-				PROVISIONING_PROFILE_SPECIFIER = needtest20170508;
+				PROVISIONING_PROFILE = "4dd2226e-7918-4032-bc3f-dd4f9796a396";
+				PROVISIONING_PROFILE_SPECIFIER = yuan0327;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
@@ -2537,6 +2671,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F30173EF1EDF2587006F5294 /* Build configuration list for PBXNativeTarget "PetWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F30173F01EDF2587006F5294 /* Debug */,
+				F30173F11EDF2587006F5294 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F337E75E1E878D2C00709A3B /* Build configuration list for PBXProject "MyPet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
