@@ -12,5 +12,6 @@
 @property (nonatomic,retain)NSString *title;
 @property (nonatomic, retain)NSString *objectID;
 @property (nonatomic, retain)NSString *url;
+@property (nonatomic, retain)NSString *PubTime;
 @property (nonatomic, assign)NSNumber *closenum;
 @end

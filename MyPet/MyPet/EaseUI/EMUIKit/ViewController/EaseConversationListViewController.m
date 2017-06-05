@@ -51,17 +51,8 @@
 }
 
 - (void)judgeBadge {
-    NSLog(@"判断消息未读数");
-    NSArray *conversations = [[EMClient sharedClient].chatManager getAllConversations];
-    int unread = 0;
-    for (EMConversation *con in conversations) {
-        unread += [con unreadMessagesCount];
-    }
-    NSLog(@"unread:%d", unread);
-    //未读消息数
-    if (unread != 0) {
-        self.navigationController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", unread];
-    }
+    
+
 }
 
 
@@ -102,7 +93,7 @@
 
 - (void)didReceiveMessages:(NSArray *)aMessages {
     
-    [self judgeBadge];
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     [self tableViewDidTriggerHeaderRefresh];
 
 }

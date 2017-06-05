@@ -2678,6 +2678,7 @@
 				F30173F11EDF2587006F5294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F337E75E1E878D2C00709A3B /* Build configuration list for PBXProject "MyPet" */ = {
 			isa = XCConfigurationList;

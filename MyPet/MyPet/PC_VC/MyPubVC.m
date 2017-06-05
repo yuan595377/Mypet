@@ -43,7 +43,7 @@
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 300;
+    self.tableView.rowHeight = 340;
     [self.tableView registerClass:[CellOfMyPub class] forCellReuseIdentifier:@"pool"];
     
 }
@@ -73,6 +73,7 @@
                 info.title = [obj objectForKey:@"title"];
                 info.url = [obj objectForKey:@"PubImg"];
                 info.closenum = [NSNumber numberWithInteger:[NSString stringWithFormat:@"%@",[obj objectForKey:@"is_close"]].integerValue];
+                info.PubTime = [obj objectForKey:@"Pub_time"];
                 
             }
             if (info.title) {
@@ -98,6 +99,10 @@
         cell.model = self.dataSource1[indexPath.row];
         cell.bu.object_ID = cell.objectID;
         [cell.bu addTarget:self action:@selector(jum:) forControlEvents:UIControlEventTouchDown];
+        
+        BmobUser *user = [BmobUser currentUser];
+        NSString *str = [NSString stringWithFormat:@"%@",[user objectForKey:@"avatar"]];
+        [cell.avatar sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:[UIImage imageNamed:@"EaseUIResource.bundle/user"]];
         return cell;
         
     }

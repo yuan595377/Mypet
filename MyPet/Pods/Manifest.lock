@@ -19,8 +19,6 @@ PODS:
   - HyphenateFullSDK (3.1.5)
   - MJRefresh (3.1.12)
   - MOBFoundation_IDFA (2.2.3)
-  - Pgyer (2.8.4)
-  - PgyUpdate (1.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -34,8 +32,6 @@ DEPENDENCIES:
   - HyphenateFullSDK (~> 3.1.5)
   - MJRefresh (~> 3.1.12)
   - MOBFoundation_IDFA
-  - Pgyer
-  - PgyUpdate
   - SDWebImage (~> 3.8.2)
   - SMSSDK
   - SVProgressHUD (~> 2.0.3)
@@ -47,12 +43,10 @@ SPEC CHECKSUMS:
   HyphenateFullSDK: 536f76eeb0914dba766b1d5d30dee083f0805da2
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MOBFoundation_IDFA: bdc119aa1dd48c741d913695dcecfbef350555df
-  Pgyer: 26edfcc8da6da6383fabfdbccd2f77c623b9d6eb
-  PgyUpdate: a42e82cec5ad4e992af390e9d494f6fc62db65e4
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SMSSDK: 1fc8500bec6bc36b524e4de7fac4acdb784e0217
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 0998590a4f97f4742858635af8c2765a38c47f56
+PODFILE CHECKSUM: 552afea039ad838b7ab8094d0d9b51e27275f0d1
 
 COCOAPODS: 1.1.1

@@ -17,4 +17,8 @@
 @property (nonatomic, retain)UIImageView *Img;
 @property (nonatomic, assign)NSNumber *closenum;
 
+@property (nonatomic, retain)UIImageView *avatar;
+@property (nonatomic, retain)UILabel *nickName;
+@property (nonatomic, retain)UILabel *dec;
+@property (nonatomic, retain)UILabel *pubTime;
 @end
