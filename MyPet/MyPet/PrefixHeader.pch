@@ -78,4 +78,7 @@
 #import "PetVC.h"
 #import "petNameVC.h"
 #import "PetCell.h"
+
+
+#import "CoreDataManager.h"
 #endif

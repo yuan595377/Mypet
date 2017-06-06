@@ -149,18 +149,8 @@
 
 - (void)localNotic:(UIButton *)bt {
     
-    NSURL *url = [NSURL
-                  URLWithString:@"prefs:root=NOTES"];
-    
-    if ([[UIApplication
-          sharedApplication]
-         canOpenURL:url]) {
-        
-        [[UIApplication
-          sharedApplication] 
-         openURL:url];
-        
-    }
+    [SVProgressHUD showSuccessWithStatus:@"点击添加闹钟"];
+
 }
 
 
