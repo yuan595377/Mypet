@@ -34,25 +34,39 @@
     //设置标题
     
     
+    self.avatar = [[UIImageView alloc]init];
+    [self.contentView addSubview:self.avatar];
+    self.avatar.layer.cornerRadius = 20;
+    self.avatar.layer.masksToBounds = YES;
+    [self.avatar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(40, 40));
+        make.left.equalTo(self.contentView).with.offset(10);
+        make.top.equalTo(self.contentView.mas_top).with.offset(10);
+    }];
+
+    
+    
     self.name = [[UILabel alloc]init];
     [self.name setFont:[UIFont systemFontOfSize:15]];
+    self.name.textColor = [UIColor colorWithRed:0.61 green:0.70 blue:0.78 alpha:1.00];
     [self.name NightWithType:UIViewColorTypeNormal];
     [self.contentView addSubview:self.name];
     [self.name mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 150, 20));
-        make.left.equalTo(self.contentView).with.offset(10);
-        make.top.equalTo(self.contentView.mas_top).with.offset(10);
+        make.left.equalTo(self.avatar.mas_right).with.offset(10);
+        make.top.equalTo(self.contentView.mas_top).with.offset(13);
     }];
     
     
     self.time = [[UILabel alloc]init];
     [self.time NightWithType:UIViewColorTypeNormal];
-    [self.time setFont:[UIFont systemFontOfSize:15]];
+    [self.time setFont:[UIFont systemFontOfSize:12]];
+    self.time.textColor = [UIColor grayColor];
     [self.contentView addSubview:self.time];
     [self.time mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 150, 20));
-        make.left.equalTo(self.contentView).with.offset(10);
-        make.top.equalTo(self.name.mas_bottom).with.offset(6);
+        make.left.equalTo(self.avatar.mas_right).with.offset(10);
+        make.top.equalTo(self.name.mas_bottom).with.offset(3);
     }];
     
     
@@ -148,6 +162,7 @@
     self.time.text = model.time;
     [self.dec_img sd_setImageWithURL:[NSURL  URLWithString:model.url]];
     self.labelOfJudge.text = model.is_close;
+    [self.avatar sd_setImageWithURL:[NSURL URLWithString:model.avatarUrl] placeholderImage:[UIImage imageNamed:@"EaseUIResource.bundle/user"]];
 
 }
 

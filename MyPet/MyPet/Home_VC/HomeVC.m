@@ -65,6 +65,7 @@
                 info.name = [obj objectForKey:@"user_id"];
                 info.time = [obj objectForKey:@"Pub_time"];
                 info.url = [obj objectForKey:@"PubImg"];
+                info.avatarUrl = [obj objectForKey:@"user_avatar"];
                 if ([[NSString stringWithFormat:@"%@", [obj objectForKey:@"is_close"]] isEqualToString:@"1"]) {
                     info.is_close = @"已接单";
                 }else {

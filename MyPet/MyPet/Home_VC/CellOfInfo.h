@@ -16,7 +16,7 @@
 @property (nonatomic, retain)UIImageView *dec_img;
 @property (nonatomic, retain)UILabel *time;
 @property (nonatomic, retain)UIButton *follow;
-
+@property (nonatomic, retain)UIImageView *avatar;
 @property (nonatomic, retain)UILabel *labelOfJudge;
 
 @end

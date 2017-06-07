@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <UserNotifications/UserNotifications.h>
+static SystemSoundID soundID = 0;
+
 @interface AppDelegate ()<UNUserNotificationCenterDelegate,EMChatManagerDelegate>
 
 @end
@@ -152,19 +154,24 @@
 
 }
 
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+
+
+#pragma mark -  本地通知回调函数 接受本地通知
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
     
-    // 必须要监听--应用程序在后台的时候进行的跳转
-    if (application.applicationState == UIApplicationStateInactive) {
-        
-        //    [self didReceiveRemoteNotification:notification.userInfo];
-        
-        
-    }
-    
-    
+
 }
 
+#pragma mark - 闹铃重复播放
+void playFinished(SystemSoundID  ssID, void* clientData)
+{
+    //    unsigned long ID = ssID; // ssID 不能直接作为参数打印出来，需要中转一次
+    //    NSLog(@"播放完成-传入ID为-%lu,传入的参数为%@", ID, clientData);
+    // 播放
+    AudioServicesPlayAlertSound((SystemSoundID)soundID);
+    
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

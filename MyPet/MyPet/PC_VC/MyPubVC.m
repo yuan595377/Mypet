@@ -75,6 +75,9 @@
                 info.closenum = [NSNumber numberWithInteger:[NSString stringWithFormat:@"%@",[obj objectForKey:@"is_close"]].integerValue];
                 info.PubTime = [obj objectForKey:@"Pub_time"];
                 
+                
+            
+                
             }
             if (info.title) {
                 [self.dataSource1 addObject:info];

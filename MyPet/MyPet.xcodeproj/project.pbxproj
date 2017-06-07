@@ -159,6 +159,18 @@
 		F3C762981EE6E82B009EB012 /* weixin.png in Resources */ = {isa = PBXBuildFile; fileRef = F3C762751EE6E82B009EB012 /* weixin.png */; };
 		F3C762991EE6E82B009EB012 /* ww.png in Resources */ = {isa = PBXBuildFile; fileRef = F3C762761EE6E82B009EB012 /* ww.png */; };
 		F3C7629C1EE6E861009EB012 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7629B1EE6E861009EB012 /* CoreDataManager.m */; };
+		F3C762B71EE6E92C009EB012 /* Clock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C7629F1EE6E92C009EB012 /* Clock.xcdatamodeld */; };
+		F3C762B81EE6E92C009EB012 /* Times+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762A21EE6E92C009EB012 /* Times+CoreDataProperties.m */; };
+		F3C762B91EE6E92C009EB012 /* Times.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762A41EE6E92C009EB012 /* Times.m */; };
+		F3C762BA1EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762A71EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.m */; };
+		F3C762BB1EE6E92C009EB012 /* ViewControllerOfAddClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762A91EE6E92C009EB012 /* ViewControllerOfAddClock.m */; };
+		F3C762BC1EE6E92C009EB012 /* ViewControllerOfAlarmClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762AB1EE6E92C009EB012 /* ViewControllerOfAlarmClock.m */; };
+		F3C762BD1EE6E92C009EB012 /* ViewControllerOfHJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762AD1EE6E92C009EB012 /* ViewControllerOfHJ.m */; };
+		F3C762BE1EE6E92C009EB012 /* ViewControllerOfHJOfChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762AF1EE6E92C009EB012 /* ViewControllerOfHJOfChange.m */; };
+		F3C762BF1EE6E92C009EB012 /* CollectionReusableViewOfHJOfHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762B21EE6E92C009EB012 /* CollectionReusableViewOfHJOfHeader.m */; };
+		F3C762C01EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762B41EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.m */; };
+		F3C762C11EE6E92C009EB012 /* TableViewCellOfHJClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762B61EE6E92C009EB012 /* TableViewCellOfHJClock.m */; };
+		F3C762CE1EE6F21A009EB012 /* Times1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C762CC1EE6F21A009EB012 /* Times1.xcdatamodeld */; };
 		F3C8A9411E8E3B900099B846 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A93F1E8E3B900099B846 /* RegisterVC.m */; };
 		F3C8A9421E8E3B900099B846 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C8A9401E8E3B900099B846 /* RegisterVC.xib */; };
 		F3C8A95D1E8E4FF30099B846 /* loginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A95B1E8E4FF30099B846 /* loginVC.m */; };
@@ -539,6 +551,28 @@
 		F3C762761EE6E82B009EB012 /* ww.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ww.png; sourceTree = "<group>"; };
 		F3C7629A1EE6E861009EB012 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		F3C7629B1EE6E861009EB012 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		F3C762A01EE6E92C009EB012 /* Clock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Clock.xcdatamodel; sourceTree = "<group>"; };
+		F3C762A11EE6E92C009EB012 /* Times+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Times+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F3C762A21EE6E92C009EB012 /* Times+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Times+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F3C762A31EE6E92C009EB012 /* Times.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Times.h; sourceTree = "<group>"; };
+		F3C762A41EE6E92C009EB012 /* Times.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Times.m; sourceTree = "<group>"; };
+		F3C762A61EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellOfHjOfPicture.h; sourceTree = "<group>"; };
+		F3C762A71EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellOfHjOfPicture.m; sourceTree = "<group>"; };
+		F3C762A81EE6E92C009EB012 /* ViewControllerOfAddClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerOfAddClock.h; sourceTree = "<group>"; };
+		F3C762A91EE6E92C009EB012 /* ViewControllerOfAddClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerOfAddClock.m; sourceTree = "<group>"; };
+		F3C762AA1EE6E92C009EB012 /* ViewControllerOfAlarmClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerOfAlarmClock.h; sourceTree = "<group>"; };
+		F3C762AB1EE6E92C009EB012 /* ViewControllerOfAlarmClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerOfAlarmClock.m; sourceTree = "<group>"; };
+		F3C762AC1EE6E92C009EB012 /* ViewControllerOfHJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerOfHJ.h; sourceTree = "<group>"; };
+		F3C762AD1EE6E92C009EB012 /* ViewControllerOfHJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerOfHJ.m; sourceTree = "<group>"; };
+		F3C762AE1EE6E92C009EB012 /* ViewControllerOfHJOfChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerOfHJOfChange.h; sourceTree = "<group>"; };
+		F3C762AF1EE6E92C009EB012 /* ViewControllerOfHJOfChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerOfHJOfChange.m; sourceTree = "<group>"; };
+		F3C762B11EE6E92C009EB012 /* CollectionReusableViewOfHJOfHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionReusableViewOfHJOfHeader.h; sourceTree = "<group>"; };
+		F3C762B21EE6E92C009EB012 /* CollectionReusableViewOfHJOfHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableViewOfHJOfHeader.m; sourceTree = "<group>"; };
+		F3C762B31EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellOfHJOfClock.h; sourceTree = "<group>"; };
+		F3C762B41EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellOfHJOfClock.m; sourceTree = "<group>"; };
+		F3C762B51EE6E92C009EB012 /* TableViewCellOfHJClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellOfHJClock.h; sourceTree = "<group>"; };
+		F3C762B61EE6E92C009EB012 /* TableViewCellOfHJClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellOfHJClock.m; sourceTree = "<group>"; };
+		F3C762CD1EE6F21A009EB012 /* Times1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Times1.xcdatamodel; sourceTree = "<group>"; };
 		F3C8A93E1E8E3B8F0099B846 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		F3C8A93F1E8E3B900099B846 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		F3C8A9401E8E3B900099B846 /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
@@ -1372,6 +1406,58 @@
 			path = HJIMG;
 			sourceTree = "<group>";
 		};
+		F3C7629D1EE6E92C009EB012 /* HJ */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7629E1EE6E92C009EB012 /* Models */,
+				F3C762A51EE6E92C009EB012 /* ViewControllers */,
+				F3C762B01EE6E92C009EB012 /* Views */,
+			);
+			path = HJ;
+			sourceTree = "<group>";
+		};
+		F3C7629E1EE6E92C009EB012 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7629F1EE6E92C009EB012 /* Clock.xcdatamodeld */,
+				F3C762A11EE6E92C009EB012 /* Times+CoreDataProperties.h */,
+				F3C762A21EE6E92C009EB012 /* Times+CoreDataProperties.m */,
+				F3C762A31EE6E92C009EB012 /* Times.h */,
+				F3C762A41EE6E92C009EB012 /* Times.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3C762A51EE6E92C009EB012 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3C762A61EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.h */,
+				F3C762A71EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.m */,
+				F3C762A81EE6E92C009EB012 /* ViewControllerOfAddClock.h */,
+				F3C762A91EE6E92C009EB012 /* ViewControllerOfAddClock.m */,
+				F3C762AA1EE6E92C009EB012 /* ViewControllerOfAlarmClock.h */,
+				F3C762AB1EE6E92C009EB012 /* ViewControllerOfAlarmClock.m */,
+				F3C762AC1EE6E92C009EB012 /* ViewControllerOfHJ.h */,
+				F3C762AD1EE6E92C009EB012 /* ViewControllerOfHJ.m */,
+				F3C762AE1EE6E92C009EB012 /* ViewControllerOfHJOfChange.h */,
+				F3C762AF1EE6E92C009EB012 /* ViewControllerOfHJOfChange.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F3C762B01EE6E92C009EB012 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3C762B11EE6E92C009EB012 /* CollectionReusableViewOfHJOfHeader.h */,
+				F3C762B21EE6E92C009EB012 /* CollectionReusableViewOfHJOfHeader.m */,
+				F3C762B31EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.h */,
+				F3C762B41EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.m */,
+				F3C762B51EE6E92C009EB012 /* TableViewCellOfHJClock.h */,
+				F3C762B61EE6E92C009EB012 /* TableViewCellOfHJClock.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F3C8B4181E8F4E870099B846 /* EaseUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -1920,8 +2006,10 @@
 		F3F135291EDD057E00C3C780 /* PET */ = {
 			isa = PBXGroup;
 			children = (
+				F3C7629D1EE6E92C009EB012 /* HJ */,
 				F3F135261EDD057900C3C780 /* PetVC.h */,
 				F3F135271EDD057900C3C780 /* PetVC.m */,
+				F3C762CC1EE6F21A009EB012 /* Times1.xcdatamodeld */,
 				F3C762501EE6E7DB009EB012 /* Clock1VC.h */,
 				F3C762511EE6E7DB009EB012 /* Clock1VC.m */,
 				F3F135361EDD666800C3C780 /* 添加-4.png */,
@@ -2374,6 +2462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C8B5721E8F4E870099B846 /* NSData+EMImageContentType.m in Sources */,
+				F3C762C01EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.m in Sources */,
 				F339B5E91E9B14FB0058A38C /* Find_VC.m in Sources */,
 				F3C8B5421E8F4E870099B846 /* EMCDDeviceManager+Media.m in Sources */,
 				F3C8B5621E8F4E870099B846 /* MWGridCell.m in Sources */,
@@ -2381,9 +2470,11 @@
 				F3C8B5A51E8F4E870099B846 /* EaseBubbleView+Gif.m in Sources */,
 				F3C8B59C1E8F4E870099B846 /* EaseRefreshTableViewController.m in Sources */,
 				F3E5FB101EDAB6D1007D1D6D /* FollowVcViewController.m in Sources */,
+				F3C762C11EE6E92C009EB012 /* TableViewCellOfHJClock.m in Sources */,
 				F3C8B5B31E8F4E870099B846 /* EaseRecordView.m in Sources */,
 				F3C8B5901E8F4E870099B846 /* UIViewController+HUD.m in Sources */,
 				F3C8B5741E8F4E870099B846 /* UIImage+EMGIF.m in Sources */,
+				F3C762BB1EE6E92C009EB012 /* ViewControllerOfAddClock.m in Sources */,
 				F339B5ED1E9B1F2A0058A38C /* NewCell.m in Sources */,
 				F3C8B5AE1E8F4E870099B846 /* EaseImageView.m in Sources */,
 				F3C8B5A91E8F4E870099B846 /* EaseBubbleView+Video.m in Sources */,
@@ -2399,6 +2490,8 @@
 				F3CB24FD1E8A8A8C00EBA1E9 /* MASViewAttribute.m in Sources */,
 				F3B6B9A61EB8F05A002C2F2B /* UINavigationBar+ThemeChange.m in Sources */,
 				F3F1352F1EDD60F000C3C780 /* PetCell.m in Sources */,
+				F3C762B81EE6E92C009EB012 /* Times+CoreDataProperties.m in Sources */,
+				F3C762BE1EE6E92C009EB012 /* ViewControllerOfHJOfChange.m in Sources */,
 				F3C8B5B21E8F4E870099B846 /* EaseChatBarMoreView.m in Sources */,
 				F3C8B5831E8F4E870099B846 /* PSTGridLayoutInfo.m in Sources */,
 				F337E76E1E878D2C00709A3B /* ViewController.m in Sources */,
@@ -2408,7 +2501,10 @@
 				F337E76B1E878D2C00709A3B /* AppDelegate.m in Sources */,
 				F36B58361EA527510023A7FD /* RegisterVC_2.m in Sources */,
 				F3C8B5A61E8F4E870099B846 /* EaseBubbleView+Image.m in Sources */,
+				F3C762BD1EE6E92C009EB012 /* ViewControllerOfHJ.m in Sources */,
 				F3C8B5701E8F4E870099B846 /* EMSDWebImagePrefetcher.m in Sources */,
+				F3C762B71EE6E92C009EB012 /* Clock.xcdatamodeld in Sources */,
+				F3C762BF1EE6E92C009EB012 /* CollectionReusableViewOfHJOfHeader.m in Sources */,
 				F3F1352C1EDD2C5A00C3C780 /* petNameVC.m in Sources */,
 				F3C8B5921E8F4E870099B846 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				F3372CC81EA657020035EA34 /* CellOfInfo.m in Sources */,
@@ -2420,6 +2516,7 @@
 				F3C8B57F1E8F4E870099B846 /* PSTCollectionViewFlowLayout.m in Sources */,
 				F337E7681E878D2C00709A3B /* main.m in Sources */,
 				F3C8B56C1E8F4E870099B846 /* EMSDWebImageDecoder.m in Sources */,
+				F3C762BA1EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.m in Sources */,
 				F3B6B9A31EB8F05A002C2F2B /* ThemeManage.m in Sources */,
 				F3C8B54D1E8F4E870099B846 /* MBProgressHUD.m in Sources */,
 				F3C8B5B11E8F4E870099B846 /* EaseFacialView.m in Sources */,
@@ -2472,6 +2569,7 @@
 				F3B6B9A91EB8F05A002C2F2B /* UIView+RemoveNotifition.m in Sources */,
 				F3C8B58E1E8F4E870099B846 /* NSString+Valid.m in Sources */,
 				F3C8B56B1E8F4E870099B846 /* EMSDWebImageCompat.m in Sources */,
+				F3C762CE1EE6F21A009EB012 /* Times1.xcdatamodeld in Sources */,
 				F3B6B9A51EB8F05A002C2F2B /* UILabel+ThemeChange.m in Sources */,
 				F3C8B5441E8F4E870099B846 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				F337E7A51E878F7B00709A3B /* HomeVC.m in Sources */,
@@ -2487,6 +2585,7 @@
 				F3C8B5851E8F4E870099B846 /* PSTGridLayoutRow.m in Sources */,
 				F3C8B56D1E8F4E870099B846 /* EMSDWebImageDownloader.m in Sources */,
 				F3C8B5661E8F4E870099B846 /* MWTapDetectingImageView.m in Sources */,
+				F3C762BC1EE6E92C009EB012 /* ViewControllerOfAlarmClock.m in Sources */,
 				F3C8B5821E8F4E870099B846 /* PSTCollectionViewUpdateItem.m in Sources */,
 				F3C8B5731E8F4E870099B846 /* UIButton+EMWebCache.m in Sources */,
 				F38B180B1E97C8A8006C69F8 /* NSString+Extension.m in Sources */,
@@ -2503,6 +2602,7 @@
 				F3E5FB161EDABAEF007D1D6D /* FollowCell.m in Sources */,
 				F3C8B5A31E8F4E870099B846 /* EaseMessageTimeCell.m in Sources */,
 				F3C8B5961E8F4E870099B846 /* EaseEmotionEscape.m in Sources */,
+				F3C762B91EE6E92C009EB012 /* Times.m in Sources */,
 				F3C8B5A11E8F4E870099B846 /* EaseCustomMessageCell.m in Sources */,
 				F3E5FB131EDAB9BA007D1D6D /* followModel.m in Sources */,
 				F3C8B54C1E8F4E870099B846 /* MBProgressHUD+Add.m in Sources */,
@@ -2877,6 +2977,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F3C7629F1EE6E92C009EB012 /* Clock.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F3C762A01EE6E92C009EB012 /* Clock.xcdatamodel */,
+			);
+			currentVersion = F3C762A01EE6E92C009EB012 /* Clock.xcdatamodel */;
+			path = Clock.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		F3C762CC1EE6F21A009EB012 /* Times1.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F3C762CD1EE6F21A009EB012 /* Times1.xcdatamodel */,
+			);
+			currentVersion = F3C762CD1EE6F21A009EB012 /* Times1.xcdatamodel */;
+			path = Times1.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F337E75B1E878D2C00709A3B /* Project object */;
 }

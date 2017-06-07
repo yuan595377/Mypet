@@ -112,7 +112,8 @@
     NSString *nowtimeStr = [formatter stringFromDate:datenow];
     
     NSLog(@"nowtimeStr =  %@",nowtimeStr);
-    
+    BmobUser *user = [BmobUser currentUser];
+    NSString *tr = [NSString stringWithFormat:@"%@",[user objectForKey:@"avatar"]];
     
     //创建BmobObject对象，指定对应要操作的数据表名称
     _obj = [[BmobObject alloc] initWithClassName:STOREAGE_INFO];
@@ -121,6 +122,8 @@
     [_obj setObject:[EMClient sharedClient].currentUsername forKey:@"user_id"];
     [_obj setObject:self.url forKey:@"PubImg"];
     [_obj setObject:nowtimeStr forKey:@"Pub_time"];
+    [_obj setObject:tr forKey:@"user_avatar"];
+    NSLog(@"头像:%@, 图片:%@", tr, self.url);
     
     //执行保存操作
     [_obj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {

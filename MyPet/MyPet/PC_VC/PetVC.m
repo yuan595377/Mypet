@@ -7,7 +7,7 @@
 //
 
 #import "PetVC.h"
-
+#import "ViewControllerOfAlarmClock.h"
 @interface PetVC ()<LEActionSheetDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIActionSheetDelegate>;
 @property (nonatomic, retain)NSMutableArray *dataSource;
 @property (nonatomic, retain)UIImageView *avatar;
@@ -48,6 +48,7 @@
 }
 
 - (void)fetchData {
+    
     self.title = @"我的宠物";
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.00];
@@ -59,9 +60,6 @@
     
       [self creatTableView];
     }
-    
-    
-    
     
     
 }
@@ -103,6 +101,7 @@
         make.top.equalTo(self.avatar.mas_bottom).with.offset(20);
     }];
     
+    
     self.petsex = [[UILabel alloc]init];
     self.petsex.backgroundColor = [UIColor whiteColor];
     self.petsex.text = [NSString stringWithFormat:@"宠物性别:%@",sex];
@@ -137,7 +136,7 @@
     self.saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.saveBtn];
     self.saveBtn.backgroundColor = [UIColor redColor];
-    [self.saveBtn setTitle:@"添加闹钟提醒" forState:UIControlStateNormal];
+    [self.saveBtn setTitle:@"我的闹钟" forState:UIControlStateNormal];
     [self.saveBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.saveBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 20, 30));
@@ -149,7 +148,8 @@
 
 - (void)localNotic:(UIButton *)bt {
     
-    [SVProgressHUD showSuccessWithStatus:@"点击添加闹钟"];
+    ViewControllerOfHJ *vc = [[ViewControllerOfHJ alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 
 }
 

@@ -14,6 +14,6 @@
 @property (nonatomic, retain)NSString *time;
 @property (nonatomic, retain)NSString *url;
 @property (nonatomic, retain)NSString *is_close;
-
+@property (nonatomic, retain)NSString *avatarUrl;
 - (instancetype)initWithDataSource:(NSDictionary *)dataSource;
 @end

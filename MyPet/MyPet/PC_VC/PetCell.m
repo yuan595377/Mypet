@@ -29,6 +29,7 @@
 }
 
 - (void)createLayOut {
+    
     self.title = [[UILabel alloc]init];
     [self.contentView addSubview:_title];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -46,7 +47,6 @@
         make.right.equalTo(self.contentView.mas_right).with.offset(-10);
         make.top.equalTo(self.contentView.mas_top).with.offset(10);
     }];
-    
     
     
 }
