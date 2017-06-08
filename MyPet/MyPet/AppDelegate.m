@@ -84,6 +84,10 @@ static SystemSoundID soundID = 0;
 //收到消息时，添加本地推送
 - (void)didReceiveMessages:(NSArray *)aMessages {
     
+    
+    NSUserDefaults *sr = [NSUserDefaults standardUserDefaults];
+    
+    [sr setObject:@"no" forKey:@"clock"];
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
         NSLog(@"在前台收到消息");
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -156,9 +160,63 @@ static SystemSoundID soundID = 0;
 #pragma mark -  本地通知回调函数 接受本地通知
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
+    // 这里真实需要处理交互的地方
+    // 获取通知所带的数据
+    
+    NSUserDefaults *sr = [NSUserDefaults standardUserDefaults];
+    NSString *ty = [NSString stringWithFormat:@"%@",[sr objectForKey:@"notic"]];
+    NSString * name = [sr objectForKey:@"clock"];
+    NSLog(@"bool:%@", name);
+    
+    if ([name isEqualToString:@"yes"]) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:ty delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        
+        NSString *music = notification.userInfo[@"music"];
+        NSArray *arr = [music componentsSeparatedByString:@":"];
+        NSString *path = [[NSBundle mainBundle]pathForResource:arr[2] ofType:@"mp3"];
+        if (path) {
+            // 注册声音到系统
+            NSURL *soundURL = [NSURL fileURLWithPath:path];
+            OSStatus err = AudioServicesCreateSystemSoundID((__bridge CFURLRef)(soundURL), &soundID);
+            if(err!= kAudioServicesNoError){
+                NSLog(@"Could not load %@,error code:%d",soundURL,err);
+            }
+        }
+        //开始播放声音 带有震动
+        AudioServicesPlayAlertSound((SystemSoundID)soundID);
+        // 重复播放
+        /*
+         *参数说明:
+         * 1、刚刚播放完成自定义系统声音的ID
+         * 2、回调函数（playFinished）执行的run Loop，NULL表示main run loop
+         * 3、回调函数执行所在run loop的模式，NULL表示默认的run loop mode
+         * 4、需要回调的函数
+         * 5、传入的参数， 此参数会被传入回调函数里
+         */
+        AudioServicesAddSystemSoundCompletion(soundID, NULL, NULL, &playFinished, (__bridge void *)(self));
+        
+        [alertView show];
+
+        
+        
+    }
+    
     
 
 }
+
+#pragma mark - 点击确定按钮 停止播放
+#pragma mark 点击确定取消震动音乐
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    
+    AudioServicesDisposeSystemSoundID((SystemSoundID)soundID);
+    AudioServicesRemoveSystemSoundCompletion((SystemSoundID)soundID);
+    
+}
+
+
 
 #pragma mark - 闹铃重复播放
 void playFinished(SystemSoundID  ssID, void* clientData)

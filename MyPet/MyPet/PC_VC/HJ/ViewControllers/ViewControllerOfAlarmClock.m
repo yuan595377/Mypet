@@ -276,7 +276,10 @@
 #pragma mark - 闹钟设置完成
 - (void)clock:(UIButton *)clock
 {
-   
+    
+    NSUserDefaults *sr = [NSUserDefaults standardUserDefaults];
+    [sr setObject:self.textFieldOfLabel.text forKey:@"notic"];
+    [sr setObject:@"yes" forKey:@"clock"];
     
     for (NSString *ss in self.arrOfSelectedWeek) {
         [self.stringOfAppending appendString:ss];
@@ -352,7 +355,7 @@
                         notifocation.soundName = [NSString stringWithFormat:@"%@.mp3", self.musicOfName];
                     }
                     // 通知内容
-                   notifocation.alertBody = @"(づ￣3￣)づ╭❤～ 该起床喽!";
+                   notifocation.alertBody = self.textFieldOfLabel.text;
                     // 通知参数
                     NSDictionary *information = nil;
                     if (self.musicOfName.length == 0) {
@@ -408,7 +411,7 @@
                             notification.soundName = [NSString stringWithFormat:@"%@.mp3", self.musicOfName];
                         }
                         // 通知内容
-                        notification.alertBody = @"(づ￣3￣)づ╭❤～ 该起床喽!";
+                        notification.alertBody = self.textFieldOfLabel.text;
                         // 通知参数
                         NSDictionary *information = nil;
                         if (self.musicOfName.length == 0) {
