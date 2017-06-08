@@ -84,6 +84,8 @@
     
     self.dec_img = [[UIImageView alloc]init];
     [self.contentView addSubview:self.dec_img];
+    self.dec_img.layer.cornerRadius = 10;
+    self.dec_img.layer.masksToBounds = YES;
     [self.dec_img mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 20, 300));
@@ -97,7 +99,7 @@
     self.contact = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.contentView addSubview:self.contact];
     [self.contact setTitle:@"联系他" forState:UIControlStateNormal];
-    [self.contact setImage:[UIImage imageNamed:@"消息.png"] forState:UIControlStateNormal];
+    [self.contact setImage:[UIImage imageNamed:@"chat.png"] forState:UIControlStateNormal];
     [self.contact mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(20, 20));
         make.left.equalTo(self.contentView).with.offset(20);
@@ -108,7 +110,8 @@
     
     self.labelOfJudge = [[UILabel alloc]init];
     [self.labelOfJudge NightWithType:UIViewColorTypeNormal];
-    [self.labelOfJudge setFont:[UIFont systemFontOfSize:15]];
+    [self.labelOfJudge setFont:[UIFont systemFontOfSize:13]];
+    self.labelOfJudge.textColor = [UIColor grayColor];
     [self.contentView addSubview:self.labelOfJudge];
     [self.labelOfJudge mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(80, 30));
@@ -131,6 +134,18 @@
     [self.follow.layer setCornerRadius:10.0];
     self.follow.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor redColor]);
     [self.follow setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    
+    
+    self.labelBt = [[UILabel alloc]init];
+    [self.contentView addSubview:self.labelBt];
+    self.labelBt.backgroundColor = [UIColor colorWithRed:0.89 green:0.89 blue:0.89 alpha:1.00];
+    [self.labelBt mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 16));
+        make.right.equalTo(self.contentView.mas_right).with.offset(0);
+        make.bottom.equalTo(self.contentView.mas_bottom).with.offset(0);
+        
+    }];
+    
      
     
 }

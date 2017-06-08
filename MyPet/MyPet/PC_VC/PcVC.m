@@ -8,6 +8,7 @@
 
 #import "PcVC.h"
 #import "FollowVcViewController.h"
+#import "followModel.h"
 @interface PcVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain)UITableView *tableView;
 @property (nonatomic, retain)UILabel *follow;
@@ -17,8 +18,11 @@
 @property (nonatomic, retain)UILabel *dec;
 @property (nonatomic, retain)UIImageView *avatar;
 
-
-
+@property (nonatomic, retain)UILabel *labelOfInNum;
+@property (nonatomic, retain)UILabel *followNum;
+@property (nonatomic, retain)UILabel *FansNum;
+@property (nonatomic, retain)NSMutableArray *arrOfInfo;
+@property (nonatomic, retain)NSMutableArray *arrOfFollow;
 @end
 
 @implementation PcVC
@@ -36,8 +40,55 @@
     BmobUser *user = [BmobUser currentUser];
     NSString *str = [NSString stringWithFormat:@"%@", [user objectForKey:@"avatar"]];
     [self.avatar sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:[UIImage imageNamed:@"EaseUIResource.bundle/user"]];
+    [self fetchData];
+
+}
+
+
+
+- (void)fetchData {
     
+    self.arrOfInfo = [NSMutableArray array];
+    //创建BmobQuery实例，指定对应要操作的数据表名称
+    BmobQuery *query = [BmobQuery queryWithClassName:STOREAGE_INFO];
+    //按updatedAt进行降序排列
+    [query orderByDescending:@"updatedAt"];
+    //返回最多20个结果
+    query.limit = 50;
+    //执行查询
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        //处理查询结果
+        for (BmobObject *obj in array) {
+            PubModel * info  = [[PubModel alloc] init];
+            if ([[obj objectForKey:@"user_id"] isEqualToString:[EMClient sharedClient].currentUsername]) {
+                info.objectID = [obj objectForKey:@"objectId"];
+                info.title = [obj objectForKey:@"title"];
+                info.url = [obj objectForKey:@"PubImg"];
+                info.closenum = [NSNumber numberWithInteger:[NSString stringWithFormat:@"%@",[obj objectForKey:@"is_close"]].integerValue];
+                info.PubTime = [obj objectForKey:@"Pub_time"];
+            }
+            if (info.title) {
+                [self.arrOfInfo addObject:info];
+            }
+        }
+        
+        NSLog(@"self.arrOfInfo.count:%lu", self.arrOfInfo.count);
+        self.labelOfInNum.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.arrOfInfo.count];
+        [_tableView reloadData];
+    }];
     
+    _arrOfFollow = [NSMutableArray array];
+    BmobUser *user = [BmobUser currentUser];
+    NSArray *a = [user objectForKey:@"follow_list"];
+    for (NSString *str in a) {
+        followModel *model2 = [[followModel alloc]init];
+        model2.username = str;
+        [_arrOfFollow addObject:model2];
+    }
+    
+    self.followNum.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.arrOfFollow.count];
+    
+    [_tableView reloadData];
 
 }
 
@@ -61,8 +112,6 @@
     self.avatar = [[UIImageView alloc]init];
     view.backgroundColor = [UIColor whiteColor];
     [view addSubview:self.avatar];
-    NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"avatar.png"];
-    NSLog(@"图片路径:%@", fullPath);
     [self.avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(70, 70));
         make.left.equalTo(view).with.offset(10);
@@ -70,7 +119,6 @@
     }];
     self.avatar.layer.cornerRadius = 35;
     self.avatar.layer.masksToBounds = YES;
-
     
     self.nick_name = [[UILabel alloc]init];
     [self.nick_name NightWithType:UIViewColorTypeNormal];
@@ -119,6 +167,18 @@
     }];
     [button1 addTarget:self action:@selector(pushaction) forControlEvents:UIControlEventTouchDown];
     
+    self.labelOfInNum = [[UILabel alloc]init];
+    self.labelOfInNum.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushaction)];
+    [view addSubview:self.labelOfInNum];
+    [self.labelOfInNum mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(40, 25));
+        make.left.equalTo(view).with.offset(45);
+        make.top.equalTo(button1.mas_bottom).with.offset(0);
+    }];
+    self.labelOfInNum.text = @"1";
+    self.labelOfInNum.textColor = [UIColor grayColor];
+    [self.labelOfInNum addGestureRecognizer:tap];
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
     [button2 NightWithType:UIViewColorTypeNormal];
@@ -134,6 +194,18 @@
     }];
     [button2 addTarget:self action:@selector(folo) forControlEvents:UIControlEventTouchDown];
     
+    self.followNum = [[UILabel alloc]init];
+    [view addSubview:self.followNum];
+    self.followNum.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(folo)];
+    [self.followNum addGestureRecognizer:tap2];
+    [self.followNum mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(40, 25));
+        make.left.equalTo(self.labelOfInNum.mas_right).with.offset(50);
+        make.top.equalTo(button2.mas_bottom).with.offset(0);
+    }];
+    self.followNum.text = @"1";
+    self.followNum.textColor = [UIColor grayColor];
     
     UIButton *button3 = [UIButton buttonWithType:UIButtonTypeCustom];
     [button3 NightWithType:UIViewColorTypeNormal];
@@ -145,14 +217,28 @@
         make.size.mas_equalTo(CGSizeMake(40, 25));
         make.left.equalTo(button2.mas_right).with.offset(50);
         make.top.equalTo(view4.mas_bottom).with.offset(10);
-        
     }];
     [button3 addTarget:self action:@selector(fan) forControlEvents:UIControlEventTouchDown];
     
+    
+    self.FansNum = [[UILabel alloc]init];
+    [view addSubview:self.FansNum];
+    self.FansNum.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap3 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(fan)];
+    [self.FansNum addGestureRecognizer:tap3];
+    [self.FansNum mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(40, 25));
+        make.left.equalTo(self.followNum.mas_right).with.offset(50);
+        make.top.equalTo(button3.mas_bottom).with.offset(0);
+    }];
+    self.FansNum.text = @"0";
+    self.FansNum.textColor = [UIColor grayColor];
+    
+    
     UIImageView *i = [[UIImageView alloc]init];
     i.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(mymsg)];
-    [i addGestureRecognizer:tap];
+    UITapGestureRecognizer *tap4 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(mymsg)];
+    [i addGestureRecognizer:tap4];
     [view addSubview:i];
     i.image = [UIImage imageNamed:@"脚印.png"];
     [i mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -188,6 +274,7 @@
     
     self.tableView.tableHeaderView = view;
 }
+
 
 
 - (void)pushaction {

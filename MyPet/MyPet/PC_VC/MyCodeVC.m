@@ -10,6 +10,8 @@
 
 @interface MyCodeVC ()
 @property (nonatomic, retain)UIImageView *codeImg;
+@property (nonatomic, retain)UIImageView *backImg;
+
 @end
 
 @implementation MyCodeVC
@@ -21,14 +23,20 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self createSub];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.title = @"我的二维码";
 }
 
 
 
 - (void)createSub {
+    
+    UIImageView *backImg = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.view addSubview:backImg];
+    backImg.image = [UIImage imageNamed:@"99.jpg"];
+    
+    
     self.codeImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
-    [self.view addSubview:_codeImg];
+    [backImg addSubview:_codeImg];
     self.codeImg.center = self.view.center;
     
     //生成二维码图片

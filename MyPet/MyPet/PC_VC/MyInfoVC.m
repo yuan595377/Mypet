@@ -67,8 +67,7 @@
         [vc setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:vc animated:YES];
     }else {
-        [SVProgressHUD showWithStatus:@"我的昵称"];
-        [SVProgressHUD setMinimumDismissTimeInterval:1];
+        [SVProgressHUD showSuccessWithStatus:@"点击昵称"];
     
     }
     

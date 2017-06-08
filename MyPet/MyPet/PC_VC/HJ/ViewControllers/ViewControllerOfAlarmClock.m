@@ -10,7 +10,7 @@
 #import "ViewControllerOfAddClock.h"
 #import "CollectionViewCellOfHJOfClock.h"
 #import "CoreDataManager.h"
-#import "Times.h"
+#import "Times+CoreDataClass.h"
 
 @interface ViewControllerOfAlarmClock ()<UICollectionViewDelegate, UICollectionViewDataSource, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 @property (nonatomic, retain) UIImageView *imageView;
@@ -282,7 +282,7 @@
         [self.stringOfAppending appendString:ss];
     }
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Times1" inManagedObjectContext:self.manager.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Times" inManagedObjectContext:self.manager.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"hour = %@ and minutes = %@ and week = %@", [NSNumber numberWithInteger:self.hour], [NSNumber numberWithInteger:self.minutes], self.stringOfAppending];
@@ -310,9 +310,9 @@
                 
             }];
         }else {
-            Times *model = [NSEntityDescription insertNewObjectForEntityForName:@"Times1" inManagedObjectContext:self.manager.managedObjectContext];
-            model.hour = [NSNumber numberWithInteger:self.hour];
-            model.minutes = [NSNumber numberWithInteger:self.minutes];
+            Times *model = [NSEntityDescription insertNewObjectForEntityForName:@"Times" inManagedObjectContext:self.manager.managedObjectContext];
+            model.hour = self.hour;
+            model.minutes = self.minutes;
             model.label = self.textFieldOfLabel.text;
             model.week = self.stringOfAppending;
             if (self.musicOfName.length == 0) {

@@ -10,10 +10,6 @@
 		3B9EEAC4F0F6CA022175B6DA /* libPods-MyPetUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF04AF4F23D2D82D0D4BF706 /* libPods-MyPetUITests.a */; };
 		DAC6C36230785F3E8DD2CCD3 /* libPods-MyPetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14860BD93314E6982ED07B8 /* libPods-MyPetTests.a */; };
 		E9A91CA30C4D5D6E3F200CC2 /* libPods-MyPet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D401018F7BC5C18A13BC526 /* libPods-MyPet.a */; };
-		F30173E31EDF2587006F5294 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30173E21EDF2587006F5294 /* NotificationCenter.framework */; };
-		F30173E71EDF2587006F5294 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30173E61EDF2587006F5294 /* TodayViewController.m */; };
-		F30173EA1EDF2587006F5294 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F30173E81EDF2587006F5294 /* MainInterface.storyboard */; };
-		F30173EE1EDF2587006F5294 /* PetWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F30173E11EDF2587006F5294 /* PetWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F309CD5D1E8F5575001B178C /* chatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F309CD5C1E8F5575001B178C /* chatVC.m */; };
 		F309CD601E8F89D1001B178C /* conversationListVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F309CD5F1E8F89D1001B178C /* conversationListVc.m */; };
 		F30B4AE91ED729D700152393 /* 消息.png in Resources */ = {isa = PBXBuildFile; fileRef = F30B4AE81ED729D700152393 /* 消息.png */; };
@@ -53,6 +49,8 @@
 		F3242B881E98898100A39ADD /* tabbar_profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3242B6A1E98898100A39ADD /* tabbar_profile@2x.png */; };
 		F3242B891E98898100A39ADD /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = F3242B6C1E98898100A39ADD /* Contents.json */; };
 		F3242B8A1E98898100A39ADD /* tabbar_profile_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3242B6D1E98898100A39ADD /* tabbar_profile_selected@2x.png */; };
+		F334D6CE1EE973FD00D1704D /* Times.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F334D6CC1EE973FD00D1704D /* Times.xcdatamodeld */; };
+		F334D6D41EE9747400D1704D /* Times+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F334D6D21EE9747400D1704D /* Times+CoreDataProperties.m */; };
 		F3372CC81EA657020035EA34 /* CellOfInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3372CC71EA657020035EA34 /* CellOfInfo.m */; };
 		F3372CCB1EA657330035EA34 /* InfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3372CCA1EA657330035EA34 /* InfoModel.m */; };
 		F3372CCF1EA66C340035EA34 /* MyPubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3372CCE1EA66C340035EA34 /* MyPubVC.m */; };
@@ -95,7 +93,6 @@
 		F36B58311EA515E20023A7FD /* login2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F36B58301EA515E20023A7FD /* login2.jpeg */; };
 		F36B58331EA522580023A7FD /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = F36B58321EA522580023A7FD /* back2.png */; };
 		F36B58361EA527510023A7FD /* RegisterVC_2.m in Sources */ = {isa = PBXBuildFile; fileRef = F36B58351EA527510023A7FD /* RegisterVC_2.m */; };
-		F375452E1EA84DE900667717 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = F375452D1EA84DE900667717 /* chat.png */; };
 		F387830B1ED87ED4005EF868 /* Mybutton.m in Sources */ = {isa = PBXBuildFile; fileRef = F387830A1ED87ED4005EF868 /* Mybutton.m */; };
 		F38B18081E97C832006C69F8 /* LEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B18071E97C832006C69F8 /* LEActionSheet.m */; };
 		F38B180B1E97C8A8006C69F8 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */; };
@@ -159,9 +156,6 @@
 		F3C762981EE6E82B009EB012 /* weixin.png in Resources */ = {isa = PBXBuildFile; fileRef = F3C762751EE6E82B009EB012 /* weixin.png */; };
 		F3C762991EE6E82B009EB012 /* ww.png in Resources */ = {isa = PBXBuildFile; fileRef = F3C762761EE6E82B009EB012 /* ww.png */; };
 		F3C7629C1EE6E861009EB012 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7629B1EE6E861009EB012 /* CoreDataManager.m */; };
-		F3C762B71EE6E92C009EB012 /* Clock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C7629F1EE6E92C009EB012 /* Clock.xcdatamodeld */; };
-		F3C762B81EE6E92C009EB012 /* Times+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762A21EE6E92C009EB012 /* Times+CoreDataProperties.m */; };
-		F3C762B91EE6E92C009EB012 /* Times.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762A41EE6E92C009EB012 /* Times.m */; };
 		F3C762BA1EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762A71EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.m */; };
 		F3C762BB1EE6E92C009EB012 /* ViewControllerOfAddClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762A91EE6E92C009EB012 /* ViewControllerOfAddClock.m */; };
 		F3C762BC1EE6E92C009EB012 /* ViewControllerOfAlarmClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762AB1EE6E92C009EB012 /* ViewControllerOfAlarmClock.m */; };
@@ -170,7 +164,6 @@
 		F3C762BF1EE6E92C009EB012 /* CollectionReusableViewOfHJOfHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762B21EE6E92C009EB012 /* CollectionReusableViewOfHJOfHeader.m */; };
 		F3C762C01EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762B41EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.m */; };
 		F3C762C11EE6E92C009EB012 /* TableViewCellOfHJClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C762B61EE6E92C009EB012 /* TableViewCellOfHJClock.m */; };
-		F3C762CE1EE6F21A009EB012 /* Times1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C762CC1EE6F21A009EB012 /* Times1.xcdatamodeld */; };
 		F3C8A9411E8E3B900099B846 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A93F1E8E3B900099B846 /* RegisterVC.m */; };
 		F3C8A9421E8E3B900099B846 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C8A9401E8E3B900099B846 /* RegisterVC.xib */; };
 		F3C8A95D1E8E4FF30099B846 /* loginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A95B1E8E4FF30099B846 /* loginVC.m */; };
@@ -299,6 +292,7 @@
 		F3E5FB101EDAB6D1007D1D6D /* FollowVcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FB0F1EDAB6D1007D1D6D /* FollowVcViewController.m */; };
 		F3E5FB131EDAB9BA007D1D6D /* followModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FB121EDAB9BA007D1D6D /* followModel.m */; };
 		F3E5FB161EDABAEF007D1D6D /* FollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FB151EDABAEF007D1D6D /* FollowCell.m */; };
+		F3E7C2FD1EE99C6500D760B5 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E7C2FC1EE99C6500D760B5 /* chat.png */; };
 		F3F135281EDD057900C3C780 /* PetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F135271EDD057900C3C780 /* PetVC.m */; };
 		F3F1352C1EDD2C5A00C3C780 /* petNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1352B1EDD2C5A00C3C780 /* petNameVC.m */; };
 		F3F1352F1EDD60F000C3C780 /* PetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1352E1EDD60F000C3C780 /* PetCell.m */; };
@@ -309,13 +303,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F30173EC1EDF2587006F5294 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F337E75B1E878D2C00709A3B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F30173E01EDF2587006F5294;
-			remoteInfo = PetWidget;
-		};
 		F337E77D1E878D2C00709A3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F337E75B1E878D2C00709A3B /* Project object */;
@@ -339,7 +326,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				F30173EE1EDF2587006F5294 /* PetWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,7 +342,6 @@
 		B909B5B34CD1EA8846FDEEE9 /* Pods-MyPetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPetUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPetUITests/Pods-MyPetUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CF04AF4F23D2D82D0D4BF706 /* libPods-MyPetUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPetUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14860BD93314E6982ED07B8 /* libPods-MyPetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F30173E11EDF2587006F5294 /* PetWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PetWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30173E21EDF2587006F5294 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		F30173E51EDF2587006F5294 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		F30173E61EDF2587006F5294 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
@@ -407,6 +392,11 @@
 		F3242B6A1E98898100A39ADD /* tabbar_profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profile@2x.png"; sourceTree = "<group>"; };
 		F3242B6C1E98898100A39ADD /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		F3242B6D1E98898100A39ADD /* tabbar_profile_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profile_selected@2x.png"; sourceTree = "<group>"; };
+		F334D6CD1EE973FD00D1704D /* Times.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Times.xcdatamodel; sourceTree = "<group>"; };
+		F334D6CF1EE9747400D1704D /* Times+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Times+CoreDataClass.h"; sourceTree = "<group>"; };
+		F334D6D01EE9747400D1704D /* Times+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Times+CoreDataClass.m"; sourceTree = "<group>"; };
+		F334D6D11EE9747400D1704D /* Times+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Times+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F334D6D21EE9747400D1704D /* Times+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Times+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F3372CC61EA657020035EA34 /* CellOfInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellOfInfo.h; sourceTree = "<group>"; };
 		F3372CC71EA657020035EA34 /* CellOfInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellOfInfo.m; sourceTree = "<group>"; };
 		F3372CC91EA657330035EA34 /* InfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoModel.h; sourceTree = "<group>"; };
@@ -474,7 +464,6 @@
 		F36B58321EA522580023A7FD /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2.png; sourceTree = "<group>"; };
 		F36B58341EA527510023A7FD /* RegisterVC_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC_2.h; sourceTree = "<group>"; };
 		F36B58351EA527510023A7FD /* RegisterVC_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC_2.m; sourceTree = "<group>"; };
-		F375452D1EA84DE900667717 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		F38783091ED87ED4005EF868 /* Mybutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mybutton.h; sourceTree = "<group>"; };
 		F387830A1ED87ED4005EF868 /* Mybutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mybutton.m; sourceTree = "<group>"; };
 		F38B18061E97C832006C69F8 /* LEActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEActionSheet.h; sourceTree = "<group>"; };
@@ -551,11 +540,6 @@
 		F3C762761EE6E82B009EB012 /* ww.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ww.png; sourceTree = "<group>"; };
 		F3C7629A1EE6E861009EB012 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		F3C7629B1EE6E861009EB012 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
-		F3C762A01EE6E92C009EB012 /* Clock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Clock.xcdatamodel; sourceTree = "<group>"; };
-		F3C762A11EE6E92C009EB012 /* Times+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Times+CoreDataProperties.h"; sourceTree = "<group>"; };
-		F3C762A21EE6E92C009EB012 /* Times+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Times+CoreDataProperties.m"; sourceTree = "<group>"; };
-		F3C762A31EE6E92C009EB012 /* Times.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Times.h; sourceTree = "<group>"; };
-		F3C762A41EE6E92C009EB012 /* Times.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Times.m; sourceTree = "<group>"; };
 		F3C762A61EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellOfHjOfPicture.h; sourceTree = "<group>"; };
 		F3C762A71EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellOfHjOfPicture.m; sourceTree = "<group>"; };
 		F3C762A81EE6E92C009EB012 /* ViewControllerOfAddClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerOfAddClock.h; sourceTree = "<group>"; };
@@ -572,7 +556,6 @@
 		F3C762B41EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellOfHJOfClock.m; sourceTree = "<group>"; };
 		F3C762B51EE6E92C009EB012 /* TableViewCellOfHJClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellOfHJClock.h; sourceTree = "<group>"; };
 		F3C762B61EE6E92C009EB012 /* TableViewCellOfHJClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellOfHJClock.m; sourceTree = "<group>"; };
-		F3C762CD1EE6F21A009EB012 /* Times1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Times1.xcdatamodel; sourceTree = "<group>"; };
 		F3C8A93E1E8E3B8F0099B846 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		F3C8A93F1E8E3B900099B846 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		F3C8A9401E8E3B900099B846 /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
@@ -841,6 +824,7 @@
 		F3E5FB121EDAB9BA007D1D6D /* followModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = followModel.m; sourceTree = "<group>"; };
 		F3E5FB141EDABAEF007D1D6D /* FollowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowCell.h; sourceTree = "<group>"; };
 		F3E5FB151EDABAEF007D1D6D /* FollowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowCell.m; sourceTree = "<group>"; };
+		F3E7C2FC1EE99C6500D760B5 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		F3F135261EDD057900C3C780 /* PetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetVC.h; sourceTree = "<group>"; };
 		F3F135271EDD057900C3C780 /* PetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetVC.m; sourceTree = "<group>"; };
 		F3F1352A1EDD2C5A00C3C780 /* petNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = petNameVC.h; sourceTree = "<group>"; };
@@ -855,14 +839,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F30173DE1EDF2587006F5294 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F30173E31EDF2587006F5294 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F337E7601E878D2C00709A3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1146,7 +1122,6 @@
 				F337E7631E878D2C00709A3B /* MyPet.app */,
 				F337E77C1E878D2C00709A3B /* MyPetTests.xctest */,
 				F337E7871E878D2C00709A3B /* MyPetUITests.xctest */,
-				F30173E11EDF2587006F5294 /* PetWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1227,7 +1202,6 @@
 				F337E7A31E878F7B00709A3B /* HomeVC.m */,
 				F3D746141EABFEE700232B34 /* home_test.jpeg */,
 				F3D3E8B51EABBB0200ECE482 /* 112.jpeg */,
-				F375452D1EA84DE900667717 /* chat.png */,
 				F3372CC61EA657020035EA34 /* CellOfInfo.h */,
 				F3372CC71EA657020035EA34 /* CellOfInfo.m */,
 				F3372CC91EA657330035EA34 /* InfoModel.h */,
@@ -1419,11 +1393,11 @@
 		F3C7629E1EE6E92C009EB012 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F3C7629F1EE6E92C009EB012 /* Clock.xcdatamodeld */,
-				F3C762A11EE6E92C009EB012 /* Times+CoreDataProperties.h */,
-				F3C762A21EE6E92C009EB012 /* Times+CoreDataProperties.m */,
-				F3C762A31EE6E92C009EB012 /* Times.h */,
-				F3C762A41EE6E92C009EB012 /* Times.m */,
+				F334D6CF1EE9747400D1704D /* Times+CoreDataClass.h */,
+				F334D6D01EE9747400D1704D /* Times+CoreDataClass.m */,
+				F334D6D11EE9747400D1704D /* Times+CoreDataProperties.h */,
+				F334D6D21EE9747400D1704D /* Times+CoreDataProperties.m */,
+				F334D6CC1EE973FD00D1704D /* Times.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1955,6 +1929,7 @@
 				F38B180A1E97C8A8006C69F8 /* NSString+Extension.m */,
 				F38B18061E97C832006C69F8 /* LEActionSheet.h */,
 				F38B18071E97C832006C69F8 /* LEActionSheet.m */,
+				F3E7C2FC1EE99C6500D760B5 /* chat.png */,
 				F3CB24DD1E8A8A8C00EBA1E9 /* Masonry */,
 			);
 			path = Tools;
@@ -2009,7 +1984,6 @@
 				F3C7629D1EE6E92C009EB012 /* HJ */,
 				F3F135261EDD057900C3C780 /* PetVC.h */,
 				F3F135271EDD057900C3C780 /* PetVC.m */,
-				F3C762CC1EE6F21A009EB012 /* Times1.xcdatamodeld */,
 				F3C762501EE6E7DB009EB012 /* Clock1VC.h */,
 				F3C762511EE6E7DB009EB012 /* Clock1VC.m */,
 				F3F135361EDD666800C3C780 /* 添加-4.png */,
@@ -2026,23 +2000,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F30173E01EDF2587006F5294 /* PetWidget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F30173EF1EDF2587006F5294 /* Build configuration list for PBXNativeTarget "PetWidget" */;
-			buildPhases = (
-				F30173DD1EDF2587006F5294 /* Sources */,
-				F30173DE1EDF2587006F5294 /* Frameworks */,
-				F30173DF1EDF2587006F5294 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PetWidget;
-			productName = PetWidget;
-			productReference = F30173E11EDF2587006F5294 /* PetWidget.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		F337E7621E878D2C00709A3B /* MyPet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F337E7901E878D2C00709A3B /* Build configuration list for PBXNativeTarget "MyPet" */;
@@ -2058,7 +2015,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F30173ED1EDF2587006F5294 /* PBXTargetDependency */,
 			);
 			name = MyPet;
 			productName = MyPet;
@@ -2116,14 +2072,10 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "袁立康";
 				TargetAttributes = {
-					F30173E01EDF2587006F5294 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 98E92X44D4;
-						ProvisioningStyle = Automatic;
-					};
 					F337E7621E878D2C00709A3B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 98E92X44D4;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -2137,12 +2089,14 @@
 					F337E77B1E878D2C00709A3B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SE9769F267;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F337E7621E878D2C00709A3B;
 					};
 					F337E7861E878D2C00709A3B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SE9769F267;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F337E7621E878D2C00709A3B;
 					};
@@ -2164,20 +2118,11 @@
 				F337E7621E878D2C00709A3B /* MyPet */,
 				F337E77B1E878D2C00709A3B /* MyPetTests */,
 				F337E7861E878D2C00709A3B /* MyPetUITests */,
-				F30173E01EDF2587006F5294 /* PetWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F30173DF1EDF2587006F5294 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F30173EA1EDF2587006F5294 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F337E7611E878D2C00709A3B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2210,6 +2155,7 @@
 				F3C762851EE6E82B009EB012 /* H20.png in Resources */,
 				F3242B751E98898100A39ADD /* Contents.json in Resources */,
 				F3242B411E98863500A39ADD /* images.bundle in Resources */,
+				F3E7C2FD1EE99C6500D760B5 /* chat.png in Resources */,
 				F3C762911EE6E82B009EB012 /* H6.png in Resources */,
 				F38FEA281EA8DE9D002CB53D /* 二维码.png in Resources */,
 				F3A9D9E21E969625005FF25C /* home.png in Resources */,
@@ -2230,7 +2176,6 @@
 				F3C762791EE6E82B009EB012 /* 12.jpg in Resources */,
 				F3242B851E98898100A39ADD /* Contents.json in Resources */,
 				F3C762861EE6E82B009EB012 /* H21.png in Resources */,
-				F375452E1EA84DE900667717 /* chat.png in Resources */,
 				F3C762991EE6E82B009EB012 /* ww.png in Resources */,
 				F39C7F3B1E9E32BA008705C6 /* welcome.jpeg in Resources */,
 				F3242B7E1E98898100A39ADD /* tabbar_discover_selected@2x.png in Resources */,
@@ -2449,14 +2394,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F30173DD1EDF2587006F5294 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F30173E71EDF2587006F5294 /* TodayViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F337E75F1E878D2C00709A3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2464,6 +2401,7 @@
 				F3C8B5721E8F4E870099B846 /* NSData+EMImageContentType.m in Sources */,
 				F3C762C01EE6E92C009EB012 /* CollectionViewCellOfHJOfClock.m in Sources */,
 				F339B5E91E9B14FB0058A38C /* Find_VC.m in Sources */,
+				F334D6CE1EE973FD00D1704D /* Times.xcdatamodeld in Sources */,
 				F3C8B5421E8F4E870099B846 /* EMCDDeviceManager+Media.m in Sources */,
 				F3C8B5621E8F4E870099B846 /* MWGridCell.m in Sources */,
 				F3B6B9A71EB8F05A002C2F2B /* UITabBar+ThemeChange.m in Sources */,
@@ -2490,7 +2428,6 @@
 				F3CB24FD1E8A8A8C00EBA1E9 /* MASViewAttribute.m in Sources */,
 				F3B6B9A61EB8F05A002C2F2B /* UINavigationBar+ThemeChange.m in Sources */,
 				F3F1352F1EDD60F000C3C780 /* PetCell.m in Sources */,
-				F3C762B81EE6E92C009EB012 /* Times+CoreDataProperties.m in Sources */,
 				F3C762BE1EE6E92C009EB012 /* ViewControllerOfHJOfChange.m in Sources */,
 				F3C8B5B21E8F4E870099B846 /* EaseChatBarMoreView.m in Sources */,
 				F3C8B5831E8F4E870099B846 /* PSTGridLayoutInfo.m in Sources */,
@@ -2503,7 +2440,6 @@
 				F3C8B5A61E8F4E870099B846 /* EaseBubbleView+Image.m in Sources */,
 				F3C762BD1EE6E92C009EB012 /* ViewControllerOfHJ.m in Sources */,
 				F3C8B5701E8F4E870099B846 /* EMSDWebImagePrefetcher.m in Sources */,
-				F3C762B71EE6E92C009EB012 /* Clock.xcdatamodeld in Sources */,
 				F3C762BF1EE6E92C009EB012 /* CollectionReusableViewOfHJOfHeader.m in Sources */,
 				F3F1352C1EDD2C5A00C3C780 /* petNameVC.m in Sources */,
 				F3C8B5921E8F4E870099B846 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
@@ -2519,6 +2455,7 @@
 				F3C762BA1EE6E92C009EB012 /* CollectionViewCellOfHjOfPicture.m in Sources */,
 				F3B6B9A31EB8F05A002C2F2B /* ThemeManage.m in Sources */,
 				F3C8B54D1E8F4E870099B846 /* MBProgressHUD.m in Sources */,
+				F334D6D41EE9747400D1704D /* Times+CoreDataProperties.m in Sources */,
 				F3C8B5B11E8F4E870099B846 /* EaseFacialView.m in Sources */,
 				F3C8B5891E8F4E870099B846 /* EaseConversationModel.m in Sources */,
 				F38B18081E97C832006C69F8 /* LEActionSheet.m in Sources */,
@@ -2569,7 +2506,6 @@
 				F3B6B9A91EB8F05A002C2F2B /* UIView+RemoveNotifition.m in Sources */,
 				F3C8B58E1E8F4E870099B846 /* NSString+Valid.m in Sources */,
 				F3C8B56B1E8F4E870099B846 /* EMSDWebImageCompat.m in Sources */,
-				F3C762CE1EE6F21A009EB012 /* Times1.xcdatamodeld in Sources */,
 				F3B6B9A51EB8F05A002C2F2B /* UILabel+ThemeChange.m in Sources */,
 				F3C8B5441E8F4E870099B846 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				F337E7A51E878F7B00709A3B /* HomeVC.m in Sources */,
@@ -2602,7 +2538,6 @@
 				F3E5FB161EDABAEF007D1D6D /* FollowCell.m in Sources */,
 				F3C8B5A31E8F4E870099B846 /* EaseMessageTimeCell.m in Sources */,
 				F3C8B5961E8F4E870099B846 /* EaseEmotionEscape.m in Sources */,
-				F3C762B91EE6E92C009EB012 /* Times.m in Sources */,
 				F3C8B5A11E8F4E870099B846 /* EaseCustomMessageCell.m in Sources */,
 				F3E5FB131EDAB9BA007D1D6D /* followModel.m in Sources */,
 				F3C8B54C1E8F4E870099B846 /* MBProgressHUD+Add.m in Sources */,
@@ -2651,11 +2586,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F30173ED1EDF2587006F5294 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F30173E01EDF2587006F5294 /* PetWidget */;
-			targetProxy = F30173EC1EDF2587006F5294 /* PBXContainerItemProxy */;
-		};
 		F337E77E1E878D2C00709A3B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F337E7621E878D2C00709A3B /* MyPet */;
@@ -2696,30 +2626,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F30173F01EDF2587006F5294 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 98E92X44D4;
-				INFOPLIST_FILE = PetWidget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet.PetWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		F30173F11EDF2587006F5294 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 98E92X44D4;
-				INFOPLIST_FILE = PetWidget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yuanMyPet.PetWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		F337E78E1E878D2C00709A3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2815,6 +2721,7 @@
 			baseConfigurationReference = 97DDA58D0609AB029AEE0A47 /* Pods-MyPet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MyPet/MyPet.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 98E92X44D4;
@@ -2837,6 +2744,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4dd2226e-7918-4032-bc3f-dd4f9796a396";
 				PROVISIONING_PROFILE_SPECIFIER = yuan0327;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -2846,6 +2756,7 @@
 			baseConfigurationReference = 27D63179CB4CC3560F981B6F /* Pods-MyPet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MyPet/MyPet.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 98E92X44D4;
@@ -2868,6 +2779,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4dd2226e-7918-4032-bc3f-dd4f9796a396";
 				PROVISIONING_PROFILE_SPECIFIER = yuan0327;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPet-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
@@ -2877,12 +2790,16 @@
 			baseConfigurationReference = 9A3309E4530F218E667883F7 /* Pods-MyPetTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SE9769F267;
 				INFOPLIST_FILE = MyPetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = yuan.MyPetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPet/PC_VC/HJ/Models/MyPetTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPet.app/MyPet";
 			};
 			name = Debug;
@@ -2892,12 +2809,15 @@
 			baseConfigurationReference = 8ED1D3B22379760672805169 /* Pods-MyPetTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SE9769F267;
 				INFOPLIST_FILE = MyPetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = yuan.MyPetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPet/PC_VC/HJ/Models/MyPetTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPet.app/MyPet";
 			};
 			name = Release;
@@ -2906,11 +2826,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE0BAC010E265E9DB7ED58A3 /* Pods-MyPetUITests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SE9769F267;
 				INFOPLIST_FILE = MyPetUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yuan.MyPetUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPet/PC_VC/HJ/Models/MyPetUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MyPet;
 			};
 			name = Debug;
@@ -2919,11 +2843,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B909B5B34CD1EA8846FDEEE9 /* Pods-MyPetUITests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SE9769F267;
 				INFOPLIST_FILE = MyPetUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yuan.MyPetUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyPet/PC_VC/HJ/Models/MyPetUITests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MyPet;
 			};
 			name = Release;
@@ -2931,15 +2858,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F30173EF1EDF2587006F5294 /* Build configuration list for PBXNativeTarget "PetWidget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F30173F01EDF2587006F5294 /* Debug */,
-				F30173F11EDF2587006F5294 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F337E75E1E878D2C00709A3B /* Build configuration list for PBXProject "MyPet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2979,23 +2897,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F3C7629F1EE6E92C009EB012 /* Clock.xcdatamodeld */ = {
+		F334D6CC1EE973FD00D1704D /* Times.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F3C762A01EE6E92C009EB012 /* Clock.xcdatamodel */,
+				F334D6CD1EE973FD00D1704D /* Times.xcdatamodel */,
 			);
-			currentVersion = F3C762A01EE6E92C009EB012 /* Clock.xcdatamodel */;
-			path = Clock.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		F3C762CC1EE6F21A009EB012 /* Times1.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F3C762CD1EE6F21A009EB012 /* Times1.xcdatamodel */,
-			);
-			currentVersion = F3C762CD1EE6F21A009EB012 /* Times1.xcdatamodel */;
-			path = Times1.xcdatamodeld;
+			currentVersion = F334D6CD1EE973FD00D1704D /* Times.xcdatamodel */;
+			path = Times.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

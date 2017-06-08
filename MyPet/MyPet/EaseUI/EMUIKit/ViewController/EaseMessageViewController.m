@@ -2025,8 +2025,16 @@
         
 
     }else {
+        BmobQuery *query = [BmobUser query];
+        [query whereKey:@"username" equalTo:self.userId];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+            for (BmobUser *user in array) {
+                NSString *avatar = [NSString stringWithFormat:@"%@", [user objectForKey:@"avatar"]];
+                model.avatarURLPath = avatar;
+                [self tableViewDidTriggerHeaderRefresh];
+            }
+        }];
         
-        model.avatarImage = [UIImage imageNamed:@"EaseUIResource.bundle/user"];
     }
     
     model.nickname = @"";

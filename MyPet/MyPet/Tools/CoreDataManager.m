@@ -7,7 +7,7 @@
 //
 
 #import "CoreDataManager.h"
-#define PATH @"Times1"
+#define PATH @"Times"
 
 @implementation CoreDataManager
 // 自己写的单利

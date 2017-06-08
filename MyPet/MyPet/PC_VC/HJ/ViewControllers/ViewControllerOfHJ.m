@@ -11,7 +11,7 @@
 #import "ViewControllerOfAlarmClock.h"
 #import "TableViewCellOfHJClock.h"
 #import "CoreDataManager.h"
-#import "Times.h"
+#import "Times+CoreDataClass.h"
 
 @interface ViewControllerOfHJ ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UIImageView *imageView;
@@ -54,12 +54,12 @@
 - (void)handleData
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Times1" inManagedObjectContext:self.manager.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Times" inManagedObjectContext:self.manager.managedObjectContext];
     [fetchRequest setEntity:entity];
     // Specify criteria for filtering which objects to fetch
     NSError *error = nil;
     NSArray *fetchedObjects = [self.manager.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    self.arrOfSelect = [NSArray arrayWithArray:fetchedObjects].mutableCopy;
+    self.arrOfSelect = [NSMutableArray arrayWithArray:fetchedObjects];//[NSArray arrayWithArray:fetchedObjects].mutableCopy;
     [_tableView reloadData];
     if (fetchedObjects == nil) {
         NSLog(@"%@", error);
@@ -101,13 +101,12 @@
     TableViewCellOfHJClock *cell = [tableView dequeueReusableCellWithIdentifier:@"pool"];
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = NO;
-
-    Times *model = self.arrOfSelect[indexPath.row];
     
-    NSInteger hour = model.hour.integerValue + 1;
+    Times *model = self.arrOfSelect[indexPath.row];
+    NSInteger hour = model.hour + 1;
     NSString *str = [NSString stringWithFormat:@"%ld", hour];
     
-    cell.labelOfTime.text = [[str stringByAppendingString:@":"] stringByAppendingString:model.minutes.stringValue];
+    cell.labelOfTime.text = [[str stringByAppendingString:@":"] stringByAppendingString:[NSString stringWithFormat:@"%d", model.minutes]];
     
     if (model.week.length == 14) {
         cell.labelOfWeek.text = @"小小闹钟,叫醒您的每一天";
@@ -135,7 +134,7 @@
         
         Times *model = self.arrOfSelect[indexPath.row];
         // 删除本地推送
-        NSString *time = [NSString stringWithFormat:@"%@:%@:%@", model.hour, model.minutes, model.music];
+        NSString *time = [NSString stringWithFormat:@"%hd:%hd:%@", model.hour, model.minutes, model.music];
         if (model.week.length == 14) {
             // 获取本地推送数组
             NSArray *arr = [[UIApplication sharedApplication]scheduledLocalNotifications];
@@ -152,7 +151,7 @@
             for (NSInteger i = 0; i < model.week.length / 2; i++) {
                 NSString *string = [model.week substringWithRange:NSMakeRange(i * 2, 2)];
                 for (UILocalNotification *location in arr) {
-                    if ([[[[location userInfo]objectForKey:@"music"] stringByAppendingString:string] isEqualToString:[NSString stringWithFormat:@"%@:%@:%@%@", model.hour, model.minutes, model.music, string]]) {
+                    if ([[[[location userInfo]objectForKey:@"music"] stringByAppendingString:string] isEqualToString:[NSString stringWithFormat:@"%hd:%hd:%@%@", model.hour, model.minutes, model.music, string]]) {
                         
                         [[UIApplication sharedApplication] cancelLocalNotification:location];
                         

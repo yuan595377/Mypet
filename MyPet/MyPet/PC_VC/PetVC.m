@@ -97,7 +97,7 @@
     [self.view addSubview:self.petname];
     [self.petname mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 40));
-        make.left.equalTo(self.view).with.offset(0);
+        make.left.equalTo(self.view).with.offset(10);
         make.top.equalTo(self.avatar.mas_bottom).with.offset(20);
     }];
     
@@ -108,7 +108,7 @@
     [self.view addSubview:self.petsex];
     [self.petsex mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 40));
-        make.left.equalTo(self.view).with.offset(0);
+        make.left.equalTo(self.view).with.offset(10);
         make.top.equalTo(self.petname.mas_bottom).with.offset(20);
     }];
     
@@ -118,7 +118,7 @@
     [self.view addSubview:self.petkind];
     [self.petkind mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 40));
-        make.left.equalTo(self.view).with.offset(0);
+        make.left.equalTo(self.view).with.offset(10);
         make.top.equalTo(self.petsex.mas_bottom).with.offset(20);
     }];
     
@@ -128,7 +128,7 @@
     [self.view addSubview:self.petbirth];
     [self.petbirth mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 40));
-        make.left.equalTo(self.view).with.offset(0);
+        make.left.equalTo(self.view).with.offset(10);
         make.top.equalTo(self.petkind.mas_bottom).with.offset(20);
     }];
     

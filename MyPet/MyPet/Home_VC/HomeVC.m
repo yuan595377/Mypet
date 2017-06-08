@@ -41,7 +41,7 @@
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 440;
+    self.tableView.rowHeight = 450;
     [self.tableView registerClass:[CellOfInfo class] forCellReuseIdentifier:@"pool"];
 
 }
@@ -113,8 +113,6 @@
 - (void)contact1:(UIButton *)button {
     
     if (![EMClient sharedClient].isLoggedIn) {
-        [SVProgressHUD showErrorWithStatus:@"请先登录"];
-        [SVProgressHUD setMinimumDismissTimeInterval:1];
         [self dismissViewControllerAnimated:YES completion:nil];
         [UIApplication sharedApplication].keyWindow.rootViewController = [[ViewController alloc]init];
         return;

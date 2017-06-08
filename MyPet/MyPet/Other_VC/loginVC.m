@@ -104,8 +104,8 @@
     [self.view addSubview:self.choose];
     [self.choose setImage:[UIImage imageNamed:@"对勾.png"] forState:UIControlStateNormal];
     [self.choose mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(30, 30));
-        make.left.equalTo(self.view).with.offset(10);
+        make.size.mas_equalTo(CGSizeMake(20, 30));
+        make.left.equalTo(self.view).with.offset(100);
         make.top.equalTo(self.login.mas_bottom).with.offset(30);
     }];
     self.choose.tag = 1;
@@ -114,8 +114,10 @@
     self.labelOfdec = [[UILabel alloc]init];
     [self.view addSubview:self.labelOfdec];
     self.labelOfdec.text = @"登录代表您已同意";
+    self.labelOfdec.textColor = [UIColor grayColor];
+    self.labelOfdec.font = [UIFont systemFontOfSize:12];
     [self.labelOfdec mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(150, 30));
+        make.size.mas_equalTo(CGSizeMake(100, 30));
         make.left.equalTo(self.choose.mas_right).with.offset(5);
         make.top.equalTo(self.login.mas_bottom).with.offset(30);
         
@@ -128,11 +130,12 @@
     [str addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:strRange];
     self.procol = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.procol setAttributedTitle:str forState:UIControlStateNormal];
-
+    [self.procol setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [self.procol setFont:[UIFont systemFontOfSize:12]];
     [self.view addSubview:self.procol];
     [self.procol mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(150, 30));
-        make.left.equalTo(self.labelOfdec.mas_right).with.offset(5);
+        make.size.mas_equalTo(CGSizeMake(80, 30));
+        make.left.equalTo(self.labelOfdec.mas_right).with.offset(0);
         make.top.equalTo(self.login.mas_bottom).with.offset(30);
     }];
     [self.procol addTarget:self action:@selector(jumpTopro) forControlEvents:UIControlEventTouchDown];
@@ -177,8 +180,8 @@
                                    password:self.password.text];
     
     if (!error)
-    {   [SVProgressHUD showSuccessWithStatus:@"登录成功"];
-        [SVProgressHUD setMinimumDismissTimeInterval:1];
+    {
+        
         [[EMClient sharedClient].options setIsAutoLogin:YES];
         [self dismissViewControllerAnimated:YES completion:nil];
         [self.navigationController popViewControllerAnimated:YES];

@@ -9,8 +9,10 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <UserNotifications/UserNotifications.h>
-static SystemSoundID soundID = 0;
+//#import <PgySDK/PgyManager.h>
+//#import <PgyUpdate/PgyUpdateManager.h>
 
+static SystemSoundID soundID = 0;
 @interface AppDelegate ()<UNUserNotificationCenterDelegate,EMChatManagerDelegate>
 
 @end
@@ -28,11 +30,12 @@ static SystemSoundID soundID = 0;
     if (NSClassFromString(@"UNUserNotificationCenter")) {
         [UNUserNotificationCenter currentNotificationCenter].delegate = self;
     }
-    //注册消息回调
     
-    //注册bmob
-    //启动基本SDK
+//    //启动基本SDK
 //    [[PgyManager sharedPgyManager] startManagerWithAppId:@"16e9996a6781ae3ffe8d55f877dabe12"];
+//    //启动基本SDK
+//    //启动更新检查SDK
+//    [[PgyUpdateManager sharedPgyManager] startManagerWithAppId:@"16e9996a6781ae3ffe8d55f877dabe12"];
     //获取夜间模式状态
     [ThemeManage shareThemeManage].isNight = [[NSUserDefaults standardUserDefaults] boolForKey:@"night"];
     [Bmob registerWithAppKey:@"5edb7a137c535854844cb92b8c1b2149"];
@@ -147,14 +150,8 @@ static SystemSoundID soundID = 0;
             default:
                 break;
         }
-    
-    
     [[UIApplication sharedApplication] scheduleLocalNotification:localNote];
-
-
 }
-
-
 
 #pragma mark -  本地通知回调函数 接受本地通知
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
@@ -170,7 +167,6 @@ void playFinished(SystemSoundID  ssID, void* clientData)
     //    NSLog(@"播放完成-传入ID为-%lu,传入的参数为%@", ID, clientData);
     // 播放
     AudioServicesPlayAlertSound((SystemSoundID)soundID);
-    
 }
 
 
@@ -183,8 +179,8 @@ void playFinished(SystemSoundID  ssID, void* clientData)
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     [[EMClient sharedClient] applicationDidEnterBackground:application];
     
 }
@@ -194,7 +190,6 @@ void playFinished(SystemSoundID  ssID, void* clientData)
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
-    
     [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
 

@@ -1,9 +1,10 @@
 //
-//  Times.h
-//  Program
+//  Times+CoreDataClass.h
+//  MyPet
 //
-//  Created by Jasmine on 16/5/23.
-//  Copyright © 2016年 XuRui. All rights reserved.
+//  Created by 袁立康 on 17/6/8.
+//  Copyright © 2017年 袁立康. All rights reserved.
+//  This file was automatically generated and should not be edited.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,8 +13,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Times : NSManagedObject
-
-// Insert code here to declare functionality of your managed object subclass
 
 @end
 

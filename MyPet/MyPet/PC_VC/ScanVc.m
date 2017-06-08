@@ -20,6 +20,8 @@
 @property (strong,nonatomic)AVCaptureSession * session;
 @property (strong,nonatomic)AVCaptureVideoPreviewLayer * preview;
 @property (nonatomic, assign)BOOL lastResult;
+@property (nonatomic, retain)UIImageView *backImg;
+
 
 @end
 
@@ -30,6 +32,7 @@
     // Do any additional setup after loading the view.
     // Device
     self.view.backgroundColor = [UIColor whiteColor];
+    
     _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
     // Input

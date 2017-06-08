@@ -18,5 +18,7 @@
 @property (nonatomic, retain)UIButton *follow;
 @property (nonatomic, retain)UIImageView *avatar;
 @property (nonatomic, retain)UILabel *labelOfJudge;
+@property (nonatomic, retain)UILabel *labelBt;
+
 
 @end
