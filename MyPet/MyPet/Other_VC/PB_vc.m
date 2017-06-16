@@ -113,7 +113,14 @@
     
     NSLog(@"nowtimeStr =  %@",nowtimeStr);
     BmobUser *user = [BmobUser currentUser];
-    NSString *tr = [NSString stringWithFormat:@"%@",[user objectForKey:@"avatar"]];
+    NSString *tr = @"";
+    
+    if ([user objectForKey:@"avtar"]) {
+        tr = [NSString stringWithFormat:@"%@",[user objectForKey:@"avatar"]];
+    }else {
+        
+       tr = @"http://bmob-cdn-10481.b0.upaiyun.com/2017/06/10/b770b2f9ab90455cb8661f1037d37e60.png";
+    }
     
     //创建BmobObject对象，指定对应要操作的数据表名称
     _obj = [[BmobObject alloc] initWithClassName:STOREAGE_INFO];
